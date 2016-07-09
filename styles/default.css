@@ -1,4 +1,4 @@
-
+/***********FOUNDATION STYLES FOR ALL PAGES**************/
 
 * {
   box-sizing: border-box;
@@ -11,7 +11,7 @@ body {
   margin: 10px;
   height: 100%;
   min-height: 100%;
-  background-image: url(../img/sunset.jpg);
+  background-image: url(../images/sunset.jpg);
 }
 
 .container {
@@ -66,21 +66,23 @@ nav {
 .home a {
   display: block;
   height: 100%;
-  padding-top: 45px;
+  padding-top: 50px;
 }
 .home a:before {
   width: 0;
   height: 0;
-  position: absolute; top: -12px; left: 40%;
+  position: absolute; top: -30px; left: 40%;
   border: 16px solid transparent;
   border-bottom-color: rgba(65,71,89,.6);
+  border-width: 32px 16px;
   display: block;
   content: '';
 }
 .home a:after {
   width: 32px;
   height: 20px;
-  position: absolute; top: 22px; left: 40%;
+  border-radius: 0 0 16px 16px;
+  position: absolute; top: 34px; left: 40%;
   display: block;
   background: linear-gradient(to top, rgba(65,71,89,.2), rgba(65,71,89,.6));
   content: '';
@@ -138,83 +140,14 @@ a {
           transition: background .5s, color .25s;
 }
 .selected {
-  color: rgba(217,247,252,1);
+  color: rgba(190,217,247,1);
   text-shadow: 0 0 2px rgba(4,102,108,.9);
 }
 a:hover {
   background: rgba(68,219,199,.7);
 }
 
-
-.title {
-  width: 42%;
-  border-radius: 0 54px 0 54px;
-  margin: 18px auto 0;
-  padding: 4px 36px 8px;
-  text-align: center;
-  background: rgba(54,82,82,.12);
-  box-shadow: 0 0 3px rgba(105,62,57,.7), inset 0 0 4px silver, inset 0 0 8px rgba(68,219,199,.7);
-  background: radial-gradient(circle, rgba(0,247,242,.05), rgba(0,247,242,.25));
-}
-
-h1,h2 {
-  color: rgba(19,43,59,1);
-  text-shadow: 0 0 1px rgba(217,247,252,1);
-
-}
-/************** CONTENT *******************/
-
-.quote {
-  text-align: center;
-}
-blockquote {
-  margin: 64px 0;
-}
-blockquote p {
-  position: relative;
-  line-height: 1.2em;
-  font-size: 3em;
-  color: rgba(51,57,74,1);
-}
-blockquote p:before,
-blockquote p:after {
-  font-size: 3em;
-  line-height: 0;
-  vertical-align: bottom;
-  margin: 0;
-  color: rgba(19,43,59,.9);
-}
-blockquote p:before {
-  content: "“";
-  margin-right: 6px;
-}
-blockquote p:after {
-  content: "”";
-  margin-left: 6px;
-}
-blockquote span {
-  color: rgba(37,41,54,.7);
-}
-blockquote span:before {
-  content: "⁓";
-  margin-right: 4px;
-  color: rgba(37,41,54,1);
-}
-footer {
-  position: absolute; bottom: 20px;
-  width: 100%;
-  height: 84px;
-  padding-top: 12px;
-  clear: both;
-  background: linear-gradient(to right, rgba(0,193,199,.5) 25%, rgba(0,247,242,.3) 50%, rgba(0,193,199,.5));
-  border-radius: 2px 2px 0 0;
-  box-shadow: 0 0 2px rgba(105,62,57,.8);
-
-  text-align: center;
-}
-
-
-/*************** MEDIA QUERIES ***************/
+/***************FOUNDATION MEDIA QUERIES ***************/
 
 @media screen and (max-width: 634px){
   nav ul {
@@ -265,19 +198,21 @@ footer {
     height: 31.2%;
     margin-bottom: 2%;
   }
-  .title {
-    padding-left: 18px; ;
-  }
-  .title h1, .title h2 {
-    display: inline-block;
-    text-align: center;
-  }
-  .title h2 {
-    font-size: 100%;
-    line-height: 130%;
-    margin-top: 0;
-    padding-left: 10px;
-  }
 }
+
+footer {
+  position: absolute; bottom: 20px;
+  width: 100%;
+  height: 84px;
+  padding-top: 12px;
+  clear: both;
+  background: linear-gradient(to right, rgba(0,193,199,.5) 25%, rgba(0,247,242,.3) 50%, rgba(0,193,199,.5));
+  border-radius: 2px 2px 0 0;
+  box-shadow: 0 0 2px rgba(105,62,57,.8);
+  text-align: center;
+}
+
+
+
 
 
