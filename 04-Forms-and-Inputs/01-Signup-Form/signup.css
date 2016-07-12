@@ -1,3 +1,160 @@
+
+
 @import url("../../styles/normalize.css");
 @import url("../../styles/default.css");
-@import url("../form-home/form_home.css")
+@import url("../form-home/form_home.css");
+
+.sidebar {
+  display: none;
+}
+.signup {
+  width: 100%;
+}
+
+form {
+  width: 300px;
+  margin: 0 auto;
+  padding: 4px;
+  display: block;
+  background: linear-gradient(to bottom, rgba(171,173,178,.25), rgba(171,173,178,.35));
+  box-shadow: 0 0 1px yellow;
+}
+form fieldset {
+  margin-top: 8px;
+}
+
+.signup ol {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+
+.signup li {
+  text-align: center;
+  height: 100%;
+  clear: both;
+  line-height: 1.5em;
+}
+
+.signup label {
+  text-align: left;
+  margin-bottom: 2px;
+  padding: 4px 0;
+  color: rgba(17,47,66,.7);
+  text-shadow: 0 0 1px #fff;
+}
+.signup input{
+  width: 100%;
+  margin-bottom: 18px;
+  padding: 2px 6px;
+}
+
+.signup input, .dob .styled-select, .dob .styled-select select {
+  background: linear-gradient(to top, rgba(250,255,250,.65), rgba(250,255,250,.45) 50%, rgba(250,255,250,1));
+  color: rgba(17,47,66,.7);
+  box-shadow: 0 0 1px rgba(17,47,66,.7);
+  border-radius: 1px;
+}
+
+.signup input:focus {
+  background: rgba(201,255,255,.75);
+}
+
+input[type=email] {
+  text-align: right;
+}
+
+/********Full Name Styles********/
+
+.name input {
+  display: block;
+  float: left;
+  width: 49%;
+}
+.name input:first-of-type {
+  margin-right: 1%;
+}
+.name input:last-of-type {
+  margin-left: 1%;
+}
+
+
+/*******Birthday Styles*******/
+
+
+.dob label:not(:first-child), .styled-select {
+  display: inline-block;
+  float: left;
+}
+
+.dob .styled-select {
+  position: relative;
+  width: 40%;
+  height: 100%;
+  margin: 4px 1% 0 0;
+  padding: 2px 0;
+}
+
+.dob>label:nth-child(0n+3) {
+  width: 23%;
+  margin: 0 1%;
+}
+.dob>label:last-child  {
+  width: 33%;
+  margin-left: 1%;
+}
+
+
+.dob .styled-select select {
+  background: transparent;
+  outline: 0;
+  width: 100%;
+  margin: -2px 0;
+  height: 24px;
+  color: rgba(17,47,66,.4);
+  box-shadow: none;
+}
+
+.dob .styled-select select:focus {
+  background: rgba(201,255,255,1);
+}
+
+.styled-select:after {
+  content: '⇳';
+  line-height: inherit;
+  position: absolute;
+  top: 1px;
+  right: 0;
+  font-size: 2em;
+  z-index: 0;
+}
+
+form button {
+  border-style: none;
+  outline: 0;
+  border: 0;
+  float: right;
+  margin: 18px 0 0;
+  width: 96px;
+  line-height: 1.5em;
+  font-size: 1.2em;
+  padding: 2px 0;
+  box-shadow: 0 0 2px rgba(232,227,131,1);
+  background: rgba(17,47,66,.65);
+  color: rgba(250,255,250,1);
+  border-radius: 1px;
+  -webkit-transition: background .5s, color .25s;
+          transition: background .5s, color .25s;
+}
+
+
+button:hover, button:focus {
+  background: rgba(2,220,214,1);
+  color: rgba(17,47,66,.65);
+  text-shadow: 0 0 1px white;
+  cursor: pointer;
+
+}
+
+

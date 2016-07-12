@@ -1,4 +1,7 @@
 
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,9 +27,9 @@
         </ul>
       </nav>
     </header>
-    <main class="form_home content">
-      <h1>Sign Up</h1>
+    <div class="content-wrapper">
       <aside class="sidebar">
+        <button></button>
         <h2>Form Types</h2>
         <ul>
           <li><a class="selected" href="index.html">Signup</a></li>
@@ -39,7 +42,61 @@
           <li><a href="../08-Credit-Debit-Form/index.html">Credit & Debit</a></li>
         </ul>
       </aside>
-    </main>
+      <main class="signup form_home content">
+        <h1>Sign Up</h1>
+        <form action="" id="signup">
+          <fieldset>
+            <legend>Sign Up</legend>
+            <ol>
+              <li class="name">
+                <label for="first_name last_name">Full Name</label>
+                <input type="text" id="first_name" name="name" placeholder="First"required>
+                <input type="text" id="last_name" name="name" placeholder="Last" required>
+              </li>
+              <li>
+                <label for="user_name">Choose your username</label>
+                <input type="text" id="user_name" name="name" required>
+              </li>
+              <li>
+                <label for="user_email">Email address</label>
+                <input type="email" id="user_email" name="email" placeholder="@email.com" required>
+              </li>
+              <li class="dob">
+                <label for="dob">Birthday</label>
+                <div class="styled-select">
+                  <select name="dob" id="month" required>
+                    <option value="january" name="dob">January</option>
+                    <option value="february" name="dob">February</option>
+                    <option value="march" name="dob">March</option>
+                    <option value="april" name="dob">April</option>
+                    <option value="may" name="dob">May</option>
+                    <option value="june" name="dob">June</option>
+                    <option value="july" name="dob">July</option>
+                    <option value="august" name="dob">August</option>
+                    <option value="september" name="dob">September</option>
+                    <option value="october" name="dob">October</option>
+                    <option value="november" name="dob">November</option>
+                    <option value="december" name="dob">December</option>
+                  </select>
+                </div>
+                <label for="day"><input type="text" id="day" name="dob" placeholder="Day" required></label>
+                <label for="year"><input type="text" id="year" name="dob" placeholder="Year" required></label>
+              </li>
+              <li>
+                <label for="user_password">Create a password</label>
+                <input type="password" id="user_password" name="password" maxlength="16" required>
+              </li>
+              <li>
+                <label for="user_password">Confirm your password</label>
+                <input type="password" id="user_password" name="password" maxlength="16" required>
+              </li>
+            </ol>
+            <button type="submit" name="signup">Sign Up</button>
+          </fieldset>
+        </form>
+      </main>
+    </div>
+
     <footer></footer>
   </div>
 </body>

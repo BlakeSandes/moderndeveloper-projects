@@ -1,27 +1,56 @@
 
 
+
 @import url("../../styles/normalize.css");
 @import url("../../styles/default.css");
 
 /************CONTENT STYLES*****************/
 
-.form_home {
+.content-wrapper {
+  position: relative;
+  margin: 18px auto;
   width: 100%;
-  margin-bottom: 54px;
+  display: inline-block;
+}
+.form_home {
+  width: 70%;
+  margin: 0 auto;
 }
 .form_home h1 {
-  margin: 36px 0;
   text-align: center;
 }
+
 .sidebar {
-  width: 172px;
+  z-index: 100;
+  position: relative;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 162px;
   text-align: center;
   border-radius: 4px;
-  padding: 1px 8px 24px;
+  padding: 1px 8px 8px;
   box-shadow: 0 0 1px rgba(105,62,57,1);
   background: linear-gradient(to bottom, rgba(92,96,99,.25), rgba(92,96,99,.35));
+}
+
+.sidebar button {
+  position: absolute;
+  top: -12px;
+  right: -8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.sidebar button:before {
+  content: '➲';
+  transform: rotate(45deg);
+  font-size: 50px;
+  color: rgba(248,219,60,.85);
 
 }
+
 .sidebar h2 {
   position: relative;
   border-bottom: 1px solid rgba(65,71,89,.2);
@@ -43,15 +72,15 @@
 
 .sidebar ul li {
   display: block;
-  height: 48px;
-  font-size: 1.2em;
+  height: 36px;
+  font-size: 1.1em;
   margin: 4px 0 ;
 }
 
 .sidebar ul li a {
   display: block;
   height: 100%;
-  padding-top: 12px;
+  padding: 8px 0;
   border-radius: 2px;
   background: rgba(110,112,171,.6);
   box-shadow: 0 0 1px rgba(61,48,78,1);
@@ -62,14 +91,52 @@
   position: relative;
   background: rgba(248,219,60,.45);
 }
-
+.sidebar ul li a:click {
+  display: none;
+}
 .sidebar ul li a:hover:after {
   content: '';
-  position: absolute; top: 16px; right: -144px;
+  position: absolute; top: 10px; right: -144px;
   width: 0;
   height: 0;
   border: 12px solid transparent;
   border-left-color: rgba(248,219,60,.45);
   border-width: 8px 72px;
   display: block;
+}
+
+/*********Default Form Styles************/
+
+.form_home fieldset {
+  border-style: none;
+}
+.form_home fieldset legend {
+  display: none;
+}
+
+.form_home li {
+  display: block;
+}
+
+.form_home input {
+  border: none;
+  border-radius: 0;
+  outline: none;
+  background: transparent;
+}
+
+.form_home label {
+  display: block;
+}
+
+.styled-select select {
+  outline: none;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }

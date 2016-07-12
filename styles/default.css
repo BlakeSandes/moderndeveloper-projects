@@ -1,4 +1,8 @@
 
+
+
+
+
 /***********FOUNDATION STYLES FOR ALL PAGES**************/
 
 * {
@@ -7,6 +11,7 @@
 html {
   height: 100%;
 }
+
 body {
   font-family: 'Slabo 27px', serif;
   margin: 10px;
@@ -21,6 +26,9 @@ body {
   min-height: 100%;
   margin: 0 auto;
   padding-bottom: 84px;
+
+  content: " ";
+  clear: both;
 }
 
 header {
@@ -148,7 +156,7 @@ a:hover {
   background: rgba(68,219,199,.7);
 }
 .content h1:first-child {
-  margin: 36px 0;
+  margin-top: 20px;
   text-align: center;
 }
 h1, h2 {
@@ -183,6 +191,32 @@ h1, h2 {
   }
 }
 
+/*Clear Moz defaults psuedo element styling*/
+*:focus, *:visited, *:active, *:hover  { outline:0 !important;}
+*::-moz-focus-inner {border:0;}
+
+/*Clear Moz deafult select element styling*/
+/*@-moz-document url-prefix() {
+  select, select:-moz-focusring, select::-moz-focus-inner {
+     color: transparent !important;
+     text-shadow: 0 0 0 #000 !important;
+     background-image: none !important;
+     border:0;
+  }
+}*/
+
+footer {
+  position: absolute; bottom: 0;
+  width: 100%;
+  height: 72px;
+  padding-top: 12px;
+  clear: both;
+  background: linear-gradient(to right, rgba(0,193,199,.5) 25%, rgba(0,247,242,.3) 50%, rgba(0,193,199,.5));
+  border-radius: 2px 2px 0 0;
+  box-shadow: 0 0 2px rgba(105,62,57,.8);
+  text-align: center;
+}
+
 @media screen and (max-width: 400px) {
   header {
     height: 148px;
@@ -208,17 +242,6 @@ h1, h2 {
   }
 }
 
-footer {
-  position: absolute; bottom: 20px;
-  width: 100%;
-  height: 72px;
-  padding-top: 12px;
-  clear: both;
-  background: linear-gradient(to right, rgba(0,193,199,.5) 25%, rgba(0,247,242,.3) 50%, rgba(0,193,199,.5));
-  border-radius: 2px 2px 0 0;
-  box-shadow: 0 0 2px rgba(105,62,57,.8);
-  text-align: center;
-}
 
 
 
