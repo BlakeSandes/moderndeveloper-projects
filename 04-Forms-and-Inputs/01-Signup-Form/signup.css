@@ -107,13 +107,11 @@ input[type=email] {
 
 
 .dob .styled-select select {
-  background: transparent;
   outline: 0;
   width: 100%;
   margin: -2px 0;
   height: 24px;
   color: rgba(17,47,66,.4);
-  box-shadow: none;
 }
 
 .dob .styled-select select:focus {
