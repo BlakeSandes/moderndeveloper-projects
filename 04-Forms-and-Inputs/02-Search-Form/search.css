@@ -16,10 +16,11 @@
 
 .searchForm {
   width: 80%;
-  height: 720px;
+  height: 95%;
   margin: 0 auto;
+  padding: 12px 6px 24px;
   clear: both;
-  background: rgba(240,240,255,.75);
+  background: rgba(240,240,255,.45);
 }
 .searchForm p {
   width: 60%;
@@ -28,9 +29,9 @@
 
 form {
   max-width: 400px;
-  height: 545px;
+  height: 570px;
   margin: 0 auto;
-  padding: 12px;
+  padding: 24px 12px;
   display: block;
   background: linear-gradient(to bottom, rgba(171,173,178,.25), rgba(171,173,178,.35));
 }
@@ -233,4 +234,15 @@ input[type=submit]:hover {
   color: rgba(55,30,64,1);
   text-shadow: 0 0 1px white;
   cursor: pointer;
+}
+
+@media screen and (max-width: 400px) {
+  .searchForm {
+    width: 95%;
+    padding-bottom: 12px;
+  }
+  .searchForm p {
+    width: 90%;
+  }
+
 }
