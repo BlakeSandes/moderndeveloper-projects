@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,23 +61,23 @@
               <li class="dob">
                 <label for="dob">Birthday</label>
                 <div class="styled-select">
-                  <select name="dob" id="month" required>
-                    <option value="january" name="dob">January</option>
-                    <option value="february" name="dob">February</option>
-                    <option value="march" name="dob">March</option>
-                    <option value="april" name="dob">April</option>
-                    <option value="may" name="dob">May</option>
-                    <option value="june" name="dob">June</option>
-                    <option value="july" name="dob">July</option>
-                    <option value="august" name="dob">August</option>
-                    <option value="september" name="dob">September</option>
-                    <option value="october" name="dob">October</option>
-                    <option value="november" name="dob">November</option>
-                    <option value="december" name="dob">December</option>
-                  </select>
+                  <fieldset>
+                    <select name="month" id="month" required>
+                      <option value="January" name="month">January</option>
+                    </select>
+                  </fieldset>
+                  <fieldset>
+                    <select name="day" id="day">
+                      <option value="01" name="day">01</option>
+                    </select>
+                  </fieldset>
+                  <fieldset>
+                    <select name="year" id="year">
+                      <option value="2016" name="year">2016</option>
+                    </select>
+                  </fieldset>
                 </div>
-                <label for="day"><input type="text" id="day" name="dob" placeholder="Day" required></label>
-                <label for="year"><input type="text" id="year" name="dob" placeholder="Year" required></label>
+
               </li>
               <li>
                 <label for="user_password">Create a password</label>
