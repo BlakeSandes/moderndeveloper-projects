@@ -1,3 +1,115 @@
 @import url("../../styles/normalize.css");
 @import url("../../styles/default.css");
-@import url("../form-home/form_home.css")
+@import url("../form-home/form_home.css");
+
+.sidebar {
+  display: none;
+}
+
+.quest_form {
+  width: 80%;
+  min-width: 308px;
+  margin: 0 auto;
+  padding: 12px 0 24px;
+  background: rgba(255,166,188,.75);
+}
+
+.quest_form>p {
+  width: 60%;
+  min-width: 275px;
+
+}
+
+
+.quest_form p {
+  margin: 0 auto;
+  text-align: center;
+  background: linear-gradient(to top, rgba(100,108,125,.35),
+    rgba(164,176,204,.40) 50%, rgba(100,108,125,.35));
+  padding: 12px;
+  border-radius: 6px;
+}
+.quest_form form {
+  width: 100%;
+  margin: 0 auto;
+}
+.quest_form fieldset {
+  margin: 18px auto;
+  width: 45%;
+  min-width: 285px;
+  padding: 36px 0 12px;
+  text-align: center;
+  border-radius: 6px;
+  background: -webkit-linear-gradient(bottom, rgba(255,202,188,.75),
+    rgba(255,202,188,.35) 50%, rgba(255,202,188,.65));
+  background: -o-linear-gradient(bottom, rgba(255,202,188,.75),
+    rgba(255,202,188,.35) 50%, rgba(255,202,188,.65));
+  background: linear-gradient(to top, rgba(255,202,188,.75),
+    rgba(255,202,188,.35) 50%, rgba(255,202,188,.65));;
+
+  box-shadow: 0 0 1px 2px rgba(18,235,200, 1);
+}
+.quest_form fieldset legend {
+  position: relative;
+  display: block;
+}
+.quest_form fieldset legend:after {
+  content: attr(title);
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  font-size: 1.1em;
+  color: rgba(2,48,64,.8);
+  text-shadow: 0 0 1px white;
+}
+.quest_form li {
+  height: 32px;
+  margin: 2px 0;
+}
+.quest_form .flavors li {
+  width: 60%;
+  min-width: 140px;
+  margin: 2px auto;
+}
+.quest_form .flavors label,
+.quest_form .flavors input {
+  display: inline-block;
+  height: 100%;
+}
+.quest_form .flavors label {
+  float: right;
+  width: 75%;
+  height: 100%;
+  font-size: 1.2em;
+  padding: 4px 0;
+  border-radius: 8px;
+  color: rgba(22,222,208, 1);
+  text-shadow: 0 0 1px rgba(8,108,125,1);
+  background: rgba(255,166,188,.75);
+}
+.quest_form .flavors input {
+  display: block;
+  float:left;
+  width: 25%;
+  height: 32px;
+
+}
+
+.quest_form .personal p {
+  width: 90%;
+  min-width: 270px;
+  margin: 6px auto 12px;
+}
+
+.quest_form .personal:last-child label {
+  display: none;
+
+}
+.quest_form .personal:last-child input[type=text] {
+  width: 96%;
+  height: 100%;
+  min-width: 270px;
+  border-radius: 4px;
+  background: rgba(255,166,188,.75);
+  padding-left: 8px;
+}

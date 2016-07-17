@@ -22,7 +22,6 @@
 }
 
 .sidebar {
-  z-index: 100;
   position: relative;
   position: absolute;
   top: 20px;

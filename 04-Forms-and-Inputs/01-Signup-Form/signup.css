@@ -155,7 +155,7 @@ input[type=email] {
   background: rgba(201,255,255,1);
 }
 
-.styled-select:after {
+/*.styled-select:after {
   content: '⇳';
   line-height: inherit;
   position: absolute;
@@ -163,7 +163,7 @@ input[type=email] {
   right: 0;
   font-size: 2em;
   z-index: 0;
-}
+}*/
 
 
 /*********Button Styles*********/
