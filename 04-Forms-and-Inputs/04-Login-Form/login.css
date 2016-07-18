@@ -1,3 +1,176 @@
+
 @import url("../../styles/normalize.css");
 @import url("../../styles/default.css");
-@import url("../form-home/form_home.css")
+@import url("../form-home/form_home.css");
+
+.sidebar {
+  display: none;
+}
+
+
+.login {
+  width: 100%;
+}
+
+.login>h1 {
+  padding-bottom: 18px;
+}
+.login form {
+  position: relative;
+  width: 300px;
+  margin: 0 auto;
+  display: block;
+  background: linear-gradient(to right,
+    rgba(27,204,255,.65), rgba(90,227,154,.65));
+  box-shadow: 0 0 1px rgba(2,48,64,.8);
+}
+.login .heading {
+  display: block;
+  width: 100%;
+  height: 2em;
+  text-align: center;
+  border-bottom: 1px solid rgba(39,54,64,.35);
+}
+.login .heading p {
+  padding-top: .25em;
+  color: rgba(39,54,64,.75);
+}
+.login form fieldset {
+  border: none;
+  margin-top: 8px;
+  position: relative;
+  padding-top: 30px;
+}
+.login fieldset:before {
+  position: absolute;
+  content: '∞';
+  color: rgba(130,57,103,1);
+  text-shadow: 0 0 1px white;
+  font-size: 3em;
+  top: -8px;
+  left: 130px;
+}
+
+.login li {
+  width: 100%;
+  height: 36px;
+  margin: 12px 0;
+  line-height: 1.2em;
+  box-shadow: 0 0 1px rgba(2,48,64,.8);
+}
+
+.login input[type=text],
+.login input[type=password] {
+  width: 100%;
+  height: 100%;
+  padding-left: 8px;
+  background: linear-gradient(to right,
+    rgba(255,215,149,.75), rgba(196,82,149,.75))
+}
+.password {
+  position: relative;
+}
+.forgot {
+  position: absolute;
+  top: .375em;
+  right: 12px;
+  padding: 3px;
+  border-radius: 2px;
+  -webkit-transition: background .5s, color .25s, box-shadow .75s;
+          transition: background .5s, color .25s, box-shadow: .75s;
+}
+.forgot:hover {
+  background: rgba(255,215,149,.5);
+  box-shadow: 0 0 1px rgba(39,54,64,.75);
+}
+
+.login .remember {
+  width: 65%;
+  height: 32px;
+  box-shadow: none;
+}
+.remember span {
+  float: left;
+  width: 20%;
+  height: 100%;
+  margin-right: 2%;
+  border-radius: 3px;
+  background: linear-gradient(to right,
+    rgba(255,215,149,.5), rgba(196,82,149,.45));
+}
+.remember input[type=checkbox] {
+  height: 100%;
+  width: 50%;
+  margin: -1px 0 0 9px;
+}
+.remember input[type=checkbox]:hover {
+  cursor: pointer;
+}
+.remember label {
+  position: relative;
+  float: right;
+  width: 69%;
+  height: 100%;
+  margin-left: 4%;
+  padding-top: 6px;
+  text-align: center;
+  color: rgba(39,54,64,.75);
+  background: linear-gradient(to right,
+    rgba(255,215,149,.5), rgba(196,82,149,.45));
+}
+.remember label:before {
+  content: '';
+  position: absolute; top: 0; left: -12px;
+  width: 0;
+  height: 0;
+  border: 12px solid transparent;
+  border-right-color: rgba(255,215,149,.5);
+  border-width: 0  12px 10px 0;
+  display: block;
+}
+
+.login button {
+  border: none;
+  float: right;
+  width: 100%;
+  height: 36px;
+  margin: 12px 0;
+  font-size: 1.2em;
+  color: white;
+  text-shadow: 0 0 1px black;
+  background: linear-gradient(to top,
+    rgba(15,160,176,85), rgba(15,160,176,.45));
+  box-shadow: 0 0 1px 2px rgba(18,235,200, 1);
+  -webkit-transition: background .5s, color .25s, font-size .5s;
+          transition: background .5s, color .25s, font-size .5s;
+}
+.login button:hover {
+  cursor: pointer;
+  background: rgba(255,208,141,.60);
+  color: rgba(130,57,103,1);
+  text-shadow: 0 0 3px white;
+  font-size: 1.3em;
+}
+.login .no_account {
+  height: 2.5em;
+  text-align: center;
+  border-top: 1px solid rgba(39,54,64,.35);
+  color: rgba(39,54,64,.75);
+}
+.login .no_account p {
+  margin-top: .62em;
+}
+.login .no_account a {
+  padding: 4px;
+  margin-left: 6px;
+  border-radius: 2px;
+  color: white;
+  text-shadow: 0 0 1px black;
+  box-shadow: 0;
+  -webkit-transition: background .5s, color .25s, box-shadow .75s;
+          transition: background .5s, color .25s, box-shadow: .75s;
+}
+.login .no_account a:hover {
+  background: rgba(255,215,149,.5);
+  box-shadow: 0 0 1px rgba(39,54,64,.75);
+}

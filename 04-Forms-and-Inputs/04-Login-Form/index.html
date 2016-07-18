@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,8 +39,34 @@
           <li><a href="../08-Credit-Debit-Form/index.html">Credit & Debit</a></li>
         </ul>
       </aside>
-      <main class="form_home content">
+      <main class="login form_home content">
         <h1>Login Form</h1>
+        <form action="">
+          <article class="heading">
+            <p>Log in to your account</p>
+          </article>
+          <fieldset>
+            <ol>
+              <li>
+                <label for="username"></label>
+                <input type="text" id="username" name="username" placeholder="username">
+              </li>
+              <li class="password">
+                <label for="password"></label>
+                <input type="password" id="password" name="password" placeholder="password">
+                <a class="forgot" href="">Forgot?</a>
+              </li>
+              <li class="remember">
+                <label for="remember_me">Remember Me</label>
+                <span><input type="checkbox" id="remember_me" name="remember_me"></span>
+              </li>
+              <button type="submit" name="login">Log in</button>
+            </ol>
+          </fieldset>
+          <article class="no_account">
+            <p>Don't have an account? <a href="../01-Signup-Form/index.html">Sign up</a></p>
+          </article>
+        </form>
       </main>
     </div>
     <footer></footer>
