@@ -12,6 +12,7 @@
   margin: 0 auto;
   padding: 12px 0 24px;
   background: rgba(255,166,188,.75);
+  box-shadow: 0 0 1px rgba(100,108,125,.75)
 }
 
 .quest_form>p {
@@ -27,6 +28,7 @@
   background: linear-gradient(to top, rgba(100,108,125,.35),
     rgba(164,176,204,.40) 50%, rgba(100,108,125,.35));
   padding: 12px;
+  box-shadow: 0 0 1px rgba(100,108,125,.95);
   border-radius: 6px;
 }
 .quest_form form {
@@ -69,12 +71,13 @@
 .quest_form .flavors li {
   width: 60%;
   min-width: 140px;
-  margin: 2px auto;
+  margin: 3px auto;
 }
 .quest_form .flavors label,
 .quest_form .flavors input {
   display: inline-block;
   height: 100%;
+  box-shadow: 0 0 1px rgba(100,108,125,.30)
 }
 .quest_form .flavors label {
   float: right;
@@ -112,4 +115,5 @@
   border-radius: 4px;
   background: rgba(255,166,188,.75);
   padding-left: 8px;
+  box-shadow: 0 0 1px rgba(100,108,125,.35)
 }
