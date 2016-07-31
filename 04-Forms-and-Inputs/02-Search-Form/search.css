@@ -1,3 +1,4 @@
+
 @import url("../../styles/normalize.css");
 @import url("../../styles/default.css");
 @import url("../form-home/form_home.css");
@@ -11,10 +12,9 @@
 
 .searchForm {
   width: 80%;
-  height: 95%;
+  height: 100%;
   margin: 0 auto;
   padding: 12px 6px 24px;
-  clear: both;
   background: rgba(240,240,255,.45);
 }
 .searchForm p {
@@ -24,7 +24,7 @@
 
 form {
   max-width: 400px;
-  height: 570px;
+  /*height: 570px;*/
   margin: 0 auto;
   padding: 24px 12px;
   display: block;
@@ -240,4 +240,10 @@ input[type=submit]:hover {
     width: 90%;
   }
 
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
 }

@@ -1,3 +1,9 @@
+
 @import url("../../styles/normalize.css");
 @import url("../../styles/default.css");
-@import url("../form-home/form_home.css")
+@import url("../form-home/form_home.css");
+
+.sidebar {
+  display: none;
+}
+
