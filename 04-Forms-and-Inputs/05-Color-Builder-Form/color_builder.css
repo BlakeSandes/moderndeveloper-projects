@@ -1,4 +1,163 @@
 
+
+
+
+
 @import url("../../styles/normalize.css");
 @import url("../../styles/default.css");
-@import url("../form-home/form_home.css")
+@import url("../form-home/form_home.css");
+
+.sidebar {
+   display: none;
+}
+
+.color_form {
+  display: block;
+  width: 100%;
+  height: inherit;
+}
+form {
+  display: block;
+  width: 25%;
+  min-width: 242px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 12px;
+  border-radius: 8px;
+  background: rgba(64,65,74,1);
+}
+.color_form fieldset {
+  margin: 0;
+  padding: 0;
+}
+.sliders {
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.color-display {
+  display: block;
+  width: 100%;
+  padding: 4px;
+  height: 100%;
+}
+.color-display textarea {
+  border: none;
+  display: block;
+  width: 180px;
+  height: 180px;
+  margin: 4px auto 12px;
+  border-radius: 50%;
+  box-shadow: 0 0 1px 2px grey;
+}
+
+label {
+  /*margin: 12px 0 6px 12px;*/
+  color: #fff;
+}
+input[type=range] {
+  position: relative;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 24px;
+  margin: 4px 0;
+  padding: 0;
+  border-radius: 12px;
+  padding: 0 6px;
+  box-shadow: 0 0 1px 1px black;
+}
+
+input[type=range]:focus {
+  -webkit-appearance: none;
+  -moz-outline-style: none;
+  box-shadow: 0 0 1px black;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+input[type=range]:hover {
+  cursor: pointer;
+}
+input[type=range].red {
+  background: linear-gradient(to right, #fff,#ff0000);
+}
+input[type=range].green {
+  background: linear-gradient(to right, #fff,#00ff00);
+}
+input[type=range].blue {
+  background: linear-gradient(to right, #fff,#0000ff);
+}
+input[type=range].alpha {
+  background: linear-gradient(to right, rgba(255,255,255,1),rgba(73,82,104,.5));
+}
+input[type=range]::-moz-focus-inner {
+  border: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  box-sizing: border-box;
+   position: absolute;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: rgba(116,207,255,.85);
+  border-bottom-color: rgba(116,207,255,.85);
+  border-right-color: rgba(204,17,102,.75);
+  border-left-color: rgba(204,17,102,.75);
+  background: none;
+}
+
+input[type=range]::-moz-range-thumb {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: rgba(116,207,255,.85);
+  border-bottom-color: rgba(116,207,255,.85);
+  border-right-color: rgba(204,17,102,.75);
+  border-left-color: rgba(204,17,102,.75);
+  background: none;
+}
+
+input[type=range]::-ms-thumb {
+   position: absolute;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: rgba(116,207,255,.85);
+  border-bottom-color: rgba(116,207,255,.85);
+  border-right-color: rgba(204,17,102,.75);
+  border-left-color: rgba(204,17,102,.75);
+  background: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  height: 12px;
+  border-radius: 5px;
+  box-shadow: 0 0 1px grey;
+  background: linear-gradient(to top, rgba(255,255,255,.25),
+    rgba(255,255,255,.45) 50%, rgba(255,255,255,.25));
+}
+
+input[type=range]::-moz-range-track {
+  height: 12px;
+  border-radius: 5px;
+  box-shadow: 0 0 1px grey;
+  background: linear-gradient(to top, rgba(255,255,255,.25),
+    rgba(255,255,255,.45) 50%, rgba(255,255,255,.25));
+}
+
+input[type=range]::-ms-track {
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+  cursor: pointer;
+  height: 12px;
+  border-radius: 5px;
+  box-shadow: 0 0 1px grey;
+  background: linear-gradient(to top, rgba(255,255,255,.25),
+    rgba(255,255,255,.45) 50%, rgba(255,255,255,.25));
+}
+

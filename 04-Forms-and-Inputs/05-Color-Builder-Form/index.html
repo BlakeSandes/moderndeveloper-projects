@@ -1,4 +1,8 @@
 
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,8 +43,23 @@
           <li><a href="../08-Credit-Debit-Form/index.html">Credit & Debit</a></li>
         </ul>
       </aside>
-      <main class="form_home content">
+      <main class="color_form form_home content">
         <h1>Colour Builder</h1>
+        <form action="">
+          <fieldset class="color-display">
+            <textarea name="color_display" id="display"></textarea>
+          </fieldset>
+          <fieldset class="sliders">
+            <label for="red"></label>
+            <input type="range" min="0" max="255" step="5" id="red" name="color" class="red">
+            <label for="green"></label>
+            <input type="range" min="0" max="255" step="5" id="green" name="color" class="green">
+            <label for="blue"></label>
+            <input type="range" min="0" max="255" step="5" id="blue" name="color" class="blue">
+            <label for="alpha"></label>
+            <input type="range" min="0" max="1" step="0.01" id="alpha" name="alpha" class="alpha">
+          </fieldset>
+        </form>
       </main>
     </div>
     <footer></footer>
