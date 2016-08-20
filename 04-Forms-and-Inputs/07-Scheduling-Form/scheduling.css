@@ -1,3 +1,91 @@
 @import url("../../styles/normalize.css");
 @import url("../../styles/default.css");
-@import url("../form-home/form_home.css")
+@import url("../form-home/form_home.css");
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.sidebar {
+  display: none;
+}
+
+.schedule_form {
+  min-width: 300px;
+  width: 50%;
+
+}
+
+.schedule_form form {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(to right,rgba(63,255,246,1),
+    rgba(63,255,246,.05));
+}
+.schedule_form fieldset {
+  width: 100%;
+  margin-bottom: 16px;
+  margin-left: 0;
+  background: rgba(63,255,246,1);
+  border-right: 1px solid rgba(127,127,127,.5);
+}
+.schedule_form .date {
+  margin-top: -81px;
+  padding-top: 80px;
+}
+.schedule_form .contact {
+  margin-bottom: 0;
+  border-bottom: 1px solid rgba(127,127,127,.5);
+}
+
+.schedule_form li {
+  height: 100%;
+}
+
+.schedule_form label {
+  display: block;
+  width: 100%;
+  float: left;
+  margin: 12px 0 4px;
+  padding: 6px;
+  color: rgba(45,15,40,1);
+  text-shadow: 0 0 2px rgba(128,245,255,1);
+}
+.schedule_form input, .schedule_form select {
+  width: 50%;
+  height: 32px;
+  float: left;
+  padding-left: 6px;
+  background: rgba(255,125,236,.20);
+  box-shadow: inset 0 0 1px rgba(255,125,236,.50) ;
+}
+.schedule_form .date li:first-child label {
+  display: block;
+  width: 50%;
+  height: 32px;
+  float: left;
+}
+.schedule_form .date input[type=checkbox] {
+  margin-top: 12px;
+}
+.schedule_form .date select {
+  width: 100%;
+  -moz-appearance: none;
+}
+
+.schedule_form .message textarea {
+  -moz-appearance: none;
+  width: 100%;
+  height: 32px;
+  border: 0;
+  background: rgba(255,125,236,.20);
+  resize: none;
+  padding: 8px 0 0 6px;
+}
+
+.schedule_form .contact input {
+  width: 100%;
+}
+

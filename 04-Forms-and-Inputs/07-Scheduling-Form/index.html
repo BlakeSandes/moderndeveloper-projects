@@ -1,3 +1,8 @@
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,8 +43,53 @@
           <li><a href="../08-Credit-Debit-Form/index.html">Credit & Debit</a></li>
         </ul>
       </aside>
-      <main class="form_home content">
-        <h1>Scheduling Form</h1>
+
+      <main class="schedule_form form_home content">
+        <form action="" class="clearfix">
+          <h1>Scheduling Form</h1>
+          <fieldset class="date">
+            <ol class="clearfix">
+              <li>
+                <label for="all-day">All day</label>
+                <input type="checkbox" id="all-day">
+              </li>
+              <li>
+                <label for="from">From</label>
+                <input type="date" id="from" name="date" placeholder="date">
+                <input type="time" id="from" name="time" placeholder="time">
+              </li>
+              <li>
+                <label for="to">To</label>
+                <input type="date" id="to" name="date" placeholder="date">
+                <input type="time" id="to" name="time" placeholder="time">
+              </li>
+              <li>
+                <label for="timezone">Timezone</label>
+                <select name="" id="timezone"></select>
+              </li>
+            </ol>
+          </fieldset>
+          <fieldset class="message">
+            <ol class="clearfix">
+              <li>
+                <label for="message">Message</label>
+                <textarea name="" id="message"></textarea>
+              </li>
+            </ol>
+          </fieldset>
+          <fieldset class="contact">
+            <ol class="clearfix">
+              <li>
+                <label for="tel">Telephone</label>
+                <input type="tel" id="tel">
+              </li>
+              <li>
+                <label for="email">Email</label>
+                <input type="email" id="email">
+              </li>
+            </ol>
+          </fieldset>
+        </form>
       </main>
     </div>
     <footer></footer>
