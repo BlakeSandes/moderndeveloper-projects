@@ -31,6 +31,7 @@
   background: rgba(63,255,246,1);
   border-right: 1px solid rgba(127,127,127,.5);
 }
+
 .schedule_form .date {
   margin-top: -81px;
   padding-top: 80px;
@@ -89,3 +90,24 @@
   width: 100%;
 }
 
+button {
+  width: 100%;
+  height: 32px;
+  padding-top: 2px;
+  margin-top: 8px;
+  border: none;
+  box-shadow: 0 0 1px grey;
+  font-size: 1.125em;
+  color: white;
+  text-shadow: 0 0 1px black;
+  background: rgba(127,101,127, .75);
+  border-radius: 2px;
+  -webkit-transition: background .5s, color .25s;
+          transition: background .5s, color .25s;
+}
+
+button:hover {
+  cursor: pointer;
+  background: rgba(255,125,236,.60);
+  color: white;
+}
