@@ -15,31 +15,34 @@
 .schedule_form {
   min-width: 300px;
   width: 50%;
-
+  margin-top: 24px;
 }
 
 .schedule_form form {
-  position: relative;
   width: 100%;
-  background: linear-gradient(to right,rgba(63,255,246,1),
-    rgba(63,255,246,.05));
-}
-.schedule_form fieldset {
-  width: 100%;
-  margin-bottom: 16px;
-  margin-left: 0;
-  background: rgba(63,255,246,1);
-  border-right: 1px solid rgba(127,127,127,.5);
+  background: linear-gradient(to right, rgba(63,255,246,1) 25%,
+    transparent);
+  border-radius: 3px 0 0 3px;
 }
 
-.schedule_form .date {
-  margin-top: -81px;
-  padding-top: 80px;
+.schedule_form .heading {
+  margin-bottom: 12px;
+  border-top-left-radius: 3px;
 }
-.schedule_form .contact {
-  margin-bottom: 0;
-  border-bottom: 1px solid rgba(127,127,127,.5);
+.schedule_form .heading h1 {
+  margin: 0;
+  padding: 12px 0;
 }
+
+.schedule_form fieldset, .heading {
+  width: 100%;
+  margin-bottom: 12px;
+  margin-top: 0;
+  margin-left: 0;
+  background: rgba(63,255,246,1);
+  border-radius: 0 3px 3px 0;
+}
+
 
 .schedule_form li {
   height: 100%;
@@ -86,6 +89,11 @@
   padding: 8px 0 0 6px;
 }
 
+.schedule_form .contact {
+  border-radius: 0 3px 3px 3px;
+  margin-bottom: 0;
+  border-bottom: 1px solid rgba(127,127,127,.5);
+}
 .schedule_form .contact input {
   width: 100%;
 }
@@ -94,7 +102,7 @@ button {
   width: 100%;
   height: 32px;
   padding-top: 2px;
-  margin-top: 8px;
+  margin-top: 12px;
   border: none;
   box-shadow: 0 0 1px grey;
   font-size: 1.125em;
@@ -108,6 +116,10 @@ button {
 
 button:hover {
   cursor: pointer;
+  background: rgba(255,125,236,.60);
+  color: white;
+}
+button:focus {
   background: rgba(255,125,236,.60);
   color: white;
 }

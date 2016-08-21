@@ -189,9 +189,8 @@ form button {
 
 
 button:hover, button:focus {
-  background: rgba(2,220,214,1);
+  background: rgba(255,192,124,1);
   color: rgba(17,47,66,.65);
-  text-shadow: 0 0 1px white;
   cursor: pointer;
 
 }
