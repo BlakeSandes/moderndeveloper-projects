@@ -4,6 +4,11 @@
 @import url("../../styles/default.css");
 @import url("../form-home/form_home.css");
 
+.clearfix {
+  content: "";
+  display: table;
+  clear: both;
+}
 .sidebar {
   display: none;
 }
@@ -12,9 +17,10 @@
 }
 
 form {
-  width: 300px;
+  width: 50%;
+  min-width: 300px;
   margin: 0 auto;
-  padding: 4px;
+  padding: 2px;
   display: block;
   background: linear-gradient(to bottom, rgba(171,173,178,.25), rgba(171,173,178,.35));
   box-shadow: 0 0 1px yellow;
@@ -32,28 +38,26 @@ form fieldset {
 
 .signup li {
   text-align: center;
-  height: 100%;
-  clear: both;
   line-height: 1.5em;
+  margin-bottom: 8px;
 }
 
 .signup label {
   text-align: left;
-  margin-bottom: 2px;
+  width: 100%;
+  margin-bottom: 4px;
   padding: 4px 0;
   color: rgba(17,47,66,.7);
   text-shadow: 0 0 1px #fff;
 }
-.signup input {
+
+.signup input  {
   width: 100%;
   height: 30px;
-  margin-bottom: 18px;
+  /*margin-bottom: 18px;*/
   padding: 2px 6px;
-}
-
-.signup input,
-.dob .styled-select fieldset  {
-  background: linear-gradient(to top, rgba(250,255,250,.65), rgba(250,255,250,.45) 50%, rgba(250,255,250,1));
+  background: linear-gradient(to top, rgba(250,255,250,.65),
+    rgba(250,255,250,.45) 50%, rgba(250,255,250,1));
   color: rgba(17,47,66,.7);
   box-shadow: 0 0 1px rgba(17,47,66,.7);
   border-radius: 1px;
@@ -65,10 +69,10 @@ form fieldset {
   color: rgba(17,47,66,.65);
   text-shadow: 0 0 1px white;
   cursor: pointer;
-}
+}/*
 .signup input:focus {
   background: rgba(201,255,255,.75);
-}
+}*/
 
 input[type=email] {
   text-align: right;
@@ -91,61 +95,56 @@ input[type=email] {
 
 /*******Birthday Styles*******/
 
-
-.dob label:not(:first-child) {
-  display: inline-block;
-  float: left;
-}
-
 .dob .styled-select {
   width: 100%;
   height: 30px;
   display: block;
-  margin-bottom: 18px;
+  /*margin-bottom: 18px;*/
 }
-.dob .styled-select fieldset {
+
+.dob .styled-select .select {
+  float: left;
   height: 100%;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  float: left;
+  text-align: center;
+  background: linear-gradient(to top, rgba(250,255,250,.65),
+    rgba(250,255,250,.45) 50%, rgba(250,255,250,1));
+  color: rgba(17,47,66,.7);
+  box-shadow: 0 0 1px rgba(17,47,66,.7);
+  border-radius: 1px;
 }
-.dob .styled-select fieldset select {
-  float: left;
-  outline: 0;
+
+.dob .styled-select select {
+  width: 100%;
   height: 100%;
   text-shadow: 0 0 rgba(17,47,66,.4);
-  text-align: center;
-  padding: 2px 6px;
-  -webkit-transition: background .5s, text-shadow .25s;
+  background: linear-gradient(to top, rgba(250,255,250,.65),
+    rgba(250,255,250,.45) 50%, rgba(250,255,250,1));
+   -webkit-transition: background .5s, text-shadow .25s;
           transition: background .5s, text-shadow .25s;
 }
-.dob .styled-select fieldset select:hover {
+.dob .styled-select  select:hover {
   background: rgba(2,220,214,1);
   text-shadow: 0 0 rgba(17,47,66,.65);
   cursor: pointer;
 }
-.dob .styled-select fieldset:first-child {
-  position: relative;
+.dob .styled-select .select:first-child {
   width: 40%;
-  height: 100%;
   margin-right: 1%;
 }
 
-.dob .styled-select fieldset:nth-child(0n+2) {
+.dob .styled-select .select:nth-child(0n+2) {
   width: 23%;
-  height: 100%;
   margin: 0 1%;
 }
-.dob .styled-select fieldset:last-child  {
+.dob .styled-select .select:last-child  {
   width: 33%;
-  height: 100%;
   margin-left: 1%;
 }
 
 
 .dob .styled-select select option {
   width: 100%;
+  height: 100%;
   box-shadow: 0 0 1px grey;
   margin: 2px 0;
   padding: 0;
@@ -155,16 +154,6 @@ input[type=email] {
 .dob .styled-select select:focus {
   background: rgba(201,255,255,1);
 }
-
-/*.styled-select:after {
-  content: '⇳';
-  line-height: inherit;
-  position: absolute;
-  top: 1px;
-  right: 0;
-  font-size: 2em;
-  z-index: 0;
-}*/
 
 
 /*********Button Styles*********/

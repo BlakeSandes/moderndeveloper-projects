@@ -45,7 +45,7 @@
           <fieldset>
             <legend>Sign Up</legend>
             <ol>
-              <li class="name">
+              <li class="name clearfix">
                 <label for="first_name last_name">Full Name</label>
                 <input type="text" id="first_name" name="name" placeholder="First"required>
                 <input type="text" id="last_name" name="name" placeholder="Last" required>
@@ -61,31 +61,30 @@
               <li class="dob">
                 <label for="dob">Birthday</label>
                 <div class="styled-select">
-                  <fieldset>
+                  <div class="select">
                     <select name="month" id="month" required>
-                      <option value="January" name="month">January</option>
+                        <option value="January" name="month">January</option>
                     </select>
-                  </fieldset>
-                  <fieldset>
+                  </div>
+                  <div class="select" >
                     <select name="day" id="day">
-                      <option value="01" name="day">01</option>
+                        <option value="01" name="day">01</option>
                     </select>
-                  </fieldset>
-                  <fieldset>
+                  </div>
+                  <div class="select">
                     <select name="year" id="year">
-                      <option value="2016" name="year">2016</option>
+                        <option value="2016" name="year">2016</option>
                     </select>
-                  </fieldset>
+                  </div>
                 </div>
-
               </li>
-              <li>
+              <li class="password">
                 <label for="user_password">Create a password</label>
                 <input type="password" id="user_password" name="password" maxlength="16" required>
               </li>
-              <li>
-                <label for="user_password">Confirm your password</label>
-                <input type="password" id="user_password" name="password" maxlength="16" required>
+              <li class="password">
+                <label for="twice_password">Confirm your password</label>
+                <input type="password" id="twice_password" name="password" maxlength="16" required>
               </li>
             </ol>
             <button type="submit" name="signup">Sign Up</button>

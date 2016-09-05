@@ -1,3 +1,46 @@
+
 @import url("../../styles/normalize.css");
 @import url("../../styles/default.css");
-@import url("../form-home/form_home.css")
+@import url("../form-home/form_home.css");
+
+.sidebar {
+  display: none;
+}
+
+.cc_form {
+  background: yellow;
+  min-width: 300px;
+}
+.cc_form form {
+/*  width: 100%;
+*/}
+.cc_form li {
+  display: block;
+  float: left;
+  margin-bottom: 3px;
+  background: grey;
+}
+.cc_form label {
+  padding: ;
+}
+
+.name li:first-child {
+  width: 43%;
+}
+.name li:nth-child(2n) {
+  width: 10%;
+  margin: 0 2%;
+}
+.name li:last-child {
+  width: 43%;
+}
+
+.ccnumber li {
+  width: 100%;
+}
+.ccnumber li:first-child  {
+  width: 60%;
+}
+.ccnumber li:last-child {
+  width: 40%;
+}
