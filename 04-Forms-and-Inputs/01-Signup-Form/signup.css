@@ -159,9 +159,6 @@ input[type=email] {
 /*********Button Styles*********/
 
 form button {
-  border-style: none;
-  outline: 0;
-  border: 0;
   float: right;
   margin: 18px 0 0;
   width: 96px;

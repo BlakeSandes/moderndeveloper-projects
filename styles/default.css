@@ -137,6 +137,7 @@ nav ul li a {
 }
 
 a {
+  outline: none;
   text-decoration: none;
   color: rgba(2,48,64,.8);
   text-shadow: 0 0 1px white;
@@ -163,21 +164,8 @@ ul,ol {
   margin: 0;
   padding: 0;
 }
-/*Clear Moz defaults psuedo element styling*/
-*:focus, *:visited, *:active, *:hover  { outline:0 !important;}
-*::-moz-focus-inner {border:0;}
 
-/*Clear Moz deafult select element styling*/
-@-moz-document url-prefix() {
-  select, select:-moz-focusring, select::-moz-focus-inner {
-     color: transparent !important;
-     /*text-shadow: 0 0 0 #000 !important;*/
-     background-image: none !important;
-     border:0;
-     background: transparent;
-     box-shadow: none;
 
-}
 
 footer {
   position: absolute;
@@ -191,6 +179,52 @@ footer {
   text-align: center;
 }
 
+/********Clear Moz defaults psuedo element styling********/
+*:focus, *:visited, *:active, *:hover  { outline:0 !important;}
+*::-moz-focus-inner {border:0;}
+
+/*******Clear Moz deafult select element styling********/
+@-moz-document url-prefix() {
+  select, select:-moz-focusring, select::-moz-focus-inner {
+    color: transparent;
+    text-shadow: 0 0 0 rgba(0,35,64,.45);
+    background-image: none;
+    border:0;
+    background: transparent;
+    box-shadow: none;
+  }
+}
+
+/********Placeholder defaults********/
+
+::-webkit-input-placeholder {
+  color: rgba(0,35,64,.45);
+}
+::-moz-placeholder {
+  color: rgba(0,35,64,.45);
+}
+:-ms-input-placeholder {
+  color: rgba(0,35,64,.45);
+}
+:-moz-placeholder {
+  color: rgba(0,35,64,.45);
+}
+
+/********Button, select, input defualts********/
+
+button, input[type=submit] {
+  outline: 0;
+  border: 0;
+  border-style: none;
+}
+
+input:required {
+  box-shadow: none;
+}
+
+input:invalid {
+  box-shadow: none;
+}
 /***************FOUNDATION MEDIA QUERIES ***************/
 
 @media screen and (max-width: 634px){
@@ -253,5 +287,7 @@ footer {
   clear: both;
 }
 
-
+::-moz-placeholder {
+  opacity: 1;
+}
 
