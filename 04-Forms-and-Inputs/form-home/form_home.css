@@ -1,8 +1,3 @@
-
-
-
-
-
 @import url("../../styles/normalize.css");
 @import url("../../styles/default.css");
 
@@ -20,12 +15,13 @@
 }
 .form_home h1 {
   text-align: center;
+  min-width: 256px;
 }
 
 .sidebar {
   position: relative;
   position: absolute;
-  top: 20px;
+  top: 80px;
   left: 0;
   width: 162px;
   text-align: center;
