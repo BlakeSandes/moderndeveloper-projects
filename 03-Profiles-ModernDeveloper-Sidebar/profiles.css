@@ -1,6 +1,7 @@
 
 
 
+
 @import url("../styles/normalize.css");
 @import url("../styles/default.css");
 
@@ -12,7 +13,7 @@
 .profiles-main {
   background: linear-gradient(to top, rgba(138,223,255,.25), rgba(93,200,237,.45));
   box-shadow: -2px 0 2px 1px rgba(43,87,115,.50), 1px 0 1px rgba(43,87,115,.45);
-  border: 2px solid rgba(9,135,178,.25);
+  border: 3px solid rgba(9,135,178,.25);
   border-radius: 3px;
   width: 25%;
   /*float: right;*/
@@ -21,13 +22,14 @@
 .profiles-main .imgbox {
   width: 100%;
   min-width: 312px;
-  padding:12px 0;
-  border-bottom: 2px solid rgba(9,135,178,.25);
+  padding:12px 3px;
+  border-top: 3px solid rgba(9,135,178,.25);
+  border-bottom: 3px solid rgba(9,135,178,.25);
 }
 .profiles-main img {
   display: block;
   width: 100%;
-  border-radius: 6px;
+  border-radius: 3px;
   box-shadow: 0 0 2px rgba(43,87,115,1);
 
 }
@@ -58,18 +60,23 @@
 }
 .profiles-main h2 {
   text-align: center;
+  color: rgb(173,97,139);
+  text-shadow: 0 0 1px white;
+  margin-bottom: 0;
 }
 
 .profiles-main p {
   text-align: center;
-  padding: 6px;
+  padding: 0 6px;
 }
 .profileback {
   display: block;
   position: relative;
-  width: 118px;
+  width: 124px;
   float: right;
   margin: 0 12px 12px 0;
+  color: rgb(117,95,116);
+  font-size: 1.025em;
 }
 .profileback:before {
   content: '⇠';
