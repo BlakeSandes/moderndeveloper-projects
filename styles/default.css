@@ -151,7 +151,7 @@ a {
 a:hover {
   background: rgba(68,219,199,.7);
 }
-.content h1:first-child {
+.content > h1:first-child {
   margin-top: 20px;
   text-align: center;
 }
@@ -171,14 +171,29 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 72px;
+  height: 64px;
   clear: both;
   background: linear-gradient(to right, rgba(0,193,199,.5) 25%, rgba(0,247,242,.3) 50%, rgba(0,193,199,.5));
   border-radius: 2px 2px 0 0;
   box-shadow: 0 0 2px rgba(105,62,57,.8);
   text-align: center;
+  line-height: 64px;
 }
 
+footer span {
+  position: relative;
+  font-size: 1.145em;
+  text-shadow: 0 0 1px white;
+}
+footer span:before {
+  content: '©';
+  margin-right: 4px;
+  color: orange;
+}
+footer span:after {
+  content: 'Blake Wilson';
+  color: rgb(110,112,171);
+}
 /********Clear Moz defaults psuedo element styling********/
 *:focus, *:visited, *:active, *:hover  { outline:0 !important;}
 *::-moz-focus-inner {border:0;}

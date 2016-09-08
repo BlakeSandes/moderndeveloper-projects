@@ -1,4 +1,85 @@
 
+
+
 @import url("../styles/normalize.css");
 @import url("../styles/default.css");
 
+.clearfix {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.profiles-main {
+  background: linear-gradient(to top, rgba(138,223,255,.25), rgba(93,200,237,.45));
+  box-shadow: -2px 0 2px 1px rgba(43,87,115,.50), 1px 0 1px rgba(43,87,115,.45);
+  border: 2px solid rgba(9,135,178,.25);
+  border-radius: 3px;
+  width: 25%;
+  /*float: right;*/
+  margin: 0 auto;
+}
+.profiles-main .imgbox {
+  width: 100%;
+  min-width: 312px;
+  padding:12px 0;
+  border-bottom: 2px solid rgba(9,135,178,.25);
+}
+.profiles-main img {
+  display: block;
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 0 2px rgba(43,87,115,1);
+
+}
+
+.profiles-main h1,
+.profiles-main h2 {
+  text-shadow: 0 0 1px white;
+}
+.profiles-main h1 {
+  text-align: left;
+  margin: 12px 0 0 12px;
+  /*padding-left: 8px;*/
+  width: 10%;
+  line-height: 1.125em;
+}
+.profiles-main h1 a {
+  color: rgb(173,97,139);
+}
+.firstname, .lastname {
+  display: inline-block;
+}
+.firstname::first-letter, .lastname::first-letter {
+  color: rgb(117,95,116);
+  font-size: 1.135em;
+}
+.profiles-main h1 a:hover {
+  background: none;
+}
+.profiles-main h2 {
+  text-align: center;
+}
+
+.profiles-main p {
+  text-align: center;
+  padding: 6px;
+}
+.profileback {
+  display: block;
+  position: relative;
+  width: 118px;
+  float: right;
+  margin: 0 12px 12px 0;
+}
+.profileback:before {
+  content: '⇠';
+  position: absolute;
+  top: -2px;
+  left: -24px;
+  font-size: 1.25em;
+}
+a.profileback:hover {
+  background: none;
+  cursor: pointer;
+  color: rgb(237,119,131);
+}
