@@ -1,4 +1,7 @@
 
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,27 +28,47 @@
     </header>
     <main class="products_page content clearfix">
       <h1>Product Listings Page</h1>
-
+      <div class="basket_wrapper">
+        <aside class="basket clearfix">
+          <ol>
+            <li>
+              <h3>Basket</h3>
+              <span class="purchase_number">3</span>
+              <div class="bottom_bar"></div>
+              <ol>
+                <li>
+                  <span class="product_caption" data-caption="">Green stuff</span>
+                  <span class="price" data-price="">$75.00</span>
+                  <input type="text" name="amount" value="1" class="clearfix amount">
+                  <input type="button" name="remove" value="REMOVE">
+                  <div class="bottom_bar clearfix"></div>
+                </li>
+                <li>
+                  <span class="product_caption" data-caption="">Green stuff</span>
+                  <span class="price" data-price="">$75.00</span>
+                  <input type="text" name="amount" value="1" class="clearfix amount">
+                  <input type="button" name="remove" value="REMOVE">
+                  <div class="bottom_bar clearfix"></div>
+                </li>
+                <li>
+                  <span class="product_caption" data-caption="">Green stuff</span>
+                  <span class="price" data-price="">$75.00</span>
+                  <input type="text" name="amount" value="1" class="clearfix amount">
+                  <input type="button" name="remove" value="REMOVE">
+                  <div class="bottom_bar clearfix"></div>
+                </li>
+                <li>
+                  <span class="total_text">TOTAL</span>
+                  <span data-total="" class="total_price">$150.00</span>
+                  <div class="bottom_bar clearfix"></div>
+                </li>
+                <a href=""><button>CHECKOUT</button></a>
+              </ol>
+            </li>
+          </ol>
+        </aside>
+      </div>
       <div class="products clearfix">
-        <div class="basket_wrapper">
-          <aside class="basket clearfix">
-            <h3>Basket</h3>
-            <div class="bottom_bar"></div>
-            <section>
-              <p><span class="product_caption" data-caption="">Green stuff</span><span class="price" data-price="">$75.00</span></p>
-              <input type="text" name="amount" value="1" class="clearfix amount">
-              <input type="button" name="remove" value="REMOVE">
-              <div class="bottom_bar clearfix"></div>
-              <p><span class="product_caption" data-caption="">Green stuff</span><span class="price" data-price="">$75.00</span></p>
-              <input type="text" name="amount" value="1" class="clearfix amount">
-              <input type="button" name="remove" value="REMOVE">
-              <div class="bottom_bar clearfix"></div>
-              <p class="clearfix total"><span class="total_text">TOTAL</span><span data-total="" class="total_price">$150.00</span></p>
-              <div class="bottom_bar clearfix"></div>
-              <a href=""><button>CHECKOUT</button></a>
-            </section>
-          </aside>
-        </div>
         <article>
           <div class="content_box">
             <figure>
