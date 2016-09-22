@@ -204,11 +204,12 @@ footer span:after {
     color: transparent;
     text-shadow: 0 0 0 rgba(0,35,64,.45);
     background-image: none;
-    border:0;
+    border: 0;
     background: transparent;
     box-shadow: none;
   }
 }
+
 
 /********Placeholder defaults********/
 
@@ -227,17 +228,18 @@ footer span:after {
 
 /********Button, select, input defualts********/
 
-button, input[type=submit] {
+*button, *input[type=submit] {
   outline: 0;
   border: 0;
   border-style: none;
-}
-
-input:required {
   box-shadow: none;
 }
 
-input:invalid {
+*input:required {
+  box-shadow: none;
+}
+
+*input:invalid {
   box-shadow: none;
 }
 /***************FOUNDATION MEDIA QUERIES ***************/

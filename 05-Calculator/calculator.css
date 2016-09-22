@@ -47,6 +47,7 @@
   width: 24%;
   margin:  16px 0.5% 1%;
   border-radius: 4px;
+  border: none;
   border-top: .5px solid white;
   box-shadow: 0 0 0 1px rgba(13,37,43,1);
   font-size: 1.85em;

@@ -117,6 +117,8 @@ input[type=email] {
   width: 100%;
   height: 100%;
   text-shadow: 0 0 rgba(17,47,66,.4);
+  color: rgba(17,47,66,.05);
+  padding-left: 4px;
   background: linear-gradient(to top, rgba(250,255,250,.65),
     rgba(250,255,250,.45) 50%, rgba(250,255,250,1));
    -webkit-transition: background .5s, text-shadow .25s;
@@ -165,6 +167,7 @@ form button {
   line-height: 1.5em;
   font-size: 1.2em;
   padding: 2px 0;
+  border: none;
   box-shadow: 0 0 2px rgba(232,227,131,1);
   background: rgba(17,47,66,.65);
   color: rgba(250,255,250,1);
@@ -178,6 +181,7 @@ button:hover, button:focus {
   background: rgba(255,192,124,1);
   color: rgba(17,47,66,.65);
   cursor: pointer;
+  box-shadow: 0 0 1px rgba(17,47,66,.7);
 
 }
 
