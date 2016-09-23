@@ -202,11 +202,15 @@ footer span:after {
 @-moz-document url-prefix() {
   select, select:-moz-focusring, select::-moz-focus-inner {
     color: transparent;
-    text-shadow: 0 0 0 rgba(0,35,64,.45);
+    text-shadow: 0 0 0 #000;
     background-image: none;
     border: 0;
     background: transparent;
     box-shadow: none;
+  }
+  select:-moz-focusring:hover {
+    text-shadow: 0 0 0 #000;
+    color: transparent;
   }
 }
 
