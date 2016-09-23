@@ -36,6 +36,7 @@
   margin: 0 auto;
 }
 .quest_form fieldset {
+  position: relative;
   margin: 18px auto;
   width: 45%;
   min-width: 285px;
@@ -52,7 +53,6 @@
   box-shadow: 0 0 1px 2px rgba(18,235,200, 1);
 }
 .quest_form fieldset legend {
-  position: relative;
   display: block;
 }
 .quest_form fieldset legend:after {
@@ -69,35 +69,55 @@
   margin: 2px 0;
 }
 .quest_form .flavors li {
-  width: 60%;
+  width: 65%;
   min-width: 140px;
   margin: 3px auto;
 }
-.quest_form .flavors label,
-.quest_form .flavors input {
-  display: inline-block;
-  height: 100%;
-  box-shadow: 0 0 1px rgba(100,108,125,.30)
-}
+
 .quest_form .flavors label {
+  position: relative;
   float: right;
-  width: 75%;
+  display: inline-block;
+  width: 70%;
   height: 100%;
   font-size: 1.2em;
   padding: 4px 0;
   border-radius: 8px;
   color: rgba(22,222,208, 1);
+  box-shadow: 0 0 1px rgba(100,108,125,.30)
   text-shadow: 0 0 1px rgba(8,108,125,1);
   background: rgba(255,166,188,.75);
 }
-.quest_form .flavors input {
-  display: block;
-  float:left;
+.quest_form .flavors input[type=radio] {
+  opacity: 0;
+  /*display: block;
+  float: left;
   width: 25%;
+  height: 100%;
+  font-size: 1.125em;*/
+}
+.quest_form .flavors input[type="radio"] + label::before {
+  content: "❇";
+  position: absolute;
+  top: 0;
+  left: -36px;
+  width: 32px;
   height: 32px;
+  padding-top: 2px;
+  border-radius: 8px;
+  font-size: 1.25em;
+  background: rgba(255,166,188,.75);
+  color: rgba(232,12,122,1);
+  visibility: hidden;
 
 }
+.quest_form .flavors input[type="radio"]:checked + label::before {
+  visibility: visible;
+}
 
+/*.quest_form .flavors input[type=radio]:active {
+  height: 32px;
+}*/
 .quest_form .personal p {
   width: 90%;
   min-width: 270px;
