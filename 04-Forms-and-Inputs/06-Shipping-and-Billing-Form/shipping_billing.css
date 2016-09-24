@@ -1,5 +1,3 @@
-
-
 @import url("../../styles/normalize.css");
 @import url("../../styles/default.css");
 @import url("../form-home/form_home.css");
@@ -51,10 +49,35 @@
   padding-top: 18px;
 }
 
-.match label, .match input[type=checkbox] {
-  display: inline-block;
-  margin-left: 8px;
-  padding-left: 8px;
+.match {
+  position: relative;
+}
+.match span {
+  position: absolute;
+  left: -12px;
+  width: 20px;
+  height: 20px;
+  border-radius: 2px;
+  text-align: center;
+  background: rgba(84,81,99,.25); 
+  box-shadow: 0 0 1px rgba(84,81,99,1);
+}
+.match span::after {
+  content: '✔';
+  position: absolute;
+  top: -1px;
+  left: 2px;
+  font-size: 1.25em;
+  color: rgba(84,81,99,.85);
+  text-shadow: 0 0 1px #fff;
+  visibility: hidden;
+}
+.match input[type=checkbox] {
+  opacity: 0;
+}
+.match label {
+  position: relative;
+  margin-left: 24px;
   color: rgba(84,81,99,1);
 }
 .shipping_form li {
@@ -62,6 +85,42 @@
   padding: 0;
   display: inline-block;
   float: left;
+}
+
+li>label {
+  margin-bottom: 6px;
+  color: rgba(84,81,99,1);
+}
+
+input[type=text] {
+  padding-left: 6px;
+}
+input[type=text], .selectStyles {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 32px;
+  background: rgba(242,247,255,.90);
+  box-shadow: 0 0 1px grey;
+  border-radius: 3px;
+}
+
+.selectStyles select {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 3px;
+  background: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+}
+.selectStyles::after {
+  content: '▼';
+  position: absolute;
+  top: 8px;
+  right: 0;
+  color: rgba(84,81,99,.5);
 }
 .country {
   width: 100%;
@@ -95,45 +154,12 @@
   margin-left: 1%;
 }
 
-li>label {
-  margin-bottom: 6px;
-  color: rgba(84,81,99,1);
-}
-
-input[type=text], .selectStyles {
-  position: relative;
-  width: 100%;
-  height: 32px;
-  padding-left: 6px;
-  background: rgba(242,247,255,.90);
-  box-shadow: 0 0 1px grey;
-  border-radius: 3px;
-}
-
-.selectStyles select {
-  /*position: relative;*/
-  width: 100%;
-  height: 100%;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-
-}
-.selectStyles:after {
-  content: '▼';
-  position: absolute;
-  top: 8px;
-  right: 4px;
-  height: 100%;
-  color: rgba(84,81,99,.5);
-}
-
 .shipping_form fieldset.button {
   text-align: center;
   padding: 0;
-}
-.button {
   height: 32px;
 }
+
 .button button {
   width: 100%;
   margin: 0;
@@ -152,7 +178,23 @@ input[type=text], .selectStyles {
         transition: background .5s, color .25s;
 }
 
-.button button:hover {
+/********ACTIVE STATES********/
+
+input[type=text]:focus,
+input[type=checkbox]:focus + span,
+select:focus {
+  background: rgba(255,234,146,1);
+  border: 0.5px solid rgba(232,164,114,.65);
+}
+input[type=checkbox]:checked + span::after {
+  visibility: visible;
+}
+
+.selectStyles:hover {
+  cursor: pointer;
+}
+.button button:hover,
+.button button:focus {
   background: rgba(168,221,255,1);
   cursor: pointer;
 }
