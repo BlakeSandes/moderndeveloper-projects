@@ -43,21 +43,34 @@
           <li><a href="../08-Credit-Debit-Form/index.html">Credit & Debit</a></li>
         </ul>
       </aside>
-      <main class="color_form form_home content">
+      <main class="color-form form_home content">
         <h1>Colour Builder</h1>
         <form action="">
-          <fieldset class="color-display">
-            <textarea name="color_display" id="display"></textarea>
+          <fieldset class="color-display clearfix">
+            <div class="color-port clearfix" id="display"></div>
           </fieldset>
-          <fieldset class="sliders">
-            <label for="red"></label>
-            <input type="range" min="0" max="255" step="5" id="red" name="color" class="red">
-            <label for="green"></label>
-            <input type="range" min="0" max="255" step="5" id="green" name="color" class="green">
-            <label for="blue"></label>
-            <input type="range" min="0" max="255" step="5" id="blue" name="color" class="blue">
-            <label for="alpha"></label>
-            <input type="range" min="0" max="1" step="0.01" id="alpha" name="alpha" class="alpha">
+
+          <fieldset class="slider-wrapper clearfix">
+            <div class="slider-border clearfix">
+              <label for="red"></label>
+              <input type="range" min="0" max="255" step="5" id="red" name="color" class="red">
+              <span></span>
+            </div>
+            <div class="slider-border clearfix">
+              <label for="green"></label>
+              <input type="range" min="0" max="255" step="5" id="green" name="color" class="green">
+              <span></span>
+            </div>
+            <div class="slider-border clearfix">
+              <label for="blue"></label>
+              <input type="range" min="0" max="255" step="5" id="blue" name="color" class="blue">
+              <span></span>
+            </div>
+            <div class="slider-border clearfix">
+              <label for="alpha"></label>
+              <input type="range" min="0" max="1" step="0.01" id="alpha" name="alpha" class="alpha">
+              <span></span>
+            </div>
           </fieldset>
         </form>
       </main>
