@@ -80,7 +80,7 @@ nav {
   width: 0;
   height: 0;
   position: absolute; 
-  top: -35px; 
+  top: -32px; 
   left: 40%;
   border: 16px solid transparent;
   border-bottom-color: rgba(65,71,89,.6);
@@ -91,10 +91,10 @@ nav {
   display: block;
   width: 32px;
   height: 20px;
-  border-radius: 0 0 16px 16px;
   position: absolute; 
-  top: 29px; 
+  top: 33px; 
   left: 40%;
+  border-radius: 0 0 16px 16px;
   background: linear-gradient(to top, rgba(65,71,89,.2), rgba(65,71,89,.6));
 }
 .home:hover {
@@ -298,7 +298,7 @@ footer span:after {
     padding-top: 72px;
   }
   .home a:before {
-    top: -25px;
+    top: -26px;
     left: 30%;
   }
   .home a:after {
