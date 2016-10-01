@@ -70,26 +70,32 @@ nav {
 .home a {
   display: block;
   height: 100%;
-  padding-top: 50px;
+  font-size: .85em;
+  padding-top: 54px;
+
 }
 .home a:before {
+  content: '';
+  display: block;
   width: 0;
   height: 0;
-  position: absolute; top: -30px; left: 40%;
+  position: absolute; 
+  top: -35px; 
+  left: 40%;
   border: 16px solid transparent;
   border-bottom-color: rgba(65,71,89,.6);
   border-width: 32px 16px;
-  display: block;
-  content: '';
 }
 .home a:after {
+  content: '';
+  display: block;
   width: 32px;
   height: 20px;
   border-radius: 0 0 16px 16px;
-  position: absolute; top: 34px; left: 40%;
-  display: block;
+  position: absolute; 
+  top: 29px; 
+  left: 40%;
   background: linear-gradient(to top, rgba(65,71,89,.2), rgba(65,71,89,.6));
-  content: '';
 }
 .home:hover {
   box-shadow: 0 0 1px rgba(4,102,108,1);
@@ -264,7 +270,8 @@ footer span:after {
     width: 24%;
   }
   .home a {
-    font-size: 1em;
+    font-size: .65em;
+    padding-top: 60px;
   }
   .home a:before {
     left: 38%;
@@ -287,12 +294,15 @@ footer span:after {
     width: 28%;
   }
   .home a {
+    font-size: .85em;
     padding-top: 72px;
   }
   .home a:before {
+    top: -25px;
     left: 30%;
   }
   .home a:after {
+    top: 39px;
     left: 30%;
   }
   nav ul li {
