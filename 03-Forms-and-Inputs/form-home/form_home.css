@@ -3,21 +3,25 @@
 
 /************CONTENT STYLES*****************/
 
+/*.clearfix {
+  content: '';
+  display: table;
+  clear: both;
+}*/
+
 .content-wrapper {
   position: relative;
   margin: 18px auto;
   width: 100%;
   display: inline-block;
 }
-.form_home {
-  width: 70%;
-  margin: 0 auto;
-}
-.form_home h1 {
-  text-align: center;
-  min-width: 256px;
-}
 
+/********SIDEBAR ********/
+
+.figpreview-wrapper {
+  position: relative;
+  border: 1px solid yellow;
+}
 .sidebar {
   position: relative;
   position: absolute;
@@ -94,16 +98,63 @@
 }
 .sidebar ul li a:hover:after {
   content: '';
-  position: absolute; top: 10px; right: -144px;
+  position: absolute; top: 10px; right: -84px;
   width: 0;
   height: 0;
-  border: 12px solid transparent;
+  border: 4px solid transparent;
   border-left-color: rgba(248,219,60,.45);
-  border-width: 8px 72px;
+  border-width: 8px 42px;
   display: block;
 }
 
+.sidebar li > ol {
+  display: none;
+}
+
+.sidebvar li > ol > li {
+  width: 100%;
+}
+.sidebar li > ol img {
+  position: absolute;
+  width: 100%;
+  top: 25%;
+  left: 124%;
+}
+
+.sidebar li:first-child > ol img {
+  top: 15%;
+}
+.sidebar li:nth-child(4) > ol img {
+  top: 35%;
+}
+.sidebar li:nth-child(5) > ol img {
+  top: 31%;
+}
+.sidebar li:nth-child(6) > ol img {
+  top: 27%;
+}
+.sidebar li:nth-child(7) > ol img {
+  top: 35%;
+}
+.sidebar li:nth-child(8) > ol img {
+  top: 64%;
+}
+
+.sidebar li:hover > ol {
+  display: block;
+}
+
+
 /*********Default Form Styles************/
+
+.form_home {
+  width: 70%;
+  margin: 0 auto;
+}
+.form_home h1 {
+  text-align: center;
+  min-width: 256px;
+}
 
 .form_home fieldset {
   border-style: none;
@@ -138,3 +189,30 @@
   -webkit-appearance: none;
   -moz-appearance: none;
 }
+
+.form-home-container footer {
+  bottom: -36px;
+}
+
+/********MEDIA QUERIES********/
+
+@media screen and (min-width: 560px) {
+  .sidebar li > ol img {
+    left: 150%;
+    width: 125%;
+  }
+
+  .sidebar li:nth-child(5) > ol img {
+    top: 24%;
+  }
+  .sidebar li:nth-child(6) > ol img {
+    top: 12%;
+  }
+  .sidebar li:nth-child(7) > ol img {
+    top: 22%;
+  }
+  .sidebar li:nth-child(8) > ol img {
+    top: 60%;
+  }
+}
+
