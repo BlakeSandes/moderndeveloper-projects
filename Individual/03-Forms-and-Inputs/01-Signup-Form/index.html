@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up</title>
+  <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+  <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <nav>
+        <div class="home">
+          <a href="../../index.html">Blake Wilson</a>
+        </div>
+        <ul>
+          <li><a href="../../01-Button-Web-Component/index.html">Components</a></li>
+          <li><a href="../../02-Profiles-ModernDeveloper-Sidebar/index.html">Sidebar</a></li>
+          <li><a class="selected"  href="../form-home/index.html">Forms</a></li>
+          <li><a href="../../04-Calculator/index.html">Calculator</a></li>
+          <li><a href="../../05-Product-Listing-Page/index.html">Products</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="content-wrapper">
+      <aside class="sidebar">
+        <button></button>
+        <h2>Form Types</h2>
+        <ul>
+          <li><a class="selected" href="index.html">Signup</a></li>
+          <li><a href="../02-Search-Form/index.html">Search</a></li>
+          <li><a href="../03-Questionaire-Form/index.html">Questionaire</a></li>
+          <li><a href="../04-Login-Form/index.html">Login</a></li>
+          <li><a href="../05-Color-Builder-Form/index.html">Color Builder</a></li>
+          <li><a href="../06-Shipping-and-Billing-Form/index.html">Shipping & Billing</a></li>
+          <li><a href="../07-Scheduling-Form/index.html">Scheduling</a></li>
+          <li><a href="../08-Credit-Debit-Form/index.html">Credit & Debit</a></li>
+        </ul>
+      </aside>
+      <main class="signup form_home content">
+        <h1>Sign Up</h1>
+        <form action="" id="signup">
+          <fieldset>
+            <legend>Sign Up</legend>
+            <ol>
+              <li class="name clearfix">
+                <label for="first_name last_name">Full Name</label>
+                <input type="text" id="first_name" name="name" placeholder="First"required>
+                <input type="text" id="last_name" name="name" placeholder="Last" required>
+              </li>
+              <li>
+                <label for="user_name">Choose your username</label>
+                <input type="text" id="user_name" name="name" required>
+              </li>
+              <li>
+                <label for="user_email">Email address</label>
+                <input type="email" id="user_email" name="email" placeholder="@email.com" required>
+              </li>
+              <li class="dob">
+                <label for="dob">Birthday</label>
+                <div class="styled-select">
+                  <div class="select">
+                    <select name="month" id="month" required>
+                        <option value="January" name="month">January</option>
+                    </select>
+                  </div>
+                  <div class="select" >
+                    <select name="day" id="day">
+                        <option value="01" name="day">01</option>
+                    </select>
+                  </div>
+                  <div class="select">
+                    <select name="year" id="year">
+                        <option value="2016" name="year">2016</option>
+                    </select>
+                  </div>
+                </div>
+              </li>
+              <li class="password">
+                <label for="user_password">Create a password</label>
+                <input type="password" id="user_password" name="password" maxlength="16" required>
+              </li>
+              <li class="password">
+                <label for="twice_password">Confirm your password</label>
+                <input type="password" id="twice_password" name="password" maxlength="16" required>
+              </li>
+            </ol>
+            <button type="submit" name="signup">Sign Up</button>
+          </fieldset>
+        </form>
+      </main>
+    </div>
+
+    <footer><span></span></footer>
+  </div>
+</body>
+</html>

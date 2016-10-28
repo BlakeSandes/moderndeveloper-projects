@@ -1,0 +1,72 @@
+@import url("../styles/normalize.css");
+@import url("../styles/default.css");
+
+.buttons {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.buttons h3 {
+  color: rgb(106,74,135);
+  text-shadow: 0 0 1px white;
+}
+
+.button {
+  /*Clear defaults*/
+  -moz-appearance: none;
+  display: inline-block;
+  text-decoration: none;
+  outline: 0;
+  border: 0;
+  background: none;
+  box-shadow: none;
+  /*New Styles*/
+  height: 32px;
+  margin: 0 8px 8px 0;
+  border-radius: 6px;
+  background-image: linear-gradient(to top,rgb(51,248,255) 10%,
+    rgb(20,193,199), rgb(51,248,255) 90%);
+  padding: 4px;
+  vertical-align: center;
+  /*border: 1px solid rgba(238,40,129,.5);*/
+  box-shadow: 0 0 0 1px rgba(30,176,201,1),
+  inset 0 0 0 1px rgba(0,255,255,1),
+  inset 0 0 0 2px rgb(50,199,195),
+  1px 1px 0 1px rgb(50,199,195);
+
+  font-size: 1.125em;
+  text-align: center;
+  color: rgb(6,105,130);
+  text-shadow: 0 0 1px white;
+  -webkit-transition: background .75s, box-shadow .75s, color .25s, font-size .75s;
+          transition: background .75s, box-shadow .75s, color .25s, font-size .75s;
+}
+
+.button:focus,
+.button:hover {
+  outline: none;
+  cursor: pointer;
+  background: linear-gradient(to top, rgb(59,173,199), rgb(102,226,255), rgb(59,173,199)),
+  linear-gradient(to right, rgb(206,126,121), rgb(206,184,175), rgb(206,126,121));
+  box-shadow:  0 0 0 1px rgba(0,255,255,1),
+  inset 0 0 0 1px rgba(255,205,94,1),
+  inset 0 0 0 2px rgba(220,138,250,1),
+  1px 1px 0 1px rgb(50,199,195),
+  0 0 1px rgb(57,46,84);
+  color: rgb(16,131,161);
+  font-size: 1.135em;
+}
+
+.button-sm {
+  width: 84px;
+}
+
+.button-md {
+  width: 132px;
+}
+
+.button-lg {
+  width: 256px;
+}
+
+3

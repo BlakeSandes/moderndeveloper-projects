@@ -1,0 +1,141 @@
+
+@import url("../../styles/normalize.css");
+@import url("../../styles/default.css");
+@import url("../form-home/form_home.css");
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.sidebar {
+  display: none;
+}
+
+.schedule_form {
+  min-width: 300px;
+  width: 50%;
+  margin-top: 24px;
+}
+
+.schedule_form form {
+  width: 100%;
+  background: linear-gradient(to right, rgba(63,255,246,1) 25%,
+    transparent);
+  border-radius: 3px 0 0 3px;
+}
+
+.schedule_form .heading {
+  margin-bottom: 12px;
+  border-top-left-radius: 3px;
+}
+.schedule_form .heading h1 {
+  margin: 0;
+  padding: 12px 0;
+}
+
+.schedule_form fieldset, .heading {
+  width: 100%;
+  margin-bottom: 12px;
+  margin-top: 0;
+  margin-left: 0;
+  background: rgba(63,255,246,1);
+  border-radius: 0 3px 3px 0;
+}
+
+
+.schedule_form li {
+  height: 100%;
+}
+
+.schedule_form label {
+  display: block;
+  width: 100%;
+  float: left;
+  margin: 12px 0 4px;
+  padding: 6px;
+  color: rgba(45,15,40,1);
+  text-shadow: 0 0 2px rgba(128,245,255,1);
+}
+.schedule_form input, .schedule_form select {
+  width: 50%;
+  height: 32px;
+  float: left;
+  padding-left: 6px;
+  background: rgba(255,125,236,.20);
+}
+.schedule_form input:not([type=checkbox]),
+.date select, .message textarea {
+  box-shadow: inset 0 0 2px rgba(255,125,236,.50);
+  /*border: 2px solid none;*/
+}
+.schedule_form .date li:first-child label {
+  display: block;
+  width: 50%;
+  height: 32px;
+  float: left;
+}
+.schedule_form .date input[type=checkbox] {
+  margin-top: 12px;
+  width: 1.25em;
+}
+
+.schedule_form .date select {
+  width: 100%;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: 0;
+  border-radius: 0;
+}
+
+.schedule_form .message textarea {
+  -moz-appearance: none;
+  width: 100%;
+  height: 32px;
+  border: 0;
+  background: rgba(255,125,236,.20);
+  resize: none;
+  padding: 8px 0 0 6px;
+}
+
+.schedule_form .contact {
+  border-radius: 0 3px 3px 3px;
+  margin-bottom: 0;
+  border-bottom: 1px solid rgba(127,127,127,.5);
+}
+.schedule_form .contact input {
+  width: 100%;
+}
+
+button {
+  width: 100%;
+  height: 32px;
+  padding-top: 2px;
+  margin-top: 12px;
+  border: none;
+  box-shadow: 0 0 1px grey;
+  font-size: 1.125em;
+  color: white;
+  text-shadow: 0 0 1px black;
+  background: rgba(127,101,127, .75);
+  border-radius: 2px;
+  -webkit-transition: background .5s, color .25s;
+          transition: background .5s, color .25s;
+}
+
+/********ACTIVE STATES********/ 
+
+.schedule_form input:focus, .date select:focus, .message textarea:focus {
+  border: 1px solid rgba(127,101,127, .75);
+}
+
+button:hover {
+  cursor: pointer;
+  background: rgba(255,125,236,.60);
+  color: white;
+}
+button:focus {
+  background: rgba(255,125,236,.60);
+  color: white;
+}
