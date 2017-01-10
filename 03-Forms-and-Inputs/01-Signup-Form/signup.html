@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up</title>
+  <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <nav>
+        <div class="home">
+          <a href="../../index.html">Blake Wilson</a>
+        </div>
+        <ul>
+          <li><a href="../../01-Button-Web-Component/index.html">Components</a></li>
+          <li><a href="../../02-Profiles-ModernDeveloper-Sidebar/index.html">Sidebar</a></li>
+          <li><a class="selected"  href="../form-home/index.html">Forms</a></li>
+          <li><a href="../../04-Calculator/index.html">Calculator</a></li>
+          <li><a href="../../05-Product-Listing-Page/index.html">Products</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="content-wrapper">
+      <aside class="sidebar">
+        <button></button>
+        <h2>Form Types</h2>
+        <ul>
+          <li><a class="selected" href="signup.html">Signup</a></li>
+          <li><a href="../02-Search-Form/search.html">Search</a></li>
+          <li><a href="../03-Questionaire-Form/questionaire.html">Questionaire</a></li>
+          <li><a href="../04-Login-Form/login.html">Login</a></li>
+          <li><a href="../05-Color-Builder-Form/color.html">Color Builder</a></li>
+          <li><a href="../06-Shipping-and-Billing-Form/shipping.html">Shipping & Billing</a></li>
+          <li><a href="../07-Scheduling-Form/scheduling.html">Scheduling</a></li>
+          <li><a href="../08-Credit-Debit-Form/credit.html">Credit & Debit</a></li>
+        </ul>
+      </aside>
+      <main class="signup form_home content">
+        <h1>Sign Up</h1>
+        <form action="" id="signup" novalidate>
+          <fieldset>
+            <legend>Sign Up</legend>
+            <ol>
+              <li class="name">
+                <ol>
+                  <li>
+                    <label for="first_name">Full Name</label>
+                    <input type="text" id="first_name" name="name" placeholder="First">
+                  </li>
+                  <li>
+                    <label for="last_name"></label>
+                    <input type="text" id="last_name" name="name" placeholder="Last">
+                  </li>
+                </ol>
+              </li>
+              <li>
+                <label for="user_name" class="clearfix">Choose your username</label>
+                <input type="text" id="user_name" name="name">
+              </li>
+              <li>
+                <label for="user_email">Email address</label>
+                <input type="email" id="user_email" placeholder="name@email.com">
+              </li>
+              <li class="dob clearfix">
+                <ol>
+                  <li>
+                    <label for="month">Date of Birth</label>
+                    <input id="month" type="tel" maxlength="2" placeholder="MM"/>
+                  </li>
+                  <li>
+                    <label for="day"></label>
+                    <input id="day" type="tel" maxlength="2" placeholder="DD"/>
+                  </li>
+                  <li>
+                    <label for="year"></label>
+                    <input id="year" type="tel" maxlength="4" placeholder="YYYY"/>
+                  </li>
+                </ol>
+              </li>
+              <li class="password">
+                <label for="user_password">Create a password</label>
+                <input type="password" id="user_password" name="password" minlength="6" maxlength="16">
+              </li>
+              <li class="password">
+                <label for="confirm_password">Confirm your password</label>
+                <input type="password" id="confirm_password" name="password" minlength="6" maxlength="16">
+              </li>
+            </ol>
+            <button type="submit" name="signup" form="signup">Sign Up</button>
+          </fieldset>
+        </form>
+      </main>
+    </div>
+
+    <footer><span></span></footer>
+  </div>
+  <script type="text/javascript" src="validator.js"></script>
+  <script type="text/javascript" src="signup.js"></script>
+</body>
+</html>
