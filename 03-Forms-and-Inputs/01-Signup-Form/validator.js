@@ -22,8 +22,7 @@
 
       return result;
     },
-    isPhoneNumber : function(input) {
-      var toNumber;
+    isPhoneNumber : function(input) {var toNumber;
       var phoneString;
       // If input number is written as string, remove common parentheses and dashes and convert to number and use toString method to get number length.
       if (typeof input === 'string') {

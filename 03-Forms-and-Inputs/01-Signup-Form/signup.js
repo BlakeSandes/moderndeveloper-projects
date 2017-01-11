@@ -11,17 +11,22 @@ password = document.getElementById('user_password'),
 confirmPassword = document.getElementById('confirm_password'),
 dateOfBirth;
 
+// Declaring HMTL fragment variables for top error modal.
+var errorDiv = document.createElement('div'),
+errorMessage = document.createTextNode("Error: empty or insufficient input.");
+invalids = document.getElementsByClassName('invalid');
 
 // change .invalid class to inputs if incorrect input.
 signupForm.addEventListener('submit', function(event) {
   event.preventDefault();
-
+  var invalids = document.getElementsByClassName('invalid');
+                                            
   if (validator.isEmpty(firstName.value) || firstName.value.length < 2) {
     firstName.classList.add('invalid');
     firstName.previousElementSibling.classList.add('error-icon');
   }
 
-  if (validator.isEmpty(lastName.value) || firstName.value.length < 2) {
+  if (validator.isEmpty(lastName.value) || lastName.value.length < 2) {
     lastName.classList.add('invalid');
     lastName.previousElementSibling.classList.add('error-icon');
   }
@@ -61,6 +66,17 @@ signupForm.addEventListener('submit', function(event) {
     confirmPassword.classList.add('invalid');
     confirmPassword.previousElementSibling.classList.add('error-icon');
   }
+
+  if (document.getElementsByClassName('invalid')) {
+    errorDiv.appendChild(errorMessage);
+    errorDiv.classList.add('error-banner');
+    signupForm.insertAdjacentElement('beforebegin', errorDiv);
+    window.scrollTo(0,0);
+  } 
+  if (invalids.length === 0){
+    errorDiv.parentNode.removeChild(errorDiv);
+  }
+
 }, false);
 
 

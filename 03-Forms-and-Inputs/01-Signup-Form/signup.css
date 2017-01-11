@@ -178,3 +178,13 @@ input.invalid {
 
 }
 
+.error-banner {
+  display: block;
+  margin: 0 auto 24px ;
+  padding-top: 12px;
+  width: 50%;
+  height: 48px;
+  text-align:  center;
+  background: #CCFF99;
+  color: rgba(17,47,66,.7);
+}
