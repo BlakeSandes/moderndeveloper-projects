@@ -1,7 +1,3 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,17 +42,17 @@
         <h1>Search Form</h1>
         <p>Type in your combination of any fruit, vegetable, or protein, then choose your ethnic food category and meal time category, and we'll give you menu suggestions.</p>
 
-        <form action="" class="clearfix">
+        <form action="" class="clearfix" id="recipe-form" novalidate>
           <div class="search_wrapper clearfix">
             <label for="search"></label>
-            <input class="search"  type="text" id="search" placeholder="foods...">
+            <input class="search"  type="search" id="search" placeholder="foods...">
             <div class="mealtimes">
-              <label for="meal_time">Meals</label>
+              <label class="meals">Meals</label>
               <div class="mealtimes-wrapper">
                 <ol>
                   <li>
                     <label for="breakfast">breakfast</label>
-                    <input id="breakfast"  name="meal" checked="" type="radio">
+                    <input id="breakfast"  name="meal" type="radio">
                   </li>
                   <li>
                     <label for="lunch">lunch</label>
@@ -71,7 +67,7 @@
                     <input id="snack" name="meal" type="radio">
                   </li>
                   <li>
-                    <label for=""dessert>dessert</label>
+                    <label for="dessert">dessert</label>
                     <input id="dessert" name="meal" type="radio">
                   </li>
                 </ol>
@@ -96,7 +92,7 @@
                     <option value="c_a_r">Central Afican Repbulic</option>
                     <option value="chad">Chad</option>
                     <option value="comoros">Comoros</option>
-                    <option value="d_r_of_c">Democratic Rebublic of Congo</option>
+                    <option value="congo">Democratic Rebublic of Congo</option>
                     <option value="Cote_d'lvoire">Cote d'lvoire</option>
                     <option value="djibouti">Djibouti</option>
                     <option value="egypt">Egypt</option>
@@ -353,12 +349,14 @@
                 </fieldset>
               </div>
             </div>
-            <input type="submit" value="Recipe!">
+            <input type="submit" value="Find Recipe!" form="recipe-form">
           </div>
         </form>
       </main>
     </div>
     <footer><span></span></footer>
   </div>
+  <script type="text/javascript" src="validator.js"></script>
+  <script type="text/javascript" src="search.js"></script>
 </body>
 </html>
