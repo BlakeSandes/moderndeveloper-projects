@@ -3,11 +3,11 @@
 
 /************CONTENT STYLES*****************/
 
-/*.clearfix {
+.clearfix {
   content: '';
   display: table;
   clear: both;
-}*/
+}
 
 .content-wrapper {
   position: relative;
@@ -153,7 +153,6 @@
 }
 .form_home h1 {
   text-align: center;
-  min-width: 256px;
 }
 
 .form_home fieldset {

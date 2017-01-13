@@ -16,31 +16,46 @@
   padding: 12px 6px 24px;
   background: rgba(240,240,255,.45);
 }
+
+.searchForm h1 {
+  margin-bottom: 12px;
+}
 .searchForm p {
   width: 60%;
   text-align: center;
-  margin: 0 auto 32px;
+  margin: 0 auto 24px;
+  line-height: 1.1rem;
 }
 
-form {
+.searchForm form {
   max-width: 400px;
-  /*height: 570px;*/
+  width: 100%;
   margin: 0 auto;
   padding: 24px 12px;
   display: block;
   background: linear-gradient(to bottom, rgba(171,173,178,.25), rgba(171,173,178,.35));
 }
 
-form > label {
+.searchForm form > label {
   text-align: center;
   display: block;
 }
 
-form .search {
+.search-wrapper {
   width: 100%;
-  margin-bottom: 32px;
-  padding: 8px 0 8px 8px;
-  box-shadow: inset 0 0 1px 1px rgba(196,17,86,.5);
+}
+
+.search-container {
+  height: 36px;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.search-container .search {
+  width: 100%;
+  height: 100%;
+  padding-left: 8px;
+  box-shadow: 0 0 1px rgba(196,17,86,.5);
   border-radius: 3px;
   background: rgba(255,155,245,1);
   color: rgba(55,30,64,1);
@@ -48,12 +63,12 @@ form .search {
           transition: background .5s, color .5s;
 }
 
-form .search:hover {
+.search:hover {
   background: rgba(118,199,245,1);
-  /*text-shadow: 0 0 1px rgba(55,30,64,1);*/
   box-shadow: 0 0 1px rgba(17,47,66,1);
 }
-form .search:hover::-webkit-input-placeholder {
+
+.search:hover::-webkit-input-placeholder {
   text-shadow: 0 0 1px rgba(55,30,64,1);
   color: rgba(18,235,200,1);
   opacity: 1;
@@ -61,24 +76,20 @@ form .search:hover::-webkit-input-placeholder {
 
 /*********Meal time Styles*********/
 
-.mealtimes {
+.mealtimes-container {
   width: 24%;
   margin-right: 1%;
 }
 
-.mealtimes-wrapper {
-  width: 24%;
-  height: 100%;
-  display: block;
-}
 .mealtimes-wrapper li {
   display: block;
-  height: 32px;
+  height: 36px;
   width: 100%;
   margin: 3px 0;
 }
+
 .mealtimes-wrapper li label {
-  padding-top: 6px;
+  /*padding-top: 6px;*/
   height: 100%;
   width: 100%;
   border-radius: 3px;
@@ -102,77 +113,107 @@ form .search:hover::-webkit-input-placeholder {
 .mealtimes-wrapper li input[type=radio] {
   display: none;
 }
+
 /*******Region Styles*****/
 
-.regions {
+.regions-container {
   width: 74%;
   margin-left: 1%;
 }
-.regions fieldset {
-  margin: 0;
-  padding: 0;
-}
 
-.region select {
-  /*Clear defaults*/
-  overflow: hidden;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-  border: 0;
-  outline: 0;
+.regions-wrapper {
   position: relative;
   display: inline-block;
   width: 100%;
-  height: 32px;
-  margin: 1px 0;
-  padding-left: 8px;
+  height: 36px;
+  margin: 3px 0;
   border-radius: 3px;
-  /*text-align: center;*/
-  /*text-shadow: 0 0 rgba(55,30,64,1);*/
   background: rgba(255,155,245,1);
   box-shadow: 0 0 1px rgba(196,17,86,.5);
   -webkit-transition: background .5s, text-shadow .25s;
           transition: background .5s, text-shadow .25s;
 }
 
+.regions-wrapper ol {
+  margin: 0;
+  padding: 0;
+  height: 300px;
+  overflow: scroll;
+}
 
-.region select:hover,
-.region select:active {
+.regions-wrapper li {
+  margin: 3px 0;
+  padding-top: 6px;
+  height: 32px;
+  width: 100%;
+  border-radius: 3px;
+  text-align: center;
+  color: rgba(55,30,64,1);
+  background: rgba(255,155,245,1);
+  box-shadow: 0 0 1px rgba(196,17,86,.5);
+  text-shadow: 0 0 1px white;
+  -webkit-transition: background .5s, color .25s;
+          transition: background .5s, color .25s;
+
+}
+
+.regions-wrapper li.init > ol {
+  display: none;
+}
+
+.regions-wrapper li.init:active>ol{
+  display: block;
   cursor: pointer;
   background: #F04593;
   box-shadow: 0 0 1px rgba(17,47,66,1);
   text-shadow: 0 0 rgba(18,235,200,1);
+}
+.each-region select:hover,
+.each-region select:active {
   /*color: rgba(18,235,200,1);*/
 }
 
-.region select option {
-  -webkit-appearance: none;
-    -moz-appearance: none;
-  outline: 0;
-
-  height: 28px;
-  margin: 3px 0;
-  padding: 4px 6px;
-  text-align: center;
-  background: rgba(118,199,245,1);
-  box-shadow: 0 0 rgba(17,47,66,1);
-  text-shadow: 0 0 rgba(55,30,64,1);
-  -webkit-transition: background .5s, text-shadow .25s;
-          transition: background .5s, text-shadow .25s;
+.each-region select option {
+  
 }
-.region select option:hover {
+.each-region select option:hover {
   cursor: pointer;
 }
 
 /*******Shared Meal and Region Styles********/
 
-.mealtimes, .regions {
+.mealtimes-container, .regions-container {
   position: relative;
   display: block;
   float: left;
-  height: 32px;
-  min-height: 32px;
+  height: 36px;
   text-align: center;
+}
+
+
+.mealtimes-container>h1,
+.regions-container>h1 {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding-top: 6px;
+  font-size: 1rem;
+  background: rgba(118,199,245,1);
+  box-shadow: 0 0 2px rgba(17,47,66,1);
+  text-shadow: 0 0 1px white;
+  color: rgba(55,30,64,1);
+  border-radius: 3px;
+  -webkit-transition: background .5s, color .25s;
+          transition: background .5s, color .25s;
+}
+
+.mealtimes-container>h1:hover,
+.regions-container>h1:hover {
+  cursor: pointer;
+  background: #F04593;
+  box-shadow: 0 0 2px rgba(17,47,66,1);
+  text-shadow: 0 0 1px rgba(55,30,64,1);
+  color: rgba(18,235,200,1);
 }
 
 .regions-wrapper,
@@ -187,32 +228,10 @@ form .search:hover::-webkit-input-placeholder {
           transition: bottom 0.5s linear;
 }
 
-.mealtimes>label,
-.regions>label {
-  height: 32px;
-  padding-top: 6px;
-  background: rgba(118,199,245,1);
-  box-shadow: 0 0 2px rgba(17,47,66,1);
-  text-shadow: 0 0 1px white;
-  color: rgba(55,30,64,1);
-  border-radius: 3px;
-  -webkit-transition: background .5s, color .25s;
-          transition: background .5s, color .25s;
-}
-
-.mealtimes>label:hover,
-.regions>label:hover {
-  cursor: pointer;
-  background: #F04593;
-  box-shadow: 0 0 2px rgba(17,47,66,1);
-  text-shadow: 0 0 1px rgba(55,30,64,1);
-  color: rgba(18,235,200,1);
-}
-
 /*******Show Hidden Meal and Region content*******/
 
-.mealtimes:hover .mealtimes-wrapper,
-.regions:hover .regions-wrapper {
+.mealtimes-container:hover .mealtimes-wrapper,
+.regions-container:hover .regions-wrapper {
   top: 32px;
 }
 
@@ -220,10 +239,10 @@ form .search:hover::-webkit-input-placeholder {
 
 input[type=submit] {
   width: 100%;
-  height: 32px;
+  height: 36px;
   display: block;
   float: right;
-  margin-top: 36px;
+  margin-top: 24px;
   border-radius: 3px;
   background: #F04593;
   box-shadow: 0 0 1px rgba(17,47,66,1);

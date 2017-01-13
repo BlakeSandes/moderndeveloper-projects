@@ -43,11 +43,13 @@
         <p>Type in your combination of any fruit, vegetable, or protein, then choose your ethnic food category and meal time category, and we'll give you menu suggestions.</p>
 
         <form action="" class="clearfix" id="recipe-form" novalidate>
-          <div class="search_wrapper clearfix">
-            <label for="search"></label>
-            <input class="search"  type="search" id="search" placeholder="foods...">
-            <div class="mealtimes">
-              <label class="meals">Meals</label>
+          <div class="search-wrapper clearfix">
+            <div class="search-container">
+              <label for="search"></label>
+              <input class="search"  type="search" id="search" placeholder="foods...">
+            </div>
+            <div class="mealtimes-container">
+              <h1>Meals</h1>
               <div class="mealtimes-wrapper">
                 <ol>
                   <li>
@@ -73,280 +75,267 @@
                 </ol>
               </div>
             </div>
-            <div class="regions">
-              <label for="region">Cuisine Region</label>
+            <div class="regions-container">
+              <h1>Cuisine Region</h1>
               <div class="regions-wrapper">
-                <fieldset class="region africa">
-                  <label for="africa"></label>
-                  <select name="region" id="africa" value='Africa'>
-                    <option value="" disabled selected hidden>Africa</option>
-                    <option value="algeria">Algeria</option>
-                    <option value="angola">Angola</option>
-                    <option value="benin">Benin</option>
-                    <option value="botswana">Botswana</option>
-                    <option value="burkina_faso">Burkina Faso</option>
-                    <option value="burundi">Burundi</option>
-                    <option value="canary_islands">Canary Islands</option>
-                    <option value="cameroon">Cameroon</option>
-                    <option value="cape_verde">Cape Verde</option>
-                    <option value="c_a_r">Central Afican Repbulic</option>
-                    <option value="chad">Chad</option>
-                    <option value="comoros">Comoros</option>
-                    <option value="congo">Democratic Rebublic of Congo</option>
-                    <option value="Cote_d'lvoire">Cote d'lvoire</option>
-                    <option value="djibouti">Djibouti</option>
-                    <option value="egypt">Egypt</option>
-                    <option value="equatorial_guinea">Equitorial Guinea</option>
-                    <option value="guinea_bissau">Guinea Bissau</option>
-                    <option value="kenya">Kenya</option>
-                    <option value="lesotho">Lesotho</option>
-                    <option value="liberia">Liberia</option>
-                    <option value="madagascar">Madagascar</option>
-                    <option value="malawi">Malawi</option>
-                    <option value="mali">Mali</option>
-                    <option value="mauritius">Mauritius</option>
-                    <option value="mayotte">Mayotte</option>
-                    <option value="morocco">Morocco</option>
-                    <option value="mozambique">Mozambique</option>
-                    <option value="namibia">Namibia</option>
-                    <option value="niger">Niger</option>
-                    <option value="nigeria">Nigeria</option>
-                    <option value="reunion">Reunion</option>
-                    <option value="rwanda">Rwanda</option>
-                    <option value="sao_tome_principe">Sao Tome & Principe</option>
-                    <option value="senegal">Senegal</option>
-                    <option value="seychelles">Seychelles</option>
-                    <option value="sierra_leone">Sierra Leone</option>
-                    <option value="somalia">Somalia</option>
-                    <option value="south_africa">South Africa</option>
-                    <option value="sudan">Sudan</option>
-                    <option value="swaziland">Swaziland</option>
-                    <option value="tanzania">Tanzania</option>
-                    <option value="togo">Togo</option>
-                    <option value="uganda">Uganda</option>
-                    <option value="zambia">Zambia</option>
-                    <option value="zimbabwe">Zimbabwe</option>
-                    <option value=""></option>
-                  </select>
-                </fieldset>
-                <fieldset class="region asia">
-                  <label for="asia"></label>
-                  <select name="region" id="asia">
-                    <option value="" disabled selected hidden>Asia</option>
-                    <option value="afghanistan">Afghanistan</option>
-                    <option value="armenia">Armenia</option>
-                    <option value="azerbaijan">Azerbaijan</option>
-                    <option value="bahrain">Bahrain</option>
-                    <option value="bangladesh">Bangladesh</option>
-                    <option value="bhutan">Bhutan</option>
-                    <option value="brunei_darussalam">Brunei Darussalam</option>
-                    <option value="cambodia">Cambodia</option>
-                    <option value="china">China</option>
-                    <option value="cyprus">Cyprus</option>
-                    <option value="georgia">Georgia</option>
-                    <option value="hong_kong">Hong Kong</option>
-                    <option value=india"">India</option>
-                    <option value="indonesia">Indonesia</option>
-                    <option value="iran">Iran</option>
-                    <option value="iraq">Iraq</option>
-                    <option value="israel">Israel</option>
-                    <option value="japan">Japan</option>
-                    <option value="jordan">Jordan</option>
-                    <option value="kazakhstan">Kazakhstan</option>
-                    <option value="north_korea">North Korea</option>
-                    <option value="south_korea">South Korea</option>
-                    <option value="kuwait">Kuwait</option>
-                    <option value="kyrgysztan">Kyrgyzstan</option>
-                    <option value="laos">Laos</option>
-                    <option value="lebanon">Lebanon</option>
-                    <option value="macau">Macau</option>
-                    <option value="malaysia">Malaysia</option>
-                    <option value="maldives">Maldives</option>
-                    <option value="mongolia">Mongolia</option>
-                    <option value="myanmar">Myanmar</option>
-                    <option value="nepal">Nepal</option>
-                    <option value="oman">Oman</option>
-                    <option value="pakistan">Pakistan</option>
-                    <option value="philippines">Philippines</option>
-                    <option value="qatar">Qatar</option>
-                    <option value="saudi_arabia">Saudi Arabia</option>
-                    <option value="singapore">Singapore</option>
-                    <option value="sri_lanka">Sri Lanka</option>
-                    <option value="syria">Syria</option>
-                    <option value="taiwan">Taiwan</option>
-                    <option value="tajikistan">Tajikistan</option>
-                    <option value="thailand">Thailand</option>
-                    <option value="turkey">Turkey</option>
-                    <option value="turkmenistan">Turkmenistan</option>
-                    <option value="u_a_e">United Arab Emirates</option>
-                    <option value="uzbekistan">Uzbekistan</option>
-                    <option value="vietnam">Vietnam</option>
-                    <option value="yemen">Yemen</option>
-                  </select>
-                </fieldset>
-                <fieldset class="region europe">
-                  <label for="europe"></label>
-                  <select name="region" id="europe">
-                    <option value="" disabled selected hidden>Europe</option>
-                    <option value="abkhazia">Abkhazia</option>
-                    <option value="albania">Albania</option>
-                    <option value="andorra">Andorra</option>
-                    <option value="austria">Austria</option>
-                    <option value="belarus">Belarus</option>
-                    <option value="belgium">Belgium</option>
-                    <option value="bosnia">Bosnia & Herzegovina</option>
-                    <option value="bulgaria">Bulgaria</option>
-                    <option value="croatia">Croatia</option>
-                    <option value="czech_republic">Czech Republic</option>
-                    <option value="denmark">Denmark</option>
-                    <option value="england">England</option>
-                    <option value="estonia">Estonia</option>
-                    <option value="faroe_islands">Faroe Islands</option>
-                    <option value="finland">Finland</option>
-                    <option value="france">France</option>
-                    <option value="germany">Germany</option>
-                    <option value="gibraltar">Gibraltar</option>
-                    <option value="greece">Greece</option>
-                    <option value="hungary">Hungary</option>
-                    <option value="iceland">Iceland</option>
-                    <option value="ireland">Ireland</option>
-                    <option value="isle_of_man">Isle of Man</option>
-                    <option value="italy">Italy</option>
-                    <option value="latvia">Latvia</option>
-                    <option value="liechtenstein">Liechtenstein</option>
-                    <option value="lithuania">Lithuania</option>
-                    <option value="luxembourg">Luxembourg</option>
-                    <option value="macedonia">Macedonia</option>
-                    <option value="malta">Malta</option>
-                    <option value="moldova">Moldova</option>
-                    <option value="monaco">Monaco</option>
-                    <option value="montenegro">Montenegro</option>
-                    <option value="netherlands">Netherlands</option>
-                    <option value="norway">Norway</option>
-                    <option value="poland">Poland</option>
-                    <option value="portugal">Portugal</option>
-                    <option value="romania">Romania</option>
-                    <option value="russia">Russia</option>
-                    <option value="san_marino">San Marino</option>
-                    <option value="scotland">Scotland</option>
-                    <option value="serbia">Serbia</option>
-                    <option value="slovakia">Slovakia</option>
-                    <option value="slovenia">Slovenia</option>
-                    <option value="spain">Spain</option>
-                    <option value="sweden">Sweden</option>
-                    <option value="switzerland">Switzerland</option>
-                    <option value="ukraine">Ukraine</option>
-                    <option value="u_k">United Kingdom</option>
-                    <option value="wales">Wales</option>
-                  </select>
-                </fieldset>
-                <fieldset class="region n_america">
-                  <label for="north_american"></label>
-                  <select name="region" id="north_america">
-                    <option value="" disabled selected hidden>North America</option>
-                    <option value="anguilla">Anguilla</option>
-                    <option value="antigua_barbuda">Antigua & Barbuda</option>
-                    <option value="bahamas">Bahamas</option>
-                    <option value="barbados">Barbados</option>
-                    <option value="belize">Belize</option>
-                    <option value="bermuda">Bermuda</option>
-                    <option value="british_virgin_islands">British Virgin Islands</option>
-                    <option value="canada">Canada</option>
-                    <option value="cayman_islands">Cayman Islands</option>
-                    <option value="costa_rica">Costa Rica</option>
-                    <option value="cuba">Cuba</option>
-                    <option value="dominica">Dominica</option>
-                    <option value="dominican_republic">Dominican Republic</option>
-                    <option value="el_salvador">El Salvador</option>
-                    <option value="greenland">Greenland</option>
-                    <option value="grenada">Grenada</option>
-                    <option value="guadeloupe">Guadeloupe</option>
-                    <option value="guatemala">Guatemala</option>
-                    <option value="haiti">Haiti</option>
-                    <option value="honduras">Honduras</option>
-                    <option value="jamaica">Jamaica</option>
-                    <option value="martinique">Martinique</option>
-                    <option value="mexico">Mexico</option>
-                    <option value="montserrat">Montserrat</option>
-                    <option value="netherlands">Netherlands</option>
-                    <option value="antilles">Antilles</option>
-                    <option value="nicaragua">Nicaragua</option>
-                    <option value="panama">Panama</option>
-                    <option value="puerto_rico">Puerto Rico</option>
-                    <option value="saint_lucia">Saint Lucia</option>
-                    <option value="saint_vincent_grenadins">Saint Vincent & the Grenadines</option>
-                    <option value="saint_kitts_nevis">Saint Kitts & Nevis</option>
-                    <option value="trinidad_tobago">Trinidad & Tobago</option>
-                    <option value="turks_caicos_islands">Turks & Caicos Islands</option>
-                    <option value="u_s_a">United States of America</option>
-                    <option value="virgin_islands">Virgin Islands</option>
-                  </select>
-                </fieldset>
-                <fieldset class="region s_america">
-                  <label for="south_america"></label>
-                  <select name="region" id="south_ameria">
-                    <option value="" disabled selected hidden>South America</option>
-                    <option value="argentina">Argentina</option>
-                    <option value="bolivia">Bolivia</option>
-                    <option value="brazil">Brazil</option>
-                    <option value="chile">Chile</option>
-                    <option value="colombia">Colombia</option>
-                    <option value="ecuador">Ecuador</option>
-                    <option value="falkland_islands">Falkland Islands</option>
-                    <option value="french_guiana">French Guiana</option>
-                    <option value="guyana">Guyana</option>
-                    <option value="paraguay">Paraguay</option>
-                    <option value="peru">Peru</option>
-                    <option value="suriname">Suriname</option>
-                    <option value="uruguay">Uruguay</option>
-                    <option value="venezuela">Venezuela</option>
-                  </select>
-                </fieldset>
-                <fieldset class="region oceana">
-                  <label for="oceana"></label>
-                  <select name="region" id="oceana">
-                    <option value="" disabled selected hidden>Oceana</option>
-                    <option value="ascension_islands">Ascension Islands</option>
-                    <option value="australia">Australia</option>
-                    <option value="cook_islands">Cook Islands</option>
-                    <option value="fiji">Fiji</option>
-                    <option value="french_polynesia">French Polynesia</option>
-                    <option value="guam">Guam</option>
-                    <option value="kiribati">Kiribati</option>
-                    <option value="marshall_islands">Marshal Islands</option>
-                    <option value="micronesia">Micronesia</option>
-                    <option value="nauru">Nauru</option>
-                    <option value="new_caledonia">New Caledonia</option>
-                    <option value="new_guinea">New Guinea</option>
-                    <option value="new_zealand">New Zealand</option>
-                    <option value="niue">Niue</option>
-                    <option value="norfold_island">Norfolk Island</option>
-                    <option value="norther_mariana_islands">Northern Mariana Islands</option>
-                    <option value="palau">Palau</option>
-                    <option value="papua_new_guinea">Papa New Guinea</option>
-                    <option value="saint_pierre_miquelon">Saint Pierre & Miquelon</option>
-                    <option value="samoa">Samoa</option>
-                    <option value="solomon_islands">Solomon Islands</option>
-                    <option value="tokelau">Tokelau</option>
-                    <option value="tonga">Tonga</option>
-                    <option value="tuvalu">Tuvalu</option>
-                    <option value="vanuatu">Vanuatu</option>
-                    <option value="wallis_futuna">Wallis & Futuna</option>
-                  </select>
-                </fieldset>
-                <fieldset class="region other">
-                  <label for="other"></label>
-                  <select name="region" id="other">
-                    <option value="" disabled selected hidden>Other Cuisines</option>
-                    <option value="jewish">Jewish</option>
-                    <option value="scandinavian">Scandinavian</option>
-                    <option value="tibetan">Tibetan</option>
-                    <option value="middle_eastern">Middle Eastern</option>
-                    <option value="mediterranean">Mediterranean</option>
-                    <option value="central_american">Central American</option>
-                    <option value="caribbean">Caribbean Cuisine</option>
-                  </select>
-                </fieldset>
+                <ol>
+                  <li data-value="africa" class="init">Africa
+                    <ol>
+                      <li data-value="algeria">Algeria</li>
+                      <li data-value="angola">Angola</li>
+                      <li data-value="benin">Benin</li>
+                      <li data-value="botswana">Botswana</li>
+                      <li data-value="burkina_faso">Burkina Faso</li>
+                      <li data-value="burundi">Burundi</li>
+                      <li data-value="canary_islands">Canary Islands</li>
+                      <li data-value="cameroon">Cameroon</li>
+                      <li data-value="cape_verde">Cape Verde</li>
+                      <li data-value="c_a_r">Central Afican Repbulic</li>
+                      <li data-value="chad">Chad</li>
+                      <li data-value="comoros">Comoros</li>
+                      <li data-value="congo">Democratic Rebublic of Congo</li>
+                      <li data-value="Cote_d'lvoire">Cote d'lvoire</li>
+                      <li data-value="djibouti">Djibouti</li>
+                      <li data-value="egypt">Egypt</li>
+                      <li data-value="equatorial_guinea">Equitorial Guinea</li>
+                      <li data-value="guinea_bissau">Guinea Bissau</li>
+                      <li data-value="kenya">Kenya</li>
+                      <li data-value="lesotho">Lesotho</li>
+                      <li data-value="liberia">Liberia</li>
+                      <li data-value="madagascar">Madagascar</li>
+                      <li data-value="malawi">Malawi</li>
+                      <li data-value="mali">Mali</li>
+                      <li data-value="mauritius">Mauritius</li>
+                      <li data-value="mayotte">Mayotte</li>
+                      <li data-value="morocco">Morocco</li>
+                      <li data-value="mozambique">Mozambique</li>
+                      <li data-value="namibia">Namibia</li>
+                      <li data-value="niger">Niger</li>
+                      <li data-value="nigeria">Nigeria</li>
+                      <li data-value="reunion">Reunion</li>
+                      <li data-value="rwanda">Rwanda</li>
+                      <li data-value="sao_tome_principe">Sao Tome & Principe</li>
+                      <li data-value="senegal">Senegal</li>
+                      <li data-value="seychelles">Seychelles</li>
+                      <li data-value="sierra_leone">Sierra Leone</li>
+                      <li data-value="somalia">Somalia</li>
+                      <li data-value="south_africa">South Africa</li>
+                      <li data-value="sudan">Sudan</li>
+                      <li data-value="swaziland">Swaziland</li>
+                      <li data-value="tanzania">Tanzania</li>
+                      <li data-value="togo">Togo</li>
+                      <li data-value="uganda">Uganda</li>
+                      <li data-value="zambia">Zambia</li>
+                      <li data-value="zimbabwe">Zimbabwe</li>
+                    </ol>
+                  </li>
+                  <li data-value="asia" class="init">Asia
+                    <ol>
+                      <li data-value="afghanistan">Afghanistan</li>
+                      <li data-value="armenia">Armenia</li>
+                      <li data-value="azerbaijan">Azerbaijan</li>
+                      <li data-value="bahrain">Bahrain</li>
+                      <li data-value="bangladesh">Bangladesh</li>
+                      <li data-value="bhutan">Bhutan</li>
+                      <li data-value="brunei_darussalam">Brunei Darussalam</li>
+                      <li data-value="cambodia">Cambodia</li>
+                      <li data-value="china">China</li>
+                      <li data-value="cyprus">Cyprus</li>
+                      <li data-value="georgia">Georgia</li>
+                      <li data-value="hong_kong">Hong Kong</li>
+                      <li data-value=india"">India</li>
+                      <li data-value="indonesia">Indonesia</li>
+                      <li data-value="iran">Iran</li>
+                      <li data-value="iraq">Iraq</li>
+                      <li data-value="israel">Israel</li>
+                      <li data-value="japan">Japan</li>
+                      <li data-value="jordan">Jordan</li>
+                      <li data-value="kazakhstan">Kazakhstan</li>
+                      <li data-value="north_korea">North Korea</li>
+                      <li data-value="south_korea">South Korea</li>
+                      <li data-value="kuwait">Kuwait</li>
+                      <li data-value="kyrgysztan">Kyrgyzstan</li>
+                      <li data-value="laos">Laos</li>
+                      <li data-value="lebanon">Lebanon</li>
+                      <li data-value="macau">Macau</li>
+                      <li data-value="malaysia">Malaysia</li>
+                      <li data-value="maldives">Maldives</li>
+                      <li data-value="mongolia">Mongolia</li>
+                      <li data-value="myanmar">Myanmar</li>
+                      <li data-value="nepal">Nepal</li>
+                      <li data-value="oman">Oman</li>
+                      <li data-value="pakistan">Pakistan</li>
+                      <li data-value="philippines">Philippines</li>
+                      <li data-value="qatar">Qatar</li>
+                      <li data-value="saudi_arabia">Saudi Arabia</li>
+                      <li data-value="singapore">Singapore</li>
+                      <li data-value="sri_lanka">Sri Lanka</li>
+                      <li data-value="syria">Syria</li>
+                      <li data-value="taiwan">Taiwan</li>
+                      <li data-value="tajikistan">Tajikistan</li>
+                      <li data-value="thailand">Thailand</li>
+                      <li data-value="turkey">Turkey</li>
+                      <li data-value="turkmenistan">Turkmenistan</li>
+                      <li data-value="u_a_e">United Arab Emirates</li>
+                      <li data-value="uzbekistan">Uzbekistan</li>
+                      <li data-value="vietnam">Vietnam</li>
+                      <li data-value="yemen">Yemen</li>
+                    </ol>
+                  </li>
+                  <li data-value="europe" class="init">Europe
+                    <ol>
+                      <li data-value="abkhazia">Abkhazia</li>
+                      <li data-value="albania">Albania</li>
+                      <li data-value="andorra">Andorra</li>
+                      <li data-value="austria">Austria</li>
+                      <li data-value="belarus">Belarus</li>
+                      <li data-value="belgium">Belgium</li>
+                      <li data-value="bosnia">Bosnia & Herzegovina</li>
+                      <li data-value="bulgaria">Bulgaria</li>
+                      <li data-value="croatia">Croatia</li>
+                      <li data-value="czech_republic">Czech Republic</li>
+                      <li data-value="denmark">Denmark</li>
+                      <li data-value="england">England</li>
+                      <li data-value="estonia">Estonia</li>
+                      <li data-value="faroe_islands">Faroe Islands</li>
+                      <li data-value="finland">Finland</li>
+                      <li data-value="france">France</li>
+                      <li data-value="germany">Germany</li>
+                      <li data-value="gibraltar">Gibraltar</li>
+                      <li data-value="greece">Greece</li>
+                      <li data-value="hungary">Hungary</li>
+                      <li data-value="iceland">Iceland</li>
+                      <li data-value="ireland">Ireland</li>
+                      <li data-value="isle_of_man">Isle of Man</li>
+                      <li data-value="italy">Italy</li>
+                      <li data-value="latvia">Latvia</li>
+                      <li data-value="liechtenstein">Liechtenstein</li>
+                      <li data-value="lithuania">Lithuania</li>
+                      <li data-value="luxembourg">Luxembourg</li>
+                      <li data-value="macedonia">Macedonia</li>
+                      <li data-value="malta">Malta</li>
+                      <li data-value="moldova">Moldova</li>
+                      <li data-value="monaco">Monaco</li>
+                      <li data-value="montenegro">Montenegro</li>
+                      <li data-value="netherlands">Netherlands</li>
+                      <li data-value="norway">Norway</li>
+                      <li data-value="poland">Poland</li>
+                      <li data-value="portugal">Portugal</li>
+                      <li data-value="romania">Romania</li>
+                      <li data-value="russia">Russia</li>
+                      <li data-value="san_marino">San Marino</li>
+                      <li data-value="scotland">Scotland</li>
+                      <li data-value="serbia">Serbia</li>
+                      <li data-value="slovakia">Slovakia</li>
+                      <li data-value="slovenia">Slovenia</li>
+                      <li data-value="spain">Spain</li>
+                      <li data-value="sweden">Sweden</li>
+                      <li data-value="switzerland">Switzerland</li>
+                      <li data-value="ukraine">Ukraine</li>
+                      <li data-value="u_k">United Kingdom</li>
+                      <li data-value="wales">Wales</li>
+                    </ol>
+                  </li>
+                  <li data-value="north-america" class="init">North America
+                    <ol>
+                      <li data-value="anguilla">Anguilla</li>
+                      <li data-value="antigua_barbuda">Antigua & Barbuda</li>
+                      <li data-value="bahamas">Bahamas</li>
+                      <li data-value="barbados">Barbados</li>
+                      <li data-value="belize">Belize</li>
+                      <li data-value="bermuda">Bermuda</li>
+                      <li data-value="british_virgin_islands">British Virgin Islands</li>
+                      <li data-value="canada">Canada</li>
+                      <li data-value="cayman_islands">Cayman Islands</li>
+                      <li data-value="costa_rica">Costa Rica</li>
+                      <li data-value="cuba">Cuba</li>
+                      <li data-value="dominica">Dominica</li>
+                      <li data-value="dominican_republic">Dominican Republic</li>
+                      <li data-value="el_salvador">El Salvador</li>
+                      <li data-value="greenland">Greenland</li>
+                      <li data-value="grenada">Grenada</li>
+                      <li data-value="guadeloupe">Guadeloupe</li>
+                      <li data-value="guatemala">Guatemala</li>
+                      <li data-value="haiti">Haiti</li>
+                      <li data-value="honduras">Honduras</li>
+                      <li data-value="jamaica">Jamaica</li>
+                      <li data-value="martinique">Martinique</li>
+                      <li data-value="mexico">Mexico</li>
+                      <li data-value="montserrat">Montserrat</li>
+                      <li data-value="netherlands">Netherlands</li>
+                      <li data-value="antilles">Antilles</li>
+                      <li data-value="nicaragua">Nicaragua</li>
+                      <li data-value="panama">Panama</li>
+                      <li data-value="puerto_rico">Puerto Rico</li>
+                      <li data-value="saint_lucia">Saint Lucia</li>
+                      <li data-value="saint_vincent_grenadins">Saint Vincent & the Grenadines</li>
+                      <li data-value="saint_kitts_nevis">Saint Kitts & Nevis</li>
+                      <li data-value="trinidad_tobago">Trinidad & Tobago</li>
+                      <li data-value="turks_caicos_islands">Turks & Caicos Islands</li>
+                      <li data-value="u_s_a">United States of America</li>
+                      <li data-value="virgin_islands">Virgin Islands</li>
+                    </ol>
+                  </li>
+                  <li data-value="south-america" class="init">South America
+                    <ol>
+                      <li data-value="argentina">Argentina</li>
+                      <li data-value="bolivia">Bolivia</li>
+                      <li data-value="brazil">Brazil</li>
+                      <li data-value="chile">Chile</li>
+                      <li data-value="colombia">Colombia</li>
+                      <li data-value="ecuador">Ecuador</li>
+                      <li data-value="falkland_islands">Falkland Islands</li>
+                      <li data-value="french_guiana">French Guiana</li>
+                      <li data-value="guyana">Guyana</li>
+                      <li data-value="paraguay">Paraguay</li>
+                      <li data-value="peru">Peru</li>
+                      <li data-value="suriname">Suriname</li>
+                      <li data-value="uruguay">Uruguay</li>
+                      <li data-value="venezuela">Venezuela</li>
+                    </ol>
+                  </li>
+                  <li data-value="oceana" class="init">Oceana
+                    <ol>
+                      <li data-value="ascension_islands">Ascension Islands</li>
+                      <li data-value="australia">Australia</li>
+                      <li data-value="cook_islands">Cook Islands</li>
+                      <li data-value="fiji">Fiji</li>
+                      <li data-value="french_polynesia">French Polynesia</li>
+                      <li data-value="guam">Guam</li>
+                      <li data-value="kiribati">Kiribati</li>
+                      <li data-value="marshall_islands">Marshal Islands</li>
+                      <li data-value="micronesia">Micronesia</li>
+                      <li data-value="nauru">Nauru</li>
+                      <li data-value="new_caledonia">New Caledonia</li>
+                      <li data-value="new_guinea">New Guinea</li>
+                      <li data-value="new_zealand">New Zealand</li>
+                      <li data-value="niue">Niue</li>
+                      <li data-value="norfold_island">Norfolk Island</li>
+                      <li data-value="norther_mariana_islands">Northern Mariana Islands</li>
+                      <li data-value="palau">Palau</li>
+                      <li data-value="papua_new_guinea">Papa New Guinea</li>
+                      <li data-value="saint_pierre_miquelon">Saint Pierre & Miquelon</li>
+                      <li data-value="samoa">Samoa</li>
+                      <li data-value="solomon_islands">Solomon Islands</li>
+                      <li data-value="tokelau">Tokelau</li>
+                      <li data-value="tonga">Tonga</li>
+                      <li data-value="tuvalu">Tuvalu</li>
+                      <li data-value="vanuatu">Vanuatu</li>
+                      <li data-value="wallis_futuna">Wallis & Futuna</li>
+                    </ol>
+                  </li>
+                  <li data-value="other-cuisine" class="init">Other Cuisines
+                    <ol>
+                      <li data-value="jewish">Jewish</li>
+                      <li data-value="scandinavian">Scandinavian</li>
+                      <li data-value="tibetan">Tibetan</li>
+                      <li data-value="middle_eastern">Middle Eastern</li>
+                      <li data-value="mediterranean">Mediterranean</li>
+                      <li data-value="central_american">Central American</li>
+                      <li data-value="caribbean">Caribbean Cuisine</li>
+                    </ol>
+                  </li>
+                </ol>
               </div>
             </div>
             <input type="submit" value="Find Recipe!" form="recipe-form">
