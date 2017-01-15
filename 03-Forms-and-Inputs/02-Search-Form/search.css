@@ -4,7 +4,6 @@
 
 /*******Form Styles*******/
 
-
 .sidebar {
   display: none;
 }
@@ -13,7 +12,7 @@
   width: 80%;
   height: 100%;
   margin: 0 auto;
-  padding: 12px 6px 24px;
+  padding: 12px 6px 175px;
   background: rgba(240,240,255,.45);
 }
 
@@ -21,10 +20,14 @@
   margin-bottom: 12px;
 }
 .searchForm p {
-  width: 60%;
+  max-width: 400px;
+  width: 100%;
   text-align: center;
   margin: 0 auto 24px;
+  padding: 12px;
   line-height: 1.1rem;
+  color: #2C4F54;
+  background: linear-gradient(to bottom, rgba(171,173,178,.25), rgba(171,173,178,.35));
 }
 
 .searchForm form {
@@ -80,6 +83,9 @@
   width: 24%;
   margin-right: 1%;
 }
+.mealtimes-wrapper {
+
+}
 
 .mealtimes-wrapper li {
   display: block;
@@ -89,11 +95,11 @@
 }
 
 .mealtimes-wrapper li label {
-  /*padding-top: 6px;*/
   height: 100%;
   width: 100%;
   border-radius: 3px;
   text-align: center;
+  padding-top: 8px;
   color: rgba(55,30,64,1);
   background: rgba(255,155,245,1);
   box-shadow: 0 0 1px rgba(196,17,86,.5);
@@ -102,12 +108,13 @@
           transition: background .5s, color .25s;
 
 }
-.mealtimes-wrapper li:hover label {
+.mealtimes-wrapper li label:hover,
+.mealtimes-wrapper li label:focus {
   cursor: pointer;
-  background: #F04593;
+  background: rgba(118,199,245,1);
   box-shadow: 0 0 2px rgba(17,47,66,1);
-  text-shadow: 0 0 1px rgba(55,30,64,1);
-  color: rgba(18,235,200,1);
+  text-shadow: 0 0 1px white;
+  color: rgba(55,30,64,1);
 }
 
 .mealtimes-wrapper li input[type=radio] {
@@ -121,31 +128,12 @@
   margin-left: 1%;
 }
 
-.regions-wrapper {
-  position: relative;
-  display: inline-block;
-  width: 100%;
+.regions-wrapper li.init {
+  display: block;
+  margin: 3px 0;
+  padding-top: 8px;
   height: 36px;
-  margin: 3px 0;
-  border-radius: 3px;
-  background: rgba(255,155,245,1);
-  box-shadow: 0 0 1px rgba(196,17,86,.5);
-  -webkit-transition: background .5s, text-shadow .25s;
-          transition: background .5s, text-shadow .25s;
-}
-
-.regions-wrapper ol {
-  margin: 0;
-  padding: 0;
-  height: 300px;
-  overflow: scroll;
-}
-
-.regions-wrapper li {
-  margin: 3px 0;
-  padding-top: 6px;
-  height: 32px;
-  width: 100%;
+  width: 38%;
   border-radius: 3px;
   text-align: center;
   color: rgba(55,30,64,1);
@@ -154,31 +142,51 @@
   text-shadow: 0 0 1px white;
   -webkit-transition: background .5s, color .25s;
           transition: background .5s, color .25s;
-
 }
 
 .regions-wrapper li.init > ol {
-  display: none;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 3px;
+  padding: 0;
+  height: 270px;
+  width: 56%;
+  overflow: auto;
+  border-radius: 3px;
+  -webkit-transition: width 0.3s ease-in, visibility .05s ease-out;
+          transition: width 0.3s ease-in, visibility .05s ease-out;
 }
 
-.regions-wrapper li.init:active>ol{
-  display: block;
+.regions-wrapper li.init:hover>ol{
+  visibility: visible;
+  width: 62%;
+}
+
+.regions-wrapper li.init:hover,
+.regions-wrapper li:not(.init):hover {
   cursor: pointer;
+  background: rgba(118,199,245,1);
+  box-shadow: 0 0 2px rgba(17,47,66,1);
+  text-shadow: 0 0 1px white;
+  color: rgba(55,30,64,1);
+}
+
+.regions-wrapper li:not(.init) {
+  height: 36px;
+  width: 98%;
+  margin: 0 0 3px 2%;
+  padding-top: 8px;
   background: #F04593;
+  color: rgba(18,235,200,1);
   box-shadow: 0 0 1px rgba(17,47,66,1);
   text-shadow: 0 0 rgba(18,235,200,1);
-}
-.each-region select:hover,
-.each-region select:active {
-  /*color: rgba(18,235,200,1);*/
+  border-radius: 3px;
+  -webkit-transition: background .5s, color .25s;
+          transition: background .5s, color .25s;
 }
 
-.each-region select option {
-  
-}
-.each-region select option:hover {
-  cursor: pointer;
-}
 
 /*******Shared Meal and Region Styles********/
 
@@ -195,20 +203,23 @@
 .regions-container>h1 {
   height: 100%;
   width: 100%;
-  margin: 0;
-  padding-top: 6px;
+  margin-top: 0;
+  padding-top: 8px;
   font-size: 1rem;
   background: rgba(118,199,245,1);
   box-shadow: 0 0 2px rgba(17,47,66,1);
   text-shadow: 0 0 1px white;
+  font-weight: lighter;
   color: rgba(55,30,64,1);
   border-radius: 3px;
   -webkit-transition: background .5s, color .25s;
           transition: background .5s, color .25s;
 }
 
-.mealtimes-container>h1:hover,
-.regions-container>h1:hover {
+.mealtimes-container:hover h1,
+/*.mealtimes-container:focus h1,*/
+.regions-container:hover h1
+/*.regions-container:focus h1 */ {
   cursor: pointer;
   background: #F04593;
   box-shadow: 0 0 2px rgba(17,47,66,1);
@@ -218,21 +229,22 @@
 
 .regions-wrapper,
 .mealtimes-wrapper {
-  z-index: 2;
   position: absolute;
-  top: -1000px;
+  visibility: hidden;
+  top: 18px;
   width: 100%;
   height: 100%;
   display: block;
-  -webkit-transition: bottom 0.5s linear;
-          transition: bottom 0.5s linear;
+  -webkit-transition: top 0.15s ease-in-out;
+          transition: top 0.15s ease-in-out;
 }
 
 /*******Show Hidden Meal and Region content*******/
 
 .mealtimes-container:hover .mealtimes-wrapper,
 .regions-container:hover .regions-wrapper {
-  top: 32px;
+  top: 36px;
+  visibility: visible;
 }
 
 
@@ -242,7 +254,7 @@ input[type=submit] {
   height: 36px;
   display: block;
   float: right;
-  margin-top: 24px;
+  margin-top: 48px;
   border-radius: 3px;
   background: #F04593;
   box-shadow: 0 0 1px rgba(17,47,66,1);
@@ -251,13 +263,47 @@ input[type=submit] {
   -webkit-transition: background .5s, color .25s;
           transition: background .5s, color .25s;
 }
-input[type=submit]:hover {
-  background: rgba(118,199,245,1);
-  color: rgba(55,30,64,1);
-  text-shadow: 0 0 1px white;
+input[type=submit]:hover,
+input[type=submit]:focus {
+  box-shadow: 0 0 1px rgba(196,17,86,.5);
+  background: rgba(255,155,245,1);
+  color: rgba(18,235,200,1);
+  border: 1px solid rgba(18,235,200,1);
   cursor: pointer;
 }
 
+/*Styles associated with .meal and .region click events.*/
+.regions-wrapper li:not(.init).active,
+.mealtimes-wrapper li label.active,
+.mealtimes-container>h1.active,
+.regions-container>h1.active {
+  color: #FF926C;
+  text-shadow: none;
+  border: 1px solid rgba(18,235,200,1);
+}
+
+/*Styles associated with form validation upon submit event.*/
+
+.error-banner {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto 12px;
+  padding: 8px 0;
+  text-align: center;
+  background: linear-gradient(to bottom, rgba(171,173,178,.25), rgba(171,173,178,.35));
+  color: rgba(18,235,200,1);
+  text-shadow: 0 0 1px grey;
+  box-shadow: 0 0 1px rgba(196,17,86,.5);
+  border: 1px solid rgba(18,235,200,1);
+  border-radius: 3px;
+}
+
+.error-banner em {
+  color: rgba(255,155,245,1);
+  margin-right: 4px;
+}
+
+/*MEDIA QUERIES*/
 @media screen and (max-width: 400px) {
   .searchForm {
     width: 95%;

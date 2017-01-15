@@ -1,7 +1,7 @@
 (function(window) {
   var validator = {
     isEmailAddress : function(input) {
-      // Grab index of @ symbol
+      // Grab index of @ symbol1€
       var at = input.indexOf('@');
       // Grab text before ampersand
       var first = input.substr(0,at);

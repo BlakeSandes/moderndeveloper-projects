@@ -39,47 +39,47 @@
         </ul>
       </aside>
       <main class="searchForm form_home content clearfix">
-        <h1>Search Form</h1>
-        <p>Type in your combination of any fruit, vegetable, or protein, then choose your ethnic food category and meal time category, and we'll give you menu suggestions.</p>
 
+        <h1>Search Form</h1>
+        <p>Type in your combination of any fruit, vegetable, or protein, then choose the meal time and cuisine region, and menu suggestions will magically appear.</p>
         <form action="" class="clearfix" id="recipe-form" novalidate>
           <div class="search-wrapper clearfix">
             <div class="search-container">
               <label for="search"></label>
-              <input class="search"  type="search" id="search" placeholder="foods...">
+              <input class="search"  type="search" id="search" placeholder="foods..." autofocus tabindex="1">
             </div>
-            <div class="mealtimes-container">
-              <h1>Meals</h1>
+            <div class="mealtimes-container" tabindex="2">
+              <h1 class="meals">Meals</h1>
               <div class="mealtimes-wrapper">
                 <ol>
                   <li>
-                    <label for="breakfast">breakfast</label>
+                    <label for="breakfast">Breakfast</label>
                     <input id="breakfast"  name="meal" type="radio">
                   </li>
                   <li>
-                    <label for="lunch">lunch</label>
+                    <label for="lunch">Lunch</label>
                     <input id="lunch" name="meal" type="radio">
                   </li>
                   <li>
-                    <label for="dinner">dinner</label>
+                    <label for="dinner">Dinner</label>
                     <input id="dinner" name="meal" type="radio">
                   </li>
                   <li>
-                    <label for="snack">snack</label>
+                    <label for="snack">Snack</label>
                     <input id="snack" name="meal" type="radio">
                   </li>
                   <li>
-                    <label for="dessert">dessert</label>
+                    <label for="dessert">Dessert</label>
                     <input id="dessert" name="meal" type="radio">
                   </li>
                 </ol>
               </div>
             </div>
-            <div class="regions-container">
-              <h1>Cuisine Region</h1>
+            <div class="regions-container" tabindex="3">
+              <h1 class="regions">Cuisine Region</h1>
               <div class="regions-wrapper">
                 <ol>
-                  <li data-value="africa" class="init">Africa
+                  <li  class="init africa">Africa
                     <ol>
                       <li data-value="algeria">Algeria</li>
                       <li data-value="angola">Angola</li>
@@ -90,10 +90,10 @@
                       <li data-value="canary_islands">Canary Islands</li>
                       <li data-value="cameroon">Cameroon</li>
                       <li data-value="cape_verde">Cape Verde</li>
-                      <li data-value="c_a_r">Central Afican Repbulic</li>
+                      <li data-value="c_a_r">African Repbulic</li>
                       <li data-value="chad">Chad</li>
                       <li data-value="comoros">Comoros</li>
-                      <li data-value="congo">Democratic Rebublic of Congo</li>
+                      <li data-value="congo">Congo</li>
                       <li data-value="Cote_d'lvoire">Cote d'lvoire</li>
                       <li data-value="djibouti">Djibouti</li>
                       <li data-value="egypt">Egypt</li>
@@ -129,7 +129,7 @@
                       <li data-value="zimbabwe">Zimbabwe</li>
                     </ol>
                   </li>
-                  <li data-value="asia" class="init">Asia
+                  <li class="init asia">Asia
                     <ol>
                       <li data-value="afghanistan">Afghanistan</li>
                       <li data-value="armenia">Armenia</li>
@@ -182,7 +182,7 @@
                       <li data-value="yemen">Yemen</li>
                     </ol>
                   </li>
-                  <li data-value="europe" class="init">Europe
+                  <li class="init europe">Europe
                     <ol>
                       <li data-value="abkhazia">Abkhazia</li>
                       <li data-value="albania">Albania</li>
@@ -190,7 +190,7 @@
                       <li data-value="austria">Austria</li>
                       <li data-value="belarus">Belarus</li>
                       <li data-value="belgium">Belgium</li>
-                      <li data-value="bosnia">Bosnia & Herzegovina</li>
+                      <li data-value="bosnia">Bosnia|Herzegovina</li>
                       <li data-value="bulgaria">Bulgaria</li>
                       <li data-value="croatia">Croatia</li>
                       <li data-value="czech_republic">Czech Republic</li>
@@ -236,7 +236,7 @@
                       <li data-value="wales">Wales</li>
                     </ol>
                   </li>
-                  <li data-value="north-america" class="init">North America
+                  <li class="init north-america">North America
                     <ol>
                       <li data-value="anguilla">Anguilla</li>
                       <li data-value="antigua_barbuda">Antigua & Barbuda</li>
@@ -244,7 +244,7 @@
                       <li data-value="barbados">Barbados</li>
                       <li data-value="belize">Belize</li>
                       <li data-value="bermuda">Bermuda</li>
-                      <li data-value="british_virgin_islands">British Virgin Islands</li>
+                      <li data-value="virgin_islands">Virgin Islands</li>
                       <li data-value="canada">Canada</li>
                       <li data-value="cayman_islands">Cayman Islands</li>
                       <li data-value="costa_rica">Costa Rica</li>
@@ -268,15 +268,15 @@
                       <li data-value="panama">Panama</li>
                       <li data-value="puerto_rico">Puerto Rico</li>
                       <li data-value="saint_lucia">Saint Lucia</li>
-                      <li data-value="saint_vincent_grenadins">Saint Vincent & the Grenadines</li>
-                      <li data-value="saint_kitts_nevis">Saint Kitts & Nevis</li>
-                      <li data-value="trinidad_tobago">Trinidad & Tobago</li>
-                      <li data-value="turks_caicos_islands">Turks & Caicos Islands</li>
-                      <li data-value="u_s_a">United States of America</li>
+                      <li data-value="saint_vincent_grenadines">Saint Vincent|Grenadines</li>
+                      <li data-value="saint_kitts_nevis">Saint Kitts|Nevis</li>
+                      <li data-value="trinidad_tobago">Trinidad|Tobago</li>
+                      <li data-value="turks_caicos_islands">Turks|Caicos Islands</li>
+                      <li data-value="u_s_a">USA</li>
                       <li data-value="virgin_islands">Virgin Islands</li>
                     </ol>
                   </li>
-                  <li data-value="south-america" class="init">South America
+                  <li class="init south-america">South America
                     <ol>
                       <li data-value="argentina">Argentina</li>
                       <li data-value="bolivia">Bolivia</li>
@@ -294,7 +294,7 @@
                       <li data-value="venezuela">Venezuela</li>
                     </ol>
                   </li>
-                  <li data-value="oceana" class="init">Oceana
+                  <li class="init oceana">Oceana
                     <ol>
                       <li data-value="ascension_islands">Ascension Islands</li>
                       <li data-value="australia">Australia</li>
@@ -321,10 +321,10 @@
                       <li data-value="tonga">Tonga</li>
                       <li data-value="tuvalu">Tuvalu</li>
                       <li data-value="vanuatu">Vanuatu</li>
-                      <li data-value="wallis_futuna">Wallis & Futuna</li>
+                      <li data-value="wallis_futuna">Wallis|Futuna</li>
                     </ol>
                   </li>
-                  <li data-value="other-cuisine" class="init">Other Cuisines
+                  <li class="init other">Other Cuisines
                     <ol>
                       <li data-value="jewish">Jewish</li>
                       <li data-value="scandinavian">Scandinavian</li>
@@ -338,7 +338,7 @@
                 </ol>
               </div>
             </div>
-            <input type="submit" value="Find Recipe!" form="recipe-form">
+            <input type="submit" value="Find Recipe!" form="recipe-form" tabindex="4">
           </div>
         </form>
       </main>

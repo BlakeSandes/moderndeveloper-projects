@@ -14,7 +14,6 @@ dateOfBirth;
 // Declaring HMTL fragment variables for top error modal.
 var errorDiv = document.createElement('div'),
 errorMessage = document.createTextNode("Error: empty or insufficient input.");
-invalids = document.getElementsByClassName('invalid');
 
 // change .invalid class to inputs if incorrect input.
 signupForm.addEventListener('submit', function(event) {
