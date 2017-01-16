@@ -39,20 +39,20 @@
           <li><a href="../08-Credit-Debit-Form/credit.html">Credit & Debit</a></li>
         </ul>
       </aside>
-      <main class="quest_form form_home content">
-        <h1>Questionaire Form</h1>
+      <main class="quest-form form_home content">
+        <h1>Qestionaire Form</h1>
         <p>There are gelato stores where you can get some pretty weird flavors. What is your favorite of these weird gelato flavours?</p>
-        <form action="" method="">
-          <fieldset class="flavors">
+        <form action="" method="" id="questionaire-form">
+          <fieldset class="flavors ">
             <legend title="Flavours"></legend>
             <ol>
               <li>
                 <input type="radio" id="curry" name="flavor">
-                <label for="curry">Curry</label>
+                <label for="curry" tabindex="1">Curry</label>
               </li>
               <li>
-                <input type="radio" id="garlic" name="flavor" checked>
-                <label for="garlic">Garlic</label>
+                <input type="radio" id="garlic" name="flavor">
+                <label for="garlic" tabindex="2">Garlic</label>
               </li>
               <li>
                 <input type="radio" id="teriyaki" name="flavor">
@@ -78,23 +78,57 @@
                 <input type="radio" id="chipotle`" name="flavor">
                 <label for="chipotle`">Chipotle`</label>
               </li>
-
+            </ol>
+            <ol>
+              <li>
+                <input type="radio" id="mustard" name="flavor">
+                <label for="mustard">Mustard</label>
+              </li>
+              <li>
+                <input type="radio" id="pepperoni" name="flavor">
+                <label for="pepperoni">Pepperoni</label>
+              </li>
+              <li>
+                <input type="radio" id="pickles" name="flavor">
+                <label for="pickles">Pickles</label>
+              </li>
+              <li>
+                <input type="radio" id="yuzu" name="flavor">
+                <label for="yuzu">Yuzu</label>
+              </li>
+              <li>
+                <input type="radio" id="marinara" name="flavor">
+                <label for="marinara">Marinara</label>
+              </li>
+              <li>
+                <input type="radio" id="sourdough" name="flavor">
+                <label for="sourdough">Sourdough</label>
+              </li>
+              <li>
+                <input type="radio" id="chili" name="flavor">
+                <label for="chili">Chili</label>
+              </li>
+              <li>
+                <input type="radio" id="hops" name="flavor">
+                <label for="hops">Hops</label>
+              </li>
             </ol>
           </fieldset>
           <fieldset class="personal">
             <p>What is your personal weird flavor preference?</p>
-            <legend title="Preferences"></legend>
+            <legend title="Preference"></legend>
             <li>
               <label for="choice"></label>
-              <input type="text" id="choice" name="flavor" placeholder="favorite flave...">
+              <input type="text" id="choice" name="flavor" placeholder="Favorite flavour...">
             </li>
           </fieldset>
-          <button type="submit">Submit</button>
+          <button type="submit" form="questionaire-form">Submit</button>
         </form>
       </main>
     </div>
-
     <footer><span></span></footer>
-  </div>
+  </div>  
+  <script type="text/javascript" src="validator.js"></script>
+  <script type="text/javascript" src="questionaire.js"></script>
 </body>
 </html>
