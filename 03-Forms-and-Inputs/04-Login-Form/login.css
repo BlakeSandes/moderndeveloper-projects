@@ -1,4 +1,3 @@
-
 @import url("../../styles/normalize.css");
 @import url("../../styles/default.css");
 @import url("../form-home/form_home.css");
@@ -8,17 +7,18 @@
 }
 
 
-.login {
+.login 
   width: 100%;
 }
 
 .login>h1 {
   padding-bottom: 18px;
 }
+
 .login form {
   position: relative;
   width: 300px;
-  margin: 0 auto;
+  margin: 54px auto 0;
   display: block;
   background: linear-gradient(to right,
     rgba(27,204,255,.65), rgba(90,227,154,.65));
@@ -27,12 +27,12 @@
 .login .heading {
   display: block;
   width: 100%;
-  height: 2em;
+  /*height: 2rem;*/
   text-align: center;
   border-bottom: 1px solid rgba(39,54,64,.35);
 }
 .login .heading p {
-  padding-top: .25em;
+  padding-top: .25rem;
   color: rgba(39,54,64,.75);
 }
 .login form fieldset {
@@ -173,4 +173,37 @@
 .login .no_account a:hover {
   background: rgba(255,215,149,.5);
   box-shadow: 0 0 1px rgba(39,54,64,.75);
+}
+
+.error-div {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  width: 300px;
+  height: 36px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  color: rgba(39,54,64,.75);
+  background: linear-gradient(to right,
+    rgba(27,204,255,.65), rgba(90,227,154,.65));
+  box-shadow: 0 0 1px 2px rgba(18,235,200, 1); 
+  -webkit-transition: visibility .15s ease-in, top .5s ease-in-out;
+          transition: visibility .15s ease-in, top .5s ease-in-out;
+}
+.error-div p {
+  margin: 0;
+  padding-top: 8px;
+}
+
+.error-div em {
+  color: rgba(130,57,103,1);
+  padding-right: 4px;
+}
+
+.visible {
+  visibility: visible;
+  top: -54px;
+  margin-top: 12px;
+
 }

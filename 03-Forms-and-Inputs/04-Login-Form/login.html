@@ -41,9 +41,12 @@
       </aside>
       <main class="login form_home content">
         <h1>Login Form</h1>
-        <form action="">
+        <form action="" id="login-form" novalidate>
+          <div class="error-div">
+            <p><em>Error:</em> empty or insufficient input.</p>
+          </div>
           <article class="heading">
-            <p>Log in to your account</p>
+            <p class="firstP">Log in to your account</p>
           </article>
           <fieldset>
             <ol>
@@ -60,16 +63,18 @@
                 <label for="remember_me">Remember Me</label>
                 <span><input type="checkbox" id="remember_me" name="remember_me"></span>
               </li>
-              <button type="submit" name="login">Log in</button>
+              <button type="submit" name="login" form="login-form">Log in</button>
             </ol>
           </fieldset>
           <article class="no_account">
-            <p>Don't have an account? <a href="../01-Signup-Form/index.html">Sign up</a></p>
+            <p>Don't have an account? <a href="../01-Signup-Form/signup.html">Sign up</a></p>
           </article>
         </form>
       </main>
     </div>
     <footer><span></span></footer>
   </div>
+  <script type="text/javascript" src="validator.js"></script>
+  <script type="text/javascript" src="login.js"></script>
 </body>
 </html>

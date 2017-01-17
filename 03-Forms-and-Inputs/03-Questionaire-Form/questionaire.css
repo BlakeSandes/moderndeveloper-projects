@@ -130,8 +130,8 @@
   min-width: 270px;
   border-radius: 4px;
   background: rgba(255,166,188,.75);
-  padding-left: 8px;
-  box-shadow: 0 0 1px rgba(100,108,125,.35)
+  box-shadow: 0 0 1px rgba(100,108,125,.35);
+  text-align: center;
 }
 
 .quest-form button {
