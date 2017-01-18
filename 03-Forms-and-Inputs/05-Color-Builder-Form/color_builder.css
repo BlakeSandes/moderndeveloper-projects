@@ -30,7 +30,7 @@
   width: 100%;
   margin: 12px 0;
   border-radius: 6px;
-  background: rgba(188,188,204,1);
+  /*background: rgba(188,188,204,1);*/
   box-shadow: inset 0 0 12px rgba(122,123,133,.45) ,0 0 1px rgba(122,123,133,1);
 }
 
@@ -58,32 +58,43 @@
   border: 1px solid rgba(162,163,176,1);
   background: rgba(162,163,176,.35);
 }
-.slider-border::before {
-  position: absolute;
-  content: '⧿';
-  top: -4px;
-  left: 3px;
-  font-size: 1.125em;
-  color: rgba(122,123,133,1);
-  text-shadow: 0 0 1px #fff;
+
+.slider-border button {
+  display: block;
+  border: none;
+  background: none;
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 5%;
+  height: 20.5px;
+  text-align: center;
 }
 
-.slider-border::after {
-  position: absolute;
-  content: '⧾';
-  top: -6px;
-  right: 3px;
-  font-size: 1.25em;
+.slider-border button:hover {
+  cursor: pointer;
+  
+}
+
+.slider-border button:hover .material-icons {
+  color: rgba(116,207,255,.85);
+}
+.slider-border button .material-icons {
+  font-size: .7rem;
+  width: 100%;
   color: rgba(122,123,133,1);
   text-shadow: 0 0 1px #fff;
+  /*padding-right: 4px;*/
 }
+
 input[type=range] {
   -webkit-appearance: none;
   -moz-appearance: none;
   display: block;
+  float: left;
   width: 90%;
   height: 20.5px;
-  margin: -1px auto 0;
+  margin-top: -1px;
   border-radius: 8px;
   box-shadow: 0 0 1px #fff;
   border: 1px solid rgba(162,163,176,1);
@@ -168,40 +179,6 @@ input[type=range]::-webkit-slider-thumb {
   background: none;
 }
 
-input[type=range] + span:before {
-  content: '127';
-  position: absolute;
-  top: -18px;
-  left: 126px;
-  width: 32px;
-  line-height: .45em;
-  height: 10px;
-  padding-top: 4px;
-  text-align: center;
-  background: rgba(162,163,176,.45);
-  text-shadow: 0 0 1px #fff;
-  background: rgba(162,163,176,.35);
-  color: rgba(122,123,133,1);
-  border: 1px solid rgba(162,163,176,1);
-}
-
-/*input[type=range]::-webkit-slider-thumb:before {
-  content: '127';
-  position: absolute;
-  top: -28px;
-  left: -16px;
-  width: 32px;
-  line-height: .45em;
-  height: 10px;
-  padding-top: 4px;
-  text-align: center;
-  background: rgba(162,163,176,.45);
-  text-shadow: 0 0 1px #fff;
-  background: rgba(162,163,176,.35);
-  color: rgba(122,123,133,1);
-  border: 1px solid rgba(162,163,176,1);
-}*/
-
 input[type=range]::-moz-range-thumb {
   position: relative;
   width: 0;
@@ -214,24 +191,8 @@ input[type=range]::-moz-range-thumb {
   background: none;
 }
 
-/*input[type=range]::-moz-range-thumb::before {
-  content: '255';
-  position: absolute;
-  top: -27px;
-  left: -16px;
-  width: 32px;
-  line-height: .45em;
-  height: 10px;
-  padding-top: 4px;
-  text-align: center;
-  background: rgba(162,163,176,.45);
-  text-shadow: 0 0 1px #fff;
-  background: rgba(162,163,176,.35);
-  color: rgba(122,123,133,1);
-  border: 1px solid rgba(162,163,176,1);
-}*/
-
 input[type=range]::-ms-thumb {
+  position: relative;
   width: 0;
   height: 0;
   border: 9px solid transparent;
@@ -241,6 +202,25 @@ input[type=range]::-ms-thumb {
   border-left-color: rgba(204,17,102,.75);
   background: none;
 }
+
+/********Displays the value of slider.********/
+
+.range-value {
+  position: absolute;
+  top: -19px;
+  left: 126px;
+  width: 32px;
+  line-height: .45em;
+  height: 16px;
+  padding-top: 4px;
+  text-align: center;
+  background: rgba(162,163,176,.45);
+  text-shadow: 0 0 1px #fff;
+  background: rgba(162,163,176,.35);
+  color: rgba(122,123,133,1);
+  border: 1px solid rgba(162,163,176,1);
+}
+
 
 
 
