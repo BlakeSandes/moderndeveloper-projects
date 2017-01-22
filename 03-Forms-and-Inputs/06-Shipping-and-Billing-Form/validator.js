@@ -8,9 +8,9 @@
       // Grab text after ampersand
       var last = input.substr(at + 1);
       
-      if (!input) {
-        throw "Please fill in email input please.";
-      }
+      // if (!input) {
+      //   throw "Please fill in email input please.";
+      // }
       // Check if String type
       if (typeof first === 'string' && at >= 0 && typeof last === 'string') {
         return true;
@@ -31,9 +31,9 @@
         phoneString = input.toString();
       }
 
-      if (!input) {
-        throw "Please input your phone number please.";
-      }
+      // if (!input) {
+      //   throw "Please input your phone number please.";
+      // }
       // Return true if ten digits.
       if (phoneString.length === 10) {
         return true;
@@ -54,9 +54,9 @@
       var date2 = new Date(reference);
 
       // Confirm that both dates are valid dates.
-      if ( (this.isDate(input) === false) || (this.isDate(reference) === false) ) {
-        throw "Invalid Date";
-      }
+      // if ( (this.isDate(input) === false) || (this.isDate(reference) === false) ) {
+      //   throw "Invalid Date";
+      // }
       // Get each date in number form from year 1970 and compare dates.
       if ( date1.getTime() > date2.getTime() ) {
         return true;
@@ -70,9 +70,9 @@
       var date2 = new Date(reference);
 
 
-      if ( (this.isDate(input) === false) || (this.isDate(reference) === false) ) {
-        throw "Invalid Date";
-      }
+      // if ( (this.isDate(input) === false) || (this.isDate(reference) === false) ) {
+      //   throw "Invalid Date";
+      // }
       // Get each date in number form from year 1970 and compare dates. 
       if ( date1.getTime() < date2.getTime() ) {
         return true;
@@ -84,9 +84,9 @@
       var today = new Date();
       var testDate = new Date(input);
       
-      if ( this.isDate(input) === false ) {
-        throw "Invalid Date";
-      }
+      // if ( this.isDate(input) === false ) {
+      //   throw "Invalid Date";
+      // }
       // Get each date in number form from year 1970 and compare dates.
       if (testDate.getTime() < today.getTime()) {
         return true;
@@ -99,9 +99,9 @@
       var today = new Date();
       var testDate = new Date(input);
 
-      if ( this.isDate(input) === false ) {
-        throw "Invalid Date";
-      }
+      // if ( this.isDate(input) === false ) {
+      //   throw "Invalid Date";
+      // }
       // Get each date in number form from year 1970 and compare dates.
       if (testDate.getTime() > today.getTime()) {
         return true;
@@ -164,33 +164,38 @@
         return false;
       }
     },
+
     isComposedOf : function(input, strings) {
+      var inputLength;
+
       strings = strings.sort(function(a,b) {
         return b.length - a.length;
       });
-      strings = strings.join('');
-      strings = this.withoutSymbols(strings.toLowerCase());
-      input = this.withoutSymbols(input.toLowerCase());
-      input = input.replace(/\s/g, '');
 
+      strings = strings.join('').toLowerCase();
+      input = input.replace(/\s/g, '').toLowerCase();
+      inputLength = input.length;
+      
       for (var i = 0; i < strings.length; i++) {
         if (input.indexOf(strings[i]) !== -1) {
           while (input.indexOf(strings[i]) !== -1) {
-            input = input.replace(strings[i], '');
+            strings = strings.replace(strings[i], '');
           }
         }
       }
-
-      if (input.length > 0) {
-        return false;
-      } else {
+      
+      if (strings.length === 0) {
         return true;
+      } else {
+        return false;
       }
+
     },
+
     isLength : function(input, n) {
-      if (!input || !n) {
-        throw "Please fill in field.";
-      }
+      // if (!input || !n) {
+      //   throw "Please fill in field.";
+      // }
 
       var inputLength = input.length;
 
@@ -202,9 +207,9 @@
       
     },
     isOfLength : function(input, n) {
-      if (!input || !n) {
-        throw "Please fill in field.";
-      }
+      // if (!input || !n) {
+      //   throw "Please fill in field.";
+      // }
 
       var inputLength = input.length;
 
@@ -214,10 +219,15 @@
         return false;
       } 
     },
+    firstWord: function(input) {
+      var words = input.split(' '),
+      first = words[0];
+      return first;
+    },
     countWords : function(input) {
-      if (input === undefined || input === null) {
-        throw "No input given!";
-      }
+      // if (input === undefined || input === null) {
+      //   throw "No input given!";
+      // }
 
       if (input.length === 0 || !input.trim()) {
         return 0;
@@ -230,9 +240,9 @@
       }
     },
     lessWordsThan : function(input, n) {
-       if ( (input === undefined || input === null) || (n === undefined || n === null) ) {
-        throw "No input given!";
-      }
+      //  if ( (input === undefined || input === null) || (n === undefined || n === null) ) {
+      //   throw "No input given!";
+      // }
 
       var inputLength;
 
@@ -255,9 +265,9 @@
 
     },
     moreWordsThan : function(input, n) {
-      if ( (input === undefined || input === null) || (n === undefined || n === null) ) {
-        throw "No input given!";
-      }
+      // if ( (input === undefined || input === null) || (n === undefined || n === null) ) {
+      //   throw "No input given!";
+      // }
 
       var inputLength;
 
@@ -288,9 +298,14 @@
     isAlphanumeric : function(input) {
       var match = input.match(/[a-z]|[A-Z]|[0-9]/g);
 
-      if (input.length === 0 || !input.trim()) {
-        return true;
+      if (match === null) {
+        return false;
       }
+
+      if (input.length === 0 || !input.trim()) {
+        return false;
+      }
+
       if (match.length === input.length) {
         return true;
       } else {
@@ -312,9 +327,9 @@
     isHex : function(input) {
       var match = input.match(/[0-9]|[A-F]|[a-f]/g);
 
-      if (!input || input === null || input === undefined) {
-        throw "Please input HEX value.";
-      }
+      // if (!input || input === null || input === undefined) {
+      //   throw "Please input HEX value.";
+      // }
 
       if (input.charAt(0) === '#' && (match.length === 6 || match.length === 3)) {
         return true;
