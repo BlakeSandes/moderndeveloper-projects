@@ -8,9 +8,9 @@
       // Grab text after ampersand
       var last = input.substr(at + 1);
       
-      if (!input) {
-        throw "Please fill in email input please.";
-      }
+      // if (!input) {
+      //   throw "Please fill in email input please.";
+      // }
       // Check if String type
       if (typeof first === 'string' && at >= 0 && typeof last === 'string') {
         return true;
@@ -31,9 +31,9 @@
         phoneString = input.toString();
       }
 
-      if (!input) {
-        throw "Please input your phone number please.";
-      }
+      // if (!input) {
+      //   throw "Please input your phone number please.";
+      // }
       // Return true if ten digits.
       if (phoneString.length === 10) {
         return true;
@@ -188,9 +188,9 @@
       }
     },
     isLength : function(input, n) {
-      if (!input || !n) {
-        throw "Please fill in field.";
-      }
+      // if (!input || !n) {
+      //   throw "Please fill in field.";
+      // }
 
       var inputLength = input.length;
 
@@ -202,9 +202,9 @@
       
     },
     isOfLength : function(input, n) {
-      if (!input || !n) {
-        throw "Please fill in field.";
-      }
+      // if (!input || !n) {
+      //   throw "Please fill in field.";
+      // }
 
       var inputLength = input.length;
 
@@ -230,9 +230,9 @@
       }
     },
     lessWordsThan : function(input, n) {
-       if ( (input === undefined || input === null) || (n === undefined || n === null) ) {
-        throw "No input given!";
-      }
+      //  if ( (input === undefined || input === null) || (n === undefined || n === null) ) {
+      //   throw "No input given!";
+      // }
 
       var inputLength;
 
@@ -255,9 +255,9 @@
 
     },
     moreWordsThan : function(input, n) {
-      if ( (input === undefined || input === null) || (n === undefined || n === null) ) {
-        throw "No input given!";
-      }
+      // if ( (input === undefined || input === null) || (n === undefined || n === null) ) {
+      //   throw "No input given!";
+      // }
 
       var inputLength;
 

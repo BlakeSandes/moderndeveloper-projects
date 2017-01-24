@@ -139,6 +139,8 @@ shippingForm.addEventListener('submit', function(event) {
       errorDiv1.classList.add('visible');
       errorDiv1Loc = errorDiv1.getBoundingClientRect();
       window.scrollTo(0, errorDiv1Loc.top);
+    } else {
+      errorDiv1.classList.remove(visible);
     }
   });
   // END OF .SHIPPING VALIDATION.
@@ -234,7 +236,10 @@ shippingForm.addEventListener('submit', function(event) {
         errorDiv2.classList.add('visible');
         errorDiv2Loc = errorDiv2.getBoundingClientRect();
         window.scrollTo(0, errorDiv2Loc.top);
-      } 
+      } else {
+        errorDiv2.classList.remove('visible');
+      }
+
     });
 
   // Loop through li's to check if the .invalid class has been set and make the error div visible if so.
@@ -243,7 +248,9 @@ shippingForm.addEventListener('submit', function(event) {
         errorDiv2.classList.add('visible');
         errorDiv2Loc = errorDiv2.getBoundingClientRect();
         window.scrollTo(0, errorDiv2Loc.top);
-      } 
+      } else {
+        errorDiv2.classList.remove('visible');
+      }
     });
 
   } 
