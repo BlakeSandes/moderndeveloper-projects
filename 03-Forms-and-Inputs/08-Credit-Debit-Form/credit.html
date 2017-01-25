@@ -6,6 +6,8 @@
   <title>Credit & Debit</title>
   <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
   <link rel="stylesheet" href="credit_debit.css">
 </head>
 <body>
@@ -39,9 +41,12 @@
           <li><a class="selected" href="credit.html">Credit & Debit</a></li>
         </ul>
       </aside>
-      <main class="cc_form form_home content">
+      <main class="cc-form form-home content">
         <h1>Credit and Debit Form</h1>
-        <form action="" class="clearfix">
+        <form action="" class="clearfix" id="cc-form" novalidate>
+          <div class="error-div">
+            <p><em>Error:</em> empty or insufficient input.</p>
+          </div>
           <fieldset class="name">
             <ol>
               <li>
@@ -76,7 +81,7 @@
               <li>
                 <label for="month"></label>
                 <select name="expiration" id="month" required>
-                  <option value="" disabled selected hidden>month</option>
+                  <option value="" hidden>Month</option>
                   <option value="01">01-January</option>
                   <option value="02">02-February</option>
                   <option value="03">03-March</option>
@@ -93,8 +98,8 @@
               </li>
               <li>
                 <label for="year"></label>
-                <select name="expiration" id="year" required invalid>
-                  <option value="" disabled selected hidden>year</option>
+                <select name="expiration" id="year" required>
+                  <option value="" disable hidden>Year</option>
                   <option value="2016">2016</option>
                   <option value="2017">2017</option>
                   <option value="2018">2018</option>
@@ -122,5 +127,7 @@
     </div>
     <footer><span></span></footer>
   </div>
+  <script type="text/javascript" src="validator.js"></script>
+  <script type="text/javascript" src="credit.js"></script>
 </body>
 </html>

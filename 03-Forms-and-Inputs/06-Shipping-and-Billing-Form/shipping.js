@@ -40,7 +40,7 @@ shippingForm.addEventListener('submit', function(event) {
   event.preventDefault();
 
   invalid = document.getElementsByClassName('invalid');
-  console.log(invalid);
+  
   // Country validation
   if (country.selectedIndex !== 0) {
     country.parentNode.classList.remove('invalid');
@@ -69,7 +69,6 @@ shippingForm.addEventListener('submit', function(event) {
   }  else {
     lastName.parentNode.classList.add('invalid');
   }
-
 
   // Street validation
   if (!validator.isEmpty(street.value) ) {
@@ -122,27 +121,16 @@ shippingForm.addEventListener('submit', function(event) {
     state.parentNode.classList.add('invalid');
   }
   
-  // Loop through selects to check if the .invalid class has been set and make the error div visible if so.
-  [].forEach.call(selectInvalidCheck, function(el) {
-    if (el.classList.contains('invalid')) {
-      errorDiv1.classList.add('visible');
-      errorDiv1Loc = errorDiv1.getBoundingClientRect();
-      window.scrollTo(0, errorDiv1Loc.top);
-    } else {
-      errorDiv1.classList.remove('visible');
-    }
-  });
+  // If any elements with .invalid class set the error div visible.
+  if (invalid.length > 0) {
+    errorDiv1.classList.add('visible');
+    errorDiv1Loc = errorDiv1.getBoundingClientRect();
+    window.scrollTo(0, errorDiv1Loc.top);
+  }
+  if (invalid.length === 0) {
+    errorDiv1.classList.remove('visible');
+  }
 
-  // Loop through li's to check if the .invalid class has been set and make the error div visible if so.
-  [].forEach.call(liInvalidCheck, function(el) {
-    if (el.classList.contains('invalid')) {
-      errorDiv1.classList.add('visible');
-      errorDiv1Loc = errorDiv1.getBoundingClientRect();
-      window.scrollTo(0, errorDiv1Loc.top);
-    } else {
-      errorDiv1.classList.remove(visible);
-    }
-  });
   // END OF .SHIPPING VALIDATION.
 
   // VALIDATION OF BILLING ON SUBMIT.
@@ -230,29 +218,15 @@ shippingForm.addEventListener('submit', function(event) {
       stateNoMatch.parentNode.classList.add('invalid');
     }
     
-    // Loop through selects to check if the .invalid class has been set and make the error div visible if so.
-    [].forEach.call(selectInvalidCheck, function(el) {
-      if (el.classList.contains('invalid')) {
-        errorDiv2.classList.add('visible');
-        errorDiv2Loc = errorDiv2.getBoundingClientRect();
-        window.scrollTo(0, errorDiv2Loc.top);
-      } else {
-        errorDiv2.classList.remove('visible');
-      }
-
-    });
-
-  // Loop through li's to check if the .invalid class has been set and make the error div visible if so.
-    [].forEach.call(liInvalidCheck, function(el) {
-      if (el.classList.contains('invalid')) {
-        errorDiv2.classList.add('visible');
-        errorDiv2Loc = errorDiv2.getBoundingClientRect();
-        window.scrollTo(0, errorDiv2Loc.top);
-      } else {
-        errorDiv2.classList.remove('visible');
-      }
-    });
-
+    // If any elements with .invalid class set the error div visible.
+     if (invalid.length > 0) {
+    errorDiv2.classList.add('visible');
+    errorDiv2Loc = errorDiv2.getBoundingClientRect();
+    window.scrollTo(0, errorDiv2Loc.top);
+  }
+  if (invalid.length === 0) {
+    errorDiv2.classList.remove('visible');
+  }
   } 
   // End of .billing validation.
 

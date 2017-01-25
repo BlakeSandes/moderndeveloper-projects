@@ -202,9 +202,9 @@
       
     },
     isOfLength : function(input, n) {
-      if (!input || !n) {
-        throw "Please fill in field.";
-      }
+      // if (!input || !n) {
+      //   throw "Please fill in field.";
+      // }
 
       var inputLength = input.length;
 

@@ -147,33 +147,33 @@
 
 /*********Default Form Styles************/
 
-.form_home {
+.form-home {
   width: 70%;
   margin: 0 auto;
 }
-.form_home h1 {
+.form-home h1 {
   text-align: center;
 }
 
-.form_home fieldset {
+.form-home fieldset {
   border-style: none;
 }
-.form_home fieldset legend {
+.form-home fieldset legend {
   display: none;
 }
 
-.form_home li {
+.form-home li {
   display: block;
 }
 
-.form_home input {
+.form-home input {
   border: none;
   border-radius: 0;
   outline: none;
   background: transparent;
 }
 
-.form_home label {
+.form-home label {
   display: block;
 }
 
