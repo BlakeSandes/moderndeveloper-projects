@@ -4,8 +4,16 @@
 
 /*******************PAGE CONTENT ************************/
 
+.quote {
+  text-align: center;
+  width: 75%;
+  max-width: 400px;
+  min-width: 345px;
+  margin: 0 auto;
+}
+
 .title {
-  width: 42%;
+  width: 100%;
   border-radius: 0 54px 0 54px;
   margin: 18px auto 0;
   padding: 4px 36px 8px;
@@ -21,16 +29,14 @@ h1,h2 {
 
 }
 
-.quote {
-  text-align: center;
-}
 blockquote {
-  margin: 64px 0;
+  width: 75%;
+  margin: 64px auto;
 }
 blockquote p {
   position: relative;
   line-height: 1.2em;
-  font-size: 3em;
+  font-size: 1.5rem;
   color: rgba(51,57,74,1);
 }
 blockquote p:before,
@@ -61,19 +67,3 @@ blockquote span:before {
 
 
 /***************CONTENT MEDIA QUERIES*****************/
-
-@media screen and (max-width: 400px) {
-  .title {
-    padding-left: 18px; ;
-  }
-  .title h1, .title h2 {
-    display: inline-block;
-    text-align: center;
-  }
-  .title h2 {
-    font-size: 100%;
-    line-height: 130%;
-    margin-top: 0;
-    padding-left: 10px;
-  }
-}
