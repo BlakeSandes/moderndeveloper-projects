@@ -18,26 +18,27 @@
   background: rgba(37,109,127,1);
 }
 
-.calculator input,
+.calculator span.screen,
 .calculator button {
   height: 40px;
 }
-.calculator input {
+.calculator span.screen {
   display: block;
   width: 99%;
-  text-align: left;
   margin: 0.5% 0.5% 6px;
-  padding: 0;
-  padding-left: 6px;
+  padding: 0 6px;
+  overflow: hidden;
   border: 0;
   background: rgba(163,226,229,.65);
+  color: rgba(19,55,64,.9);
   border-left: 3px solid rgba(33,96,112,1);
   border-top: 3px solid rgba(33,96,112,1);
   border-right: 3px solid rgba(111,153,156,1);
   border-bottom: 3px solid rgba(111,153,156,1);
 
-  font-size: 1.25em;
-
+  text-align: right;
+  font-size: 1.7rem;
+  letter-spacing: .25rem;
 }
 
 .calculator button {
@@ -50,7 +51,7 @@
   border: none;
   border-top: .5px solid white;
   box-shadow: 0 0 0 1px rgba(13,37,43,1);
-  font-size: 1.85em;
+  font-size: 1.85rem;
   background: rgba(19,55,64,.65);
   color: white;
 

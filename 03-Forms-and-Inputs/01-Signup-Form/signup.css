@@ -17,8 +17,9 @@
 }
 
 form {
-  width: 50%;
-  min-width: 300px;
+  width: 40%;
+  max-width: 480px;
+  min-width: 360px;
   margin: 0 auto;
   padding: 2px;
   display: block;

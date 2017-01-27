@@ -13,8 +13,13 @@
 }
 
 .shipping-form {
-  width: 540px;
-  min-width: 310px;
+  width: 100%;
+}
+.shipping-form form {
+  margin: 0 auto;
+  width: 40%;
+  max-width: 480px;
+  min-width: 380px;
 }
 .shipping-form fieldset {
   position: relative;
