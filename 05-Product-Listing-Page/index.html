@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <title>Product Listings</title>
   <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
   <link rel="stylesheet" href="products.css">
 </head>
 <body>
@@ -22,48 +24,39 @@
         </ul>
       </nav>
     </header>
-    <main class="products_page content clearfix">
+    <main class="products-page content clearfix">
       <h1>Product Listings Page</h1>
-      <div class="basket_wrapper">
+      <div class="basket-wrapper">
         <!-- Add feature where when scrolling up Basket moves up with scroll until it gets to top of visible window and then remains fixed there. When scrolling down, Basket comes down from fixed spot at top of visible window to new spot at top of .products_page div. as .products_page becomes visible in display window.-->
         <aside class="basket clearfix">
           <ol>
             <li>
-              <h3>Basket</h3>
-              <span class="purchase_number">3</span>
-              <div class="bottom_bar topbar"></div>
-              <ol>
-                <li>
-                  <span class="product_caption" data-caption="">Product Caption</span>
-                  <span class="price" data-price="">$75.00</span>
-                  <input type="text" name="amount" value="1" class="clearfix amount">
-                  <input type="button" name="remove" value="REMOVE" class="remove">
-                  <div class="bottom_bar clearfix"></div>
-                </li>
-                <li>
-                  <span class="product_caption" data-caption="">Product Caption</span>
-                  <span class="price" data-price="">$75.00</span>
-                  <input type="text" name="amount" value="1" class="clearfix amount">
-                  <input type="button" name="remove" value="REMOVE" class="remove">
-                  <div class="bottom_bar clearfix"></div>
-                </li>
-                <li>
-                  <span class="product_caption" data-caption="">Product Caption</span>
-                  <span class="price" data-price="">$75.00</span>
-                  <input type="text" name="amount" value="1" class="clearfix amount">
-                  <input type="button" name="remove" value="REMOVE" class="remove">
-                  <div class="bottom_bar clearfix"></div>
-                </li>
-                <li>
-                  <span class="total_text">TOTAL</span>
-                  <span data-total="" class="total_price">$150.00</span>
-                  <div class="bottom_bar clearfix"></div>
-                </li>
-                <li class="clearfix">
-                  <input type="button" name="update" value="Update" class="update">
-                  <a href="" tabindex="-1"><button>CHECKOUT</button></a>
-                </li>
-              </ol>
+              <i class="material-icons shopping-basket">shopping_basket</i>
+              <span class="quantity-count">0</span>
+              <div class="bottom-bar topbar"></div>
+              <div class="basket-dropdown">
+                <ol class="basket-items">
+                  <!-- As a reference to how I created the itemLi HTML fragment -->
+                  <!-- <li>
+                    <span class="basket-product-caption">Product Caption</span>
+                    <span class="price" data-price="">$75.00</span>
+                    <input type="text" name="amount" value="1" class="clearfix amount">
+                    <input type="button" name="remove" value="REMOVE" class="remove">
+                    <div class="bottom-bar clearfix"></div>
+                  </li> -->
+                </ol>
+                <ol class="basket-checkout">
+                  <li>
+                    <span class="total-text">TOTAL</span>
+                    <span data-total="" class="total-price">$150.00</span>
+                    <div class="bottom-bar clearfix"></div>
+                  </li>
+                  <li class="clearfix">
+                    <input type="button" name="update" value="Update" class="update">
+                    <a href="" tabindex="-1"><button>CHECKOUT</button></a>
+                  </li>
+                </ol>
+              </div>
             </li>
           </ol>
         </aside>
@@ -71,152 +64,153 @@
 
       <div class="products clearfix">
         <article>
-          <div class="content_box">
+          <div class="content-box">
             <figure>
               <!-- Clicking on image will open template with full image as well as horizontal or sidebar image views carousel as well as further description and "Add to Basket" button To be done in conjunction with Javascript.-->
               <a><img src="img/IMG_01.jpg" alt=""></a>
-              <figcaption data-caption="">Product Caption</figcaption>
+              <figcaption data-caption="Clovers on top of Moss">Clovers on top of Moss</figcaption>
             </figure>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus ullamcorper congue. Aenean lacinia, orci ut condimentum porttitor</p>
-            <p><span class="price" data-price="">$75.00</span><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
-          <div class="bottom_bar clearfix"></div>
+            <p><span class="price" data-price="75">$75.00</span><i class="material-icons add-item">add_shopping_cart</i><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
+            <div class="bottom-bar clearfix"></div>
           </div>
         </article>
         <article>
-          <div class="content_box">
-              <figure>
-                <!-- Clicking on image will open template with full image as well as horizontal or sidebar image views carousel as well as further description and "Add to Basket" button To be done in conjunction with Javascript.-->
-                <a><img src="img/IMG_02.jpg" alt=""></a>
-                <figcaption data-caption="">Product Caption</figcaption>
-              </figure>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus ullamcorper congue. Aenean lacinia, orci ut condimentum porttitor</p>
-              <p><span class="price" data-price="">$75.00</span><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
-            <div class="bottom_bar clearfix"></div>
+          <div class="content-box">
+            <figure>
+              <!-- Clicking on image will open template with full image as well as horizontal or sidebar image views carousel as well as further description and "Add to Basket" button To be done in conjunction with Javascript.-->
+              <a><img src="img/IMG_02.jpg" alt=""></a>
+              <figcaption data-caption="Pretty Tinder Fungus">Pretty Tinder Fungus</figcaption>
+            </figure>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus ullamcorper congue. Aenean lacinia, orci ut condimentum porttitor</p>
+            <p><span class="price" data-price="75">$75.00</span><i class="material-icons add-item">add_shopping_cart</i><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
+            <div class="bottom-bar clearfix"></div>
           </div>
         </article>
         <article>
-          <div class="content_box">
-              <figure>
-                <!-- Clicking on image will open template with full image as well as horizontal or sidebar image views carousel as well as further description and "Add to Basket" button To be done in conjunction with Javascript.-->
-                <a><img src="img/IMG_03.jpg" alt=""></a>
-                <figcaption data-caption="">Product Caption</figcaption>
-              </figure>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus ullamcorper congue. Aenean lacinia, orci ut condimentum porttitor</p>
-              <p><span class="price" data-price="">$75.00</span><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
-            <div class="bottom_bar clearfix"></div>
+          <div class="content-box">
+            <figure>
+              <!-- Clicking on image will open template with full image as well as horizontal or sidebar image views carousel as well as further description and "Add to Basket" button To be done in conjunction with Javascript.-->
+              <a><img src="img/IMG_03.jpg" alt=""></a>
+              <figcaption data-caption="Fireweed by Beach">Fireweed by Beach</figcaption>
+            </figure>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus ullamcorper congue. Aenean lacinia, orci ut condimentum porttitor</p>
+            <p><span class="price" data-price="75">$75.00</span><i class="material-icons add-item">add_shopping_cart</i><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
+            <div class="bottom-bar clearfix"></div>
           </div>
         </article>
         <article>
-          <div class="content_box">
-              <figure>
-                <!-- Clicking on image will open template with full image as well as horizontal or sidebar image views carousel as well as further description and "Add to Basket" button To be done in conjunction with Javascript.-->
-                <a><img src="img/IMG_04.jpg" alt=""></a>
-                <figcaption data-caption="">Product Caption</figcaption>
-              </figure>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus ullamcorper congue. Aenean lacinia, orci ut condimentum porttitor</p>
-              <p><span class="price" data-price="">$75.00</span><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
-            <div class="bottom_bar clearfix"></div>
+          <div class="content-box">
+            <figure>
+              <!-- Clicking on image will open template with full image as well as horizontal or sidebar image views carousel as well as further description and "Add to Basket" button To be done in conjunction with Javascript.-->
+              <a><img src="img/IMG_04.jpg" alt=""></a>
+              <figcaption data-caption="Fern Canyon Creak">Fern Canyon Creak</figcaption>
+            </figure>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus ullamcorper congue. Aenean lacinia, orci ut condimentum porttitor</p>
+            <p><span class="price" data-price="75">$75.00</span><i class="material-icons add-item">add_shopping_cart</i><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
+            <div class="bottom-bar clearfix"></div>
           </div>
         </article>
         <article>
-          <div class="content_box">
-              <figure>
-                <!-- Clicking on image will open template with full image as well as horizontal or sidebar image views carousel as well as further description and "Add to Basket" button To be done in conjunction with Javascript.-->
-                <a><img src="img/IMG_05.jpg" alt=""></a>
-                <figcaption data-caption="">Product Caption</figcaption>
-              </figure>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus ullamcorper congue. Aenean lacinia, orci ut condimentum porttitor</p>
-              <p><span class="price" data-price="">$75.00</span><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
-            <div class="bottom_bar clearfix"></div>
+          <div class="content-box">
+            <figure>
+              <!-- Clicking on image will open template with full image as well as horizontal or sidebar image views carousel as well as further description and "Add to Basket" button To be done in conjunction with Javascript.-->
+              <a><img src="img/IMG_05.jpg" alt=""></a>
+              <figcaption data-caption="Ferns & Water">Ferns & Water</figcaption>
+            </figure>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus ullamcorper congue. Aenean lacinia, orci ut condimentum porttitor</p>
+            <p><span class="price" data-price="75">$75.00</span><i class="material-icons add-item">add_shopping_cart</i><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
+            <div class="bottom-bar clearfix"></div>
           </div>
         </article>
         <article>
-          <div class="content_box">
-              <figure>
-                <!-- Clicking on image will open template with full image as well as horizontal or sidebar image views carousel as well as further description and "Add to Basket" button To be done in conjunction with Javascript.-->
-                <a><img src="img/IMG_06.jpg" alt=""></a>
-                <figcaption data-caption="">Product Caption</figcaption>
-              </figure>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus ullamcorper congue. Aenean lacinia, orci ut condimentum porttitor</p>
-              <p><span class="price" data-price="">$75.00</span><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
-            <div class="bottom_bar clearfix"></div>
+          <div class="content-box">
+            <figure>
+              <!-- Clicking on image will open template with full image as well as horizontal or sidebar image views carousel as well as further description and "Add to Basket" button To be done in conjunction with Javascript.-->
+              <a><img src="img/IMG_06.jpg" alt=""></a>
+              <figcaption data-caption="Beach & Sun">Beach & Sun</figcaption>
+            </figure>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus ullamcorper congue. Aenean lacinia, orci ut condimentum porttitor</p>
+            <p><span class="price" data-price="75">$75.00</span><i class="material-icons add-item">add_shopping_cart</i><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
+            <div class="bottom-bar clearfix"></div>
           </div>
         </article>
         <article>
-          <div class="content_box">
-              <figure>
-                <!-- Clicking on image will open template with full image as well as horizontal or sidebar image views carousel as well as further description and "Add to Basket" button To be done in conjunction with Javascript.-->
-                <a><img src="img/IMG_07.jpg" alt=""></a>
-                <figcaption data-caption="">Product Caption</figcaption>
-              </figure>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus ullamcorper congue. Aenean lacinia, orci ut condimentum porttitor</p>
-              <p><span class="price" data-price="">$75.00</span><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
-            <div class="bottom_bar clearfix"></div>
+          <div class="content-box">
+            <figure>
+              <!-- Clicking on image will open template with full image as well as horizontal or sidebar image views carousel as well as further description and "Add to Basket" button To be done in conjunction with Javascript.-->
+              <a><img src="img/IMG_07.jpg" alt=""></a>
+              <figcaption data-caption="Luna & Barn Horse">Luna & Barn Horse</figcaption>
+            </figure>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus ullamcorper congue. Aenean lacinia, orci ut condimentum porttitor</p>
+            <p><span class="price" data-price="75">$75.00</span><i class="material-icons add-item">add_shopping_cart</i><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
+            <div class="bottom-bar clearfix"></div>
           </div>
         </article>
         <article>
-          <div class="content_box">
-              <figure>
-                <!-- Clicking on image will open template with full image as well as horizontal or sidebar image views carousel as well as further description and "Add to Basket" button To be done in conjunction with Javascript.-->
-                <a><img src="img/IMG_08.jpg" alt=""></a>
-                <figcaption data-caption="">Product Caption</figcaption>
-              </figure>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus ullamcorper congue. Aenean lacinia, orci ut condimentum porttitor</p>
-              <p><span class="price" data-price="">$75.00</span><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
-            <div class="bottom_bar clearfix"></div>
+          <div class="content-box">
+            <figure>
+              <!-- Clicking on image will open template with full image as well as horizontal or sidebar image views carousel as well as further description and "Add to Basket" button To be done in conjunction with Javascript.-->
+              <a><img src="img/IMG_08.jpg" alt=""></a>
+              <figcaption data-caption="Frog cosy in Shiplap">Frog cosy in Shiplap</figcaption>
+            </figure>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus ullamcorper congue. Aenean lacinia, orci ut condimentum porttitor</p>
+            <p><span class="price" data-price="75">$75.00</span><i class="material-icons add-item">add_shopping_cart</i><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
+            <div class="bottom-bar clearfix"></div>
           </div>
         </article>
         <article>
-          <div class="content_box">
-              <figure>
-                <!-- Clicking on image will open template with full image as well as horizontal or sidebar image views carousel as well as further description and "Add to Basket" button To be done in conjunction with Javascript.-->
-                <a><img src="img/IMG_09.jpg" alt=""></a>
-                <figcaption data-caption="">Product Caption</figcaption>
-              </figure>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus ullamcorper congue. Aenean lacinia, orci ut condimentum porttitor</p>
-              <p><span class="price" data-price="">$75.00</span><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
-            <div class="bottom_bar clearfix"></div>
+          <div class="content-box">
+            <figure>
+              <!-- Clicking on image will open template with full image as well as horizontal or sidebar image views carousel as well as further description and "Add to Basket" button To be done in conjunction with Javascript.-->
+              <a><img src="img/IMG_09.jpg" alt=""></a>
+              <figcaption data-caption="Winter Sunset">Winter Sunset</figcaption>
+            </figure>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus ullamcorper congue. Aenean lacinia, orci ut condimentum porttitor</p>
+            <p><span class="price" data-price="75">$75.00</span><i class="material-icons add-item">add_shopping_cart</i><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
+            <div class="bottom-bar clearfix"></div>
           </div>
         </article>
         <article>
-          <div class="content_box">
-              <figure>
-                <!-- Clicking on image will open template with full image as well as horizontal or sidebar image views carousel as well as further description and "Add to Basket" button To be done in conjunction with Javascript.-->
-                <a><img src="img/IMG_10.jpg" alt=""></a>
-                <figcaption data-caption="">Product Caption</figcaption>
-              </figure>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus ullamcorper congue. Aenean lacinia, orci ut condimentum porttitor</p>
-              <p><span class="price" data-price="">$75.00</span><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
-            <div class="bottom_bar clearfix"></div>
+          <div class="content-box">
+            <figure>
+              <!-- Clicking on image will open template with full image as well as horizontal or sidebar image views carousel as well as further description and "Add to Basket" button To be done in conjunction with Javascript.-->
+              <a><img src="img/IMG_10.jpg" alt=""></a>
+              <figcaption data-caption="Luna in Snow">Luna in Snow</figcaption>
+            </figure>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus ullamcorper congue. Aenean lacinia, orci ut condimentum porttitor</p>
+            <p><span class="price" data-price="75">$75.00</span><i class="material-icons add-item">add_shopping_cart</i><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
+            <div class="bottom-bar clearfix"></div>
           </div>
         </article>
         <article>
-          <div class="content_box">
-              <figure>
-                <!-- Clicking on image will open template with full image as well as horizontal or sidebar image views carousel as well as further description and "Add to Basket" button To be done in conjunction with Javascript.-->
-                <a><img src="img/IMG_11.jpg" alt=""></a>
-                <figcaption data-caption="">Product Caption</figcaption>
-              </figure>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus ullamcorper congue. Aenean lacinia, orci ut condimentum porttitor</p>
-              <p><span class="price" data-price="">$75.00</span><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
-            <div class="bottom_bar clearfix"></div>
+          <div class="content-box">
+            <figure>
+              <!-- Clicking on image will open template with full image as well as horizontal or sidebar image views carousel as well as further description and "Add to Basket" button To be done in conjunction with Javascript.-->
+              <a><img src="img/IMG_11.jpg" alt=""></a>
+              <figcaption data-caption="Snow on Trees">Snow on Trees</figcaption>
+            </figure>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus ullamcorper congue. Aenean lacinia, orci ut condimentum porttitor</p>
+            <p><span class="price" data-price="75">$75.00</span><i class="material-icons add-item">add_shopping_cart</i><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
+            <div class="bottom-bar clearfix"></div>
           </div>
         </article>
         <article>
-          <div class="content_box">
-              <figure>
-                <!-- Clicking on image will open template with full image as well as horizontal or sidebar image views carousel as well as further description and "Add to Basket" button To be done in conjunction with Javascript.-->
-                <a><img src="img/IMG_12.jpg" alt=""></a>
-                <figcaption data-caption="">Product Caption</figcaption>
-              </figure>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus ullamcorper congue. Aenean lacinia, orci ut condimentum porttitor</p>
-              <p><span class="price" data-price="">$75.00</span><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
-            <div class="bottom_bar clearfix"></div>
+          <div class="content-box">
+            <figure>
+              <!-- Clicking on image will open template with full image as well as horizontal or sidebar image views carousel as well as further description and "Add to Basket" button To be done in conjunction with Javascript.-->
+              <a><img src="img/IMG_12.jpg" alt=""></a>
+              <figcaption data-caption="Misty Farmland">Misty Farmland</figcaption>
+            </figure>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus ullamcorper congue. Aenean lacinia, orci ut condimentum porttitor</p>
+            <p><span class="price" data-price="75">$75.00</span><i class="material-icons add-item">add_shopping_cart</i><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
+            <div class="bottom-bar clearfix"></div>
           </div>
         </article>
       </div>
     </main>
     <footer><span></span></footer>
   </div>
+  <script type="text/javascript" src="productListing.js"></script>
 </body>
 </html>

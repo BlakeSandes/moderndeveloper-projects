@@ -7,7 +7,7 @@
   clear: both;
 }
 
-.products_page {
+.products-page {
   position: relative;
   width: 100%;
   margin-top: 12px;
@@ -40,7 +40,7 @@ figure {
   display: inline-block;
   font-size: .85em;
   padding: 0 4px;
-  /*color: pink;*/
+  color: rgba(54,64,63,.95);
 }
 img {
   width: 100%;
@@ -55,21 +55,42 @@ span {
   display: block;
 }
 
-article p {
+.products article p:last-of-type {
   display: block;
-  height: 1rem;
-  margin-bottom: 0
+  height: 1.5rem;
+  margin-bottom: 0;
+  color: rgba(54,64,63,.75);
 }
 
 .price {
+  width: 45%;
   float: left;
+  padding-left: 3px;
+}
+
+.add-item {
+  float: center;
+  width: 10%;
+  text-align: center;
+  padding-top: 1px;
+  font-size: 1.25rem;
+  color: rgba(54,64,63,.85);
+  -webkit-transition: color .25s ease-in-out;
+  transition: color: .25s ease-in-out;
+}
+
+.add-item:hover {
+  color: #F54D99;
+  cursor: pointer;
 }
 .stock {
   float: right;
-  padding-right: 12px;
+  width: 45%;
+  text-align: right;
+  padding-right: 3px;
 }
 
-.bottom_bar {
+.bottom-bar {
   display: inline-block;
   width: 100%;
   height: 6px;
@@ -80,74 +101,94 @@ article p {
 
 /********SHOPPING CART SIDE BAR********/
 
-.basket_wrapper {
+.basket-wrapper {
   position: absolute;
   top: -1.5px;
   right: 0;
+  bottom: 0;
+  height: 100%;
+  overflow: auto;
 }
 
 .basket {
-  width: 200px;
   position: fixed;
-  margin-left: -200px;
   z-index: 2;
+    /*top: 0;
+    bottom: 0;
+    right: 0;*/
+  width: 12.5rem;
+  margin-left: -12.5rem;
+  border-top: 1px solid rgba(45,60,69,.26);
+  border-bottom: 1px solid rgba(45,60,69,.26);
   color: rgba(45,60,69,.86);
   background: linear-gradient( to left ,
     rgba(165,222,255,1), rgba(165,222,255,.90));
-  border-top: 1px solid rgba(45,60,69,.26);
-  border-bottom: 1px solid rgba(45,60,69,.26);
-  /*border-right: 1px solid rgba(45,60,69,.26);*/
 }
 
 .basket ol > li:first-child {
-  padding-top: 8px;
+  /*margin: 9px 0;*/
+  /*border: 1px solid black;*/
 }
 
-.basket h3 {
+.basket .shopping-basket {
   margin: 0;
-  padding: 0;
+  margin-top: 9px;
+  padding: 1px 12px 0 0;
   float: right;
   text-align: right;
-  margin: 0;
-  padding: 5px 4px 0 0;
+  font-size: 1.85rem;
+  color: rgba(45,60,69,.86);
+  -webkit-transition: color .25s ease-in-out;
+  transition: color: .25s ease-in-out;
 }
 
-.basket .purchase_number {
+.basket li .shopping-basket:hover {
+  color: #F54D99;
+  cursor: pointer;
+}
+
+.basket .quantity-count {
   width: 22px;
   height: 22px;
   border-radius: 50%;
   float: left;
   background: rgba(45,60,69,.86);
-  color: #fff;
+  color: rgba(165,222,255,1);
   text-align: center;
-  margin: 5px 0 0 6px;
+  margin: 14px 12px 0;
   padding-top: -2px;
 }
 
 .basket .topbar {
-  margin-bottom: 0;
+  margin: 0;
 }
-.basket li ol {
+
+.basket li .basket-dropdown {
   display: none;
+  margin-top: 6px;
   -webkit-transition: display 1s;
   transition: display 1s;
 }
 
+.basket .basket-items li {
+  /*height: 84px;*/
+}
+
 .basket .price,
 .basket .remove,
-.basket .total_price {
+.basket .total-price {
   padding-right: 2px;
 }
 
-.basket .product_caption {
+.basket .basket-product-caption {
   float: left;
-  width: 56%;
+  width: 70%;
   font-size: .9em;
 }
 
 .basket .price {
   float: right;
-  width: 44%;
+  width: 30%;
   text-align: right;
 }
 
@@ -184,25 +225,25 @@ article p {
   background: transparent;
   color: rgba(15,100,131,1);
   border: 1px solid transparent;
-  -webkit-transition: background .75s, color .15s;
-  transition: background .75s, color .15s;
+  -webkit-transition: background .5s ease-in-out;
+  transition: background .5s ease-in-out;
 }
 
 
-.basket .product_caption,
-.total_text {
+.basket .basket-product-caption,
+.total-text {
   padding-left: 2px;
 }
-.basket .total  {
 
+.basket-checkout li:first-child {
 }
 
-.basket .total_text {
+.basket .total-text {
   float: left;
   width: 30%;
 }
 
-.basket .total_price {
+.basket .total-price {
   float: right;
   width: 70%;
   text-align: right;
@@ -227,8 +268,8 @@ article p {
   background: transparent;
   color: rgba(10,70,97,1);
   border: 1px solid transparent;
-  -webkit-transition: color .15s, background .5s,  border .75s;
-  transition: color .15s, background .5s, border .75s;
+  -webkit-transition: color .15s, background .5s;
+  transition: color .15s, background .5s;
 }
 
 /********HOVER STATES********/
@@ -237,9 +278,7 @@ article p {
   cursor: pointer;
 }
 
-.basket li:hover ol {
-  display: block;
-}
+
 
 .basket .amount:focus {
   background: rgba(54,64,63,.34);
@@ -263,14 +302,16 @@ article p {
 .basket .remove:focus,
 .basket a button:focus {
   cursor: pointer;
-  background: rgba(253,58,77,.65);
+  background: #FF72B1;
   color: #fff;
-  border-top: 1px solid rgba(45,60,69,.26);
-  border-left: 1px solid rgba(45,60,69,.26);
-  border-bottom: 1px solid rgba(45,60,69,.26);
-  text-shadow: 0 0 1px rgba(45,60,69,.86);
+  
 }
 
+/********Styles added through Javascript********/
+
+.basket li .visible {
+  display: block;
+}
 /********MEDIA QUERIES********/
 
 @media screen and (min-width: 401px) {
@@ -301,4 +342,20 @@ article p {
     margin-left: 1.25%;
     margin-right: 1.25%;
   }
+}
+
+@media screen and (min-width: 1140px) {
+  .products article {
+    width: 24%;
+  }
+
+  .products article:nth-child(even) {
+    margin-right: 1%;
+    margin-left: 1%;
+  }
+  .products article:nth-child(odd) {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
 }

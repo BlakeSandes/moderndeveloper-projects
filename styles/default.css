@@ -11,6 +11,7 @@ body {
   font-family: 'Slabo 27px', serif;
   height: 100%;
   min-height: 100%;
+  padding-top: 7.5rem;
   background: url("../images/sunset-greyed.jpg");
 }
 
@@ -26,12 +27,21 @@ body {
 }
 
 header {
-  height: 120px;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 7.5rem;
   margin: 0;
+  margin-bottom: 2rem;
   padding-left: 6px;
-  background: linear-gradient(to right,rgba(0,193,199,.6)10%, rgba(0,247,242,.3)65%,rgba(0,193,199,.6));
+  background: linear-gradient(to right,rgb(0,193,199)10%, rgb(0,247,242)65%,rgb(0,193,199));
   border-radius: 0 0 2px 2px;
   box-shadow: 0 0 2px rgba(105,62,57,1);
+  transition: top 0.2s ease-in-out;
+}
+.nav-up {
+  top: -7.5rem;
 }
 
 nav {
