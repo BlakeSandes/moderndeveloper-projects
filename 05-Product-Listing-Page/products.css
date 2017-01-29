@@ -103,21 +103,19 @@ span {
 
 .basket-wrapper {
   position: absolute;
-  top: -1.5px;
+  top: 999px;
   right: 0;
   bottom: 0;
   height: 100%;
   overflow: auto;
+  /*top: none;*/
 }
 
 .basket {
   position: fixed;
   z-index: 2;
-    /*top: 0;
-    bottom: 0;
-    right: 0;*/
-  width: 12.5rem;
-  margin-left: -12.5rem;
+  width: 12.75rem;
+  margin-left: -12.75rem;
   border-top: 1px solid rgba(45,60,69,.26);
   border-bottom: 1px solid rgba(45,60,69,.26);
   color: rgba(45,60,69,.86);
@@ -125,18 +123,18 @@ span {
     rgba(165,222,255,1), rgba(165,222,255,.90));
 }
 
-.basket ol > li:first-child {
-  /*margin: 9px 0;*/
-  /*border: 1px solid black;*/
+.basket-top {
+  position: relative;
+  display: block;
+  height: 32px;
 }
 
 .basket .shopping-basket {
-  margin: 0;
-  margin-top: 9px;
-  padding: 1px 12px 0 0;
-  float: right;
+  position: absolute;
+  top: 1px;
+  right: 12px;
   text-align: right;
-  font-size: 1.85rem;
+  font-size: 1.65rem;
   color: rgba(45,60,69,.86);
   -webkit-transition: color .25s ease-in-out;
   transition: color: .25s ease-in-out;
@@ -148,19 +146,20 @@ span {
 }
 
 .basket .quantity-count {
+  position: absolute;
+  top: 3px;
+  left: 8px;
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  float: left;
   background: rgba(45,60,69,.86);
   color: rgba(165,222,255,1);
   text-align: center;
-  margin: 14px 12px 0;
-  padding-top: -2px;
+  margin-left: 12px;
 }
 
 .basket .topbar {
-  margin: 0;
+  margin-top: 28px;
 }
 
 .basket li .basket-dropdown {
@@ -278,8 +277,6 @@ span {
   cursor: pointer;
 }
 
-
-
 .basket .amount:focus {
   background: rgba(54,64,63,.34);
   color: rgba(165,222,255,1);
@@ -309,9 +306,13 @@ span {
 
 /********Styles added through Javascript********/
 
+.display {
+  top: -1.5px;
+}
 .basket li .visible {
   display: block;
 }
+
 /********MEDIA QUERIES********/
 
 @media screen and (min-width: 401px) {
