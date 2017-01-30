@@ -23,16 +23,12 @@ var basketWrapper = document.querySelector('.basket-wrapper'),
 basket = document.querySelector('.basket'),
 basketBtn = document.querySelector('.shopping-basket'),
 basketDropDown = document.querySelector('.basket-dropdown'),
-basketItems = document.querySelector('.basket-items'),
-addItem = document.getElementsByClassName('add-item'),
-removeBtn = document.getElementsByClassName('remove'),
 quantityCount = document.querySelector('.quantity-count'),
 productCaption = document.querySelectorAll('[data-caption]'),
-basketCount = 0,
-addCount,
-dataCaption,
-dataPrice,
-eachBasketFragment;
+basketItems = document.querySelector('.basket-items'),
+removeBtn = document.getElementsByClassName('remove'),
+addItem = document.getElementsByClassName('add-item'),
+itemAmount = document.getElementsByClassName('amount');
 
 // 2. Toggle between showing and hiding the shopping cart by using a button
     // Shopping cart individaul item HTML fragment to append to basketDropDown. Once I know templating, this rediculous HTML fragment will go the way of the dodo!
@@ -50,7 +46,7 @@ function basketFragment(caption,price) {
 
   priceSpan.className = "price";
    
-  amountInput.setAttribute('type','text');
+  amountInput.setAttribute('type','tel');
   amountInput.setAttribute('value', '1');
   amountInput.setAttribute('name', 'amount');
   amountInput.className = "amount clearfix";
@@ -101,33 +97,42 @@ forEach(addItem, function(index, elem) {
     // 1. Remain hidden until at least one item has been added
     basketWrapper.classList.add('display');
     
-    // Count up one each time the basket icon is clicked.
-    basketCount = basketCount + 1;
     // quantityCount circle will also animate on each click. Briefly flashing and enlargin with the same pink as is in the add-item button. I need to figure that shit out still:)
 
     // Add quantiy to basket quantiy amount circle.
-    quantityCount.innerHTML = basketCount;
+    quantityCount.innerHTML = basketItems.childElementCount;
     
 
-    if ( removeBtn.length >= 0) {
+    if ( basketItems.childElementCount >= 0) {
       forEach(removeBtn, function(index, elem) {
         elem.addEventListener('click', function(ev) {
           ev.preventDefault();
-          quantityCount.innerHTML = removeBtn.length;
-          basketCount = removeBtn.length;
-          if (removeBtn.length === 0) {
-            basketCount = 0;
-            quantityCount.innerHTML = basketCount;
-          }
           this.parentElement.remove();
+          quantityCount.innerHTML = basketItems.childElementCount;
           
-          
+          if (basketItems.childElementCount === 0) {
+            basketWrapper.classList.remove('display');
+          } 
         }, false);
       });
-    }
+      forEach(itemAmount, function(index, elem) {
+        elem.addEventListener('input', function(ev) {
+          ev.preventDefault();
+
+          if (this.value ==='0') {
+            this.parentElement.remove();
+            quantityCount.innerHTML = basketItems.childElementCount;
+          }
+          if (basketItems.childElementCount === 0) {
+            basketWrapper.classList.remove('display');
+          } 
+        }, false);
+      });
+    } 
 
   }, false);
 });
+
 
 // 4. Remove items from the shopping cart
 
