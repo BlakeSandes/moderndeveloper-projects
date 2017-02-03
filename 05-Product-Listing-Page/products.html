@@ -9,18 +9,18 @@
   <link rel="stylesheet" href="products.css">
 </head>
 <body>
-  <div class="container">
+  <div class="container products-container">
     <header>
       <nav>
         <div class="home">
           <a href="../index.html">Blake Wilson</a>
         </div>
         <ul>
-          <li><a href="../01-Button-Web-Component/index.html">Components</a></li>
-          <li><a href="../02-Profiles-ModernDeveloper-Sidebar/index.html">Sidebar</a></li>
-          <li><a href="../03-Forms-and-Inputs/form-home/index.html">Forms</a></li>
-          <li><a href="../04-Calculator/index.html">Calculator</a></li>
-          <li><a class="selected"  href="index.html">Products</a></li>
+          <li><a href="../01-Button-Web-Component/components.html">Components</a></li>
+          <li><a href="../02-Profiles-ModernDeveloper-Sidebar/sidebar.html">Sidebar</a></li>
+          <li><a href="../03-Forms-and-Inputs/form-home/forms.html">Forms</a></li>
+          <li><a href="../04-Calculator/calculator.html">Calculator</a></li>
+          <li><a class="selected"  href="products.html">Products</a></li>
         </ul>
       </nav>
     </header>
@@ -40,8 +40,8 @@
                 <ol class="basket-items">
                   <!-- As a reference to how I created the itemLi HTML fragment -->
                   <!-- <li>
-                    <span class="basket-product-caption">Product Caption</span>
-                    <span class="price" data-price="">$75.00</span>
+                    <span class="basket-product-caption" data-basketcaption="">Product Caption</span>
+                    <span class="basket-price" data-basketprice="">$75.00</span>
                     <input type="text" name="amount" value="1" class="clearfix amount">
                     <input type="button" name="remove" value="REMOVE" class="remove">
                     <div class="bottom-bar clearfix"></div>
@@ -50,7 +50,7 @@
                 <ol class="basket-checkout">
                   <li>
                     <span class="total-text">TOTAL</span>
-                    <span data-total="" class="total-price">$150.00</span>
+                    <span data-total="" class="total-price"></span>
                     <div class="bottom-bar clearfix"></div>
                   </li>
                   <li class="clearfix">
@@ -73,7 +73,7 @@
               <figcaption data-caption="Clovers on top of Moss">Clovers on top of Moss</figcaption>
             </figure>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus ullamcorper congue. Aenean lacinia, orci ut condimentum porttitor</p>
-            <p><span class="price" data-price="75">$75.00</span><i class="material-icons add-item">add_shopping_cart</i><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
+            <p><span class="price" data-itemprice="65">$65.00</span><i class="material-icons add-item">add_shopping_cart</i><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
             <div class="bottom-bar clearfix"></div>
           </div>
         </article>
@@ -85,7 +85,7 @@
               <figcaption data-caption="Pretty Tinder Fungus">Pretty Tinder Fungus</figcaption>
             </figure>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus ullamcorper congue. Aenean lacinia, orci ut condimentum porttitor</p>
-            <p><span class="price" data-price="75">$75.00</span><i class="material-icons add-item">add_shopping_cart</i><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
+            <p><span class="price" data-itemprice="57.57">$57.57</span><i class="material-icons add-item">add_shopping_cart</i><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
             <div class="bottom-bar clearfix"></div>
           </div>
         </article>
@@ -97,7 +97,7 @@
               <figcaption data-caption="Fireweed by Beach">Fireweed by Beach</figcaption>
             </figure>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus ullamcorper congue. Aenean lacinia, orci ut condimentum porttitor</p>
-            <p><span class="price" data-price="75">$75.00</span><i class="material-icons add-item">add_shopping_cart</i><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
+            <p><span class="price" data-itemprice="74.74">$74.74</span><i class="material-icons add-item">add_shopping_cart</i><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
             <div class="bottom-bar clearfix"></div>
           </div>
         </article>
@@ -109,7 +109,7 @@
               <figcaption data-caption="Fern Canyon Creak">Fern Canyon Creak</figcaption>
             </figure>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus ullamcorper congue. Aenean lacinia, orci ut condimentum porttitor</p>
-            <p><span class="price" data-price="75">$75.00</span><i class="material-icons add-item">add_shopping_cart</i><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
+            <p><span class="price" data-itemprice="75">$75.00</span><i class="material-icons add-item">add_shopping_cart</i><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
             <div class="bottom-bar clearfix"></div>
           </div>
         </article>
@@ -121,7 +121,7 @@
               <figcaption data-caption="Ferns & Water">Ferns & Water</figcaption>
             </figure>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus ullamcorper congue. Aenean lacinia, orci ut condimentum porttitor</p>
-            <p><span class="price" data-price="75">$75.00</span><i class="material-icons add-item">add_shopping_cart</i><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
+            <p><span class="price" data-itemprice="68">$68.00</span><i class="material-icons add-item">add_shopping_cart</i><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
             <div class="bottom-bar clearfix"></div>
           </div>
         </article>
@@ -133,7 +133,7 @@
               <figcaption data-caption="Beach & Sun">Beach & Sun</figcaption>
             </figure>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus ullamcorper congue. Aenean lacinia, orci ut condimentum porttitor</p>
-            <p><span class="price" data-price="75">$75.00</span><i class="material-icons add-item">add_shopping_cart</i><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
+            <p><span class="price" data-itemprice="71">$71.00</span><i class="material-icons add-item">add_shopping_cart</i><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
             <div class="bottom-bar clearfix"></div>
           </div>
         </article>
@@ -145,7 +145,7 @@
               <figcaption data-caption="Luna & Barn Horse">Luna & Barn Horse</figcaption>
             </figure>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus ullamcorper congue. Aenean lacinia, orci ut condimentum porttitor</p>
-            <p><span class="price" data-price="75">$75.00</span><i class="material-icons add-item">add_shopping_cart</i><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
+            <p><span class="price" data-itemprice="72">$72.00</span><i class="material-icons add-item">add_shopping_cart</i><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
             <div class="bottom-bar clearfix"></div>
           </div>
         </article>
@@ -157,7 +157,7 @@
               <figcaption data-caption="Frog cosy in Shiplap">Frog cosy in Shiplap</figcaption>
             </figure>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus ullamcorper congue. Aenean lacinia, orci ut condimentum porttitor</p>
-            <p><span class="price" data-price="75">$75.00</span><i class="material-icons add-item">add_shopping_cart</i><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
+            <p><span class="price" data-itemprice="80">$80.00</span><i class="material-icons add-item">add_shopping_cart</i><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
             <div class="bottom-bar clearfix"></div>
           </div>
         </article>
@@ -169,7 +169,7 @@
               <figcaption data-caption="Winter Sunset">Winter Sunset</figcaption>
             </figure>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus ullamcorper congue. Aenean lacinia, orci ut condimentum porttitor</p>
-            <p><span class="price" data-price="75">$75.00</span><i class="material-icons add-item">add_shopping_cart</i><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
+            <p><span class="price" data-itemprice="77">$77.00</span><i class="material-icons add-item">add_shopping_cart</i><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
             <div class="bottom-bar clearfix"></div>
           </div>
         </article>
@@ -181,7 +181,7 @@
               <figcaption data-caption="Luna in Snow">Luna in Snow</figcaption>
             </figure>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus ullamcorper congue. Aenean lacinia, orci ut condimentum porttitor</p>
-            <p><span class="price" data-price="75">$75.00</span><i class="material-icons add-item">add_shopping_cart</i><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
+            <p><span class="price" data-itemprice="63">$63.00</span><i class="material-icons add-item">add_shopping_cart</i><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
             <div class="bottom-bar clearfix"></div>
           </div>
         </article>
@@ -193,7 +193,7 @@
               <figcaption data-caption="Snow on Trees">Snow on Trees</figcaption>
             </figure>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus ullamcorper congue. Aenean lacinia, orci ut condimentum porttitor</p>
-            <p><span class="price" data-price="75">$75.00</span><i class="material-icons add-item">add_shopping_cart</i><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
+            <p><span class="price" data-itemprice="68">$68.00</span><i class="material-icons add-item">add_shopping_cart</i><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
             <div class="bottom-bar clearfix"></div>
           </div>
         </article>
@@ -205,7 +205,7 @@
               <figcaption data-caption="Misty Farmland">Misty Farmland</figcaption>
             </figure>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus ullamcorper congue. Aenean lacinia, orci ut condimentum porttitor</p>
-            <p><span class="price" data-price="75">$75.00</span><i class="material-icons add-item">add_shopping_cart</i><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
+            <p><span class="price" data-itemprice="75">$75.00</span><i class="material-icons add-item">add_shopping_cart</i><span class="stock" data-instock="In Stock" data-notstock="Not In Stock">In Stock</span></p>
             <div class="bottom-bar clearfix"></div>
           </div>
         </article>
