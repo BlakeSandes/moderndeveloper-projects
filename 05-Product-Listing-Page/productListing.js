@@ -1,9 +1,6 @@
-// The shopping cart should have the following functionality to:
-
-// 6. Give a Total Price calculation that updates when items are added or removed. All prices should be kept within an object and referred to for each calculation.
 // 7. Allow coupons/promo codes on total prices as well as on individual items. Make up your own promo codes, such as “BIGSALE” or the like
 // 8. Add a promo code for 10% off one item, 15% off all items of a specific type, and 5% off the total order
-  // 9Only apply 1 promo code at a time
+  // Only apply 1 promo code at a time
 // 9. Only apply a promo code if it makes the total price less than the total price with the current promo code
 
 // forEach function to iterate over nodeLists. 
@@ -12,8 +9,6 @@ var forEach = function(array, callback, scope) {
     callback.call(scope, i, array[i]);
   }
 };
-
-var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
 
 // Element variables
 var basketWrapper = document.querySelector('.basket-wrapper'),
@@ -41,6 +36,7 @@ function basketFragment(caption,price) {
       captionSpan = document.createElement('span'),
       priceSpan = document.createElement('span'),
       amountInput = document.createElement('input'),
+      couponInput = document.createElement('input'),
       removeBtnElem = document.createElement('input'),
       bottomBarDiv = document.createElement('div');
 
@@ -55,18 +51,24 @@ function basketFragment(caption,price) {
   amountInput.setAttribute('name', 'amount');
   amountInput.className = "amount clearfix";
   amountInput.id = "amount";
-   
+
   removeBtnElem.setAttribute('type', 'button');
   removeBtnElem.setAttribute('name', 'remove');
   removeBtnElem.setAttribute('value', 'REMOVE');
   removeBtnElem.className = "remove";
    
+  couponInput.setAttribute('type', 'text');
+  couponInput.setAttribute('name', 'coupon');
+  couponInput.setAttribute('placeholder', 'COUPON')
+  couponInput.className = "coupon clearfix";
+
   bottomBarDiv.className = "bottom-bar clearfix";
 
   itemLi.appendChild(captionSpan);
   itemLi.appendChild(priceSpan);
   itemLi.appendChild(amountInput);
   itemLi.appendChild(removeBtnElem);
+  itemLi.appendChild(couponInput);
   itemLi.appendChild(bottomBarDiv);
 
   // Add the product listing and product price to basket item.
@@ -74,7 +76,6 @@ function basketFragment(caption,price) {
   priceSpan.innerHTML = "$"+ price;
 
   return itemLi;
-
 };
 
 function totalObject(obj) {

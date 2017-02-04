@@ -94,7 +94,7 @@ span {
   display: inline-block;
   width: 100%;
   height: 6px;
-  margin: 12px 0 6px 0;
+  margin-top: 8px;
   background: linear-gradient(to right, rgba(54,64,63,.15), rgba(54,64,63,.54));
 }
 
@@ -109,7 +109,9 @@ span {
   height: 100%;
   overflow: auto;
 }
-
+ol.basket-items {
+  margin-bottom: -6px;
+}
 .basket {
   position: fixed;
   z-index: 2;
@@ -168,7 +170,7 @@ span {
   transition: display 1s;
 }
 
-.basket .price,
+.basket .basket-price,
 .basket .remove,
 .basket .total-price {
   padding-right: 2px;
@@ -176,27 +178,34 @@ span {
 
 .basket .basket-product-caption {
   float: left;
-  width: 70%;
   font-size: .9em;
 }
 
-.basket .price {
+.basket .basket-price {
   float: right;
-  width: 30%;
   text-align: right;
 }
 
 .basket .amount,
-.basket .remove {
+.basket .coupon,
+.basket .remove,
+.basket .total-text,
+.basket .total-price {
   height: 24px;
   margin-top: 6px;
 }
-.basket .amount,
-.basket .update {
-  float: left;
-  width: 36px;
-  max-width: 30%;
+
+.basket .coupon,
+.basket .total-coupon {
   text-align: center;
+  width: 50%;
+}
+
+.basket .amount,
+.basket .update,
+.basket .coupon,
+.basket .total-coupon {
+  float: left;
   border-style: none;
   background: rgba(165,222,255,1);
   color: rgba(45,60,69,.86);
@@ -206,6 +215,13 @@ span {
 
   -webkit-transition: color .25s, background .75s;
   transition: color .25s, background .75s;
+}
+
+.basket .amount,
+.basket .update {
+  width: 36px;
+  max-width: 30%;
+  text-align: center;
 }
 
 .basket .remove {
@@ -229,17 +245,16 @@ span {
   padding-left: 2px;
 }
 
-.basket-checkout li:first-child {
-}
 
 .basket .total-text {
   float: left;
-  width: 30%;
 }
 
+.basket .total-coupon {
+  margin-top: 0;
+}
 .basket .total-price {
   float: right;
-  width: 70%;
   text-align: right;
 }
 
@@ -272,7 +287,9 @@ span {
   cursor: pointer;
 }
 
-.basket .amount:focus {
+.basket .amount:focus,
+.basket .coupon:focus,
+.basket .total-coupon:focus {
   background: rgba(54,64,63,.34);
   color: rgba(165,222,255,1);
   border: 1px solid transparent;
