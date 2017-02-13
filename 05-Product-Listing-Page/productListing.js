@@ -24,14 +24,23 @@ itemAmount = document.getElementsByClassName('amount'),
 basketPrice = document.getElementsByClassName('basket-price'),
 totalPrice = document.querySelector('.total-price'),
 total = 0,
-allPricesInBasket = {};
+allPricesInBasket = {},
+allCouponsInBasket = {},
+coupon = document.getElementsByClassName('coupon'),
+siteCoupon = document.getElementById('site-coupon'),
+specialSale = "SPECIALSALE",
+productSale = "ITEMAWESOME",
+siteSale = "SITESALE",
+
+updateBtn = document.querySelector('.update'),
+checkoutBtn = document.getElementById('checkout');
 
 
 // 2. Toggle between showing and hiding the shopping cart by using a button
     // Shopping cart individaul item HTML fragment to append to basketDropDown. Once I know templating, this rediculous HTML fragment will go the way of the dodo!
 
 //*********************HTML FRAGMENT*********************//
-function basketFragment(caption,price) {
+function basketFragment(caption,price, specialClass) {
   var itemLi = document.createElement('li');
       captionSpan = document.createElement('span'),
       priceSpan = document.createElement('span'),
@@ -39,6 +48,8 @@ function basketFragment(caption,price) {
       couponInput = document.createElement('input'),
       removeBtnElem = document.createElement('input'),
       bottomBarDiv = document.createElement('div');
+
+  itemLi.className = specialClass;
 
   captionSpan.className = "basket-product-caption",
   captionSpan.setAttribute('data-basketcaption', caption);
@@ -59,7 +70,7 @@ function basketFragment(caption,price) {
    
   couponInput.setAttribute('type', 'text');
   couponInput.setAttribute('name', 'coupon');
-  couponInput.setAttribute('placeholder', 'COUPON')
+  couponInput.setAttribute('placeholder', 'Product COUPON')
   couponInput.className = "coupon clearfix";
 
   bottomBarDiv.className = "bottom-bar clearfix";
@@ -78,12 +89,51 @@ function basketFragment(caption,price) {
   return itemLi;
 };
 
-function totalObject(obj) {
+function getTotal(obj) {
+  var total = 0;
   for (var prop in obj) {
-    total = total + parseFloat(allPricesInBasket[prop]);
+    total = total + parseFloat(obj[prop]);
   }
+  return total;  
+}
+
+function totalObject(obj) {
+  total = getTotal(obj);
   totalPrice.innerHTML = "$"+ total.toString();
   total = 0;
+}
+
+function totalAfterCoupon(coupon) {
+  var siteTotal = 0,
+      newProp = 0,
+      newSpecialObj = {},
+      specialTotal
+      totalPriceNum = getTotal(allPricesInBasket);
+
+  if (coupon === siteSale) {
+    coupon = 5;
+    siteTotal = totalPriceNum - (totalPriceNum/100 * coupon); 
+    console.log(siteTotal);
+  }
+
+  if (coupon === productSale) {
+    coupon = 10;
+  }
+
+  if (coupon === specialSale) {
+    coupon = 15;
+
+    for (var prop in allPricesInBasket) {
+      newSpecialObj[prop] = allPricesInBasket[prop];
+      for (var key in allCouponsInBasket) {
+        if (key === prop && allCouponsInBasket[key] === "SPECIALSALE") {
+          newProp = parseFloat(allPricesInBasket[prop]) - (parseFloat(allPricesInBasket[prop])/100 * coupon);
+          newSpecialObj[prop] = newProp.toString();
+        } 
+      }
+    }
+    console.log(getTotal(newSpecialObj));
+  }
 }
 
 basketBtn.addEventListener('click', function(ev) {
@@ -104,19 +154,23 @@ forEach(addItem, function(index, elem) {
     itemPrice = this.previousElementSibling.dataset.itemprice;
     
     // Append itemLi HTML fragment to baskeItems ol
-    basketItems.insertAdjacentElement('afterbegin',basketFragment(itemCaption, itemPrice));
+    if ( elem.parentElement.parentElement.classList.contains('special') ) {
+      basketItems.insertAdjacentElement('afterbegin',basketFragment(itemCaption, itemPrice, 'special-sale'));
+      allCouponsInBasket[itemCaption] = specialSale;
+    } else {
+      basketItems.insertAdjacentElement('afterbegin',basketFragment(itemCaption, itemPrice,''));
+    }
 
     // 1. Remain hidden until at least one item has been added
     basketWrapper.classList.add('display');
     
-    // quantityCount circle will also animate on each click. Briefly flashing and enlargin with the same pink as is in the add-item button. I need to figure that shit out still:)
-
     // Add quantiy to basket quantiy amount circle.
     quantityCount.innerHTML = basketItems.childElementCount;
     
     // Set the property of the price object to the item caption and value to the item price when they are first added to the basket.
     allPricesInBasket[itemCaption] = itemPrice;
     totalObject(allPricesInBasket);
+
 
     // Remove items from the shopping cart. Close shopping cart if no items.
     if ( basketItems.childElementCount >= 0) {
@@ -129,6 +183,8 @@ forEach(addItem, function(index, elem) {
           
           delete allPricesInBasket[this.previousElementSibling.previousElementSibling.previousElementSibling.getAttribute('data-basketcaption')];
           totalObject(allPricesInBasket);
+
+          delete allCouponsInBasket[this.previousElementSibling.previousElementSibling.previousElementSibling.getAttribute('data-basketcaption')];
 
           if (basketItems.childElementCount === 0) {
             basketWrapper.classList.remove('display');
@@ -153,6 +209,8 @@ forEach(addItem, function(index, elem) {
             delete allPricesInBasket[this.previousElementSibling.previousElementSibling.getAttribute('data-basketcaption')];
             // Update total.
             totalObject(allPricesInBasket);
+
+            delete allCouponsInBasket[this.previousElementSibling.previousElementSibling.getAttribute('data-basketcaption')];
           }
           
           // Adjust the value in the prices object if amount is greater than 1.
@@ -167,9 +225,50 @@ forEach(addItem, function(index, elem) {
           } 
         }, false);
       });
+
+      // forEach(coupon, function(index, elem) {
+      //   elem.addEventListener('input', function(ev) {
+      //     ev.preventDefault();
+
+      //     if (this.value === productSale) {
+      //        allCouponsInBasket[this.parentElement.firstElementChild.getAttribute('data-basketcaption')] = productSale; 
+      //     }
+
+      //   }, false);
+      // });
     } 
   }, false);
 });
+
+// siteCoupon.addEventListener('input', function(ev) {
+//   ev.preventDefault();
+
+//   console.log(this.value);
+// }, false);
+
+updateBtn.addEventListener('click', function(ev) {
+  ev.preventDefault();
+  var couponValue;
+
+  forEach(coupon, function(index, elem) {
+    if (coupon.length === 1) {
+      couponValue = elem.value;
+    }
+  });
+
+  if (siteCoupon.value === 'SITESALE') {
+    totalAfterCoupon(siteSale);
+  }
+
+  if (siteCoupon.value === 'SPECIALSALE') {
+    totalAfterCoupon(specialSale);
+  }
+
+  if (couponValue === 'ITEMAWESOME') {
+    console.log(couponValue);
+  }
+
+}, false);
 
 
 

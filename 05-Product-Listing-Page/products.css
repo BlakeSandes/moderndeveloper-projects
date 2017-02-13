@@ -32,6 +32,10 @@
   margin-bottom: 12px;
 }
 
+.content-box {
+  position: relative;
+}
+
 figure {
   margin: 0;
 }
@@ -98,6 +102,18 @@ span {
   background: linear-gradient(to right, rgba(54,64,63,.15), rgba(54,64,63,.54));
 }
 
+/*15% SPECIAL BANNER*/
+
+.special::before {
+  position: absolute;
+  content: "SPECIAL";
+  top: 11px;
+  right: -7px;
+  padding: 0 1px;
+  background: rgba(245,77,153,.65);
+  color: #fff;
+  transform: rotate(45deg);
+}
 
 /********SHOPPING CART SIDE BAR********/
 
@@ -109,19 +125,22 @@ span {
   height: 100%;
   overflow: auto;
 }
+
 ol.basket-items {
-  margin-bottom: -6px;
+  max-height: 312px;
+  overflow: auto;
+  background: #62BAD6;
 }
+
 .basket {
   position: fixed;
   z-index: 2;
-  width: 13.75rem;
-  margin-left: -13.75rem;
+  width: 18rem;
+  margin-left: -18rem;
   border-top: 1px solid rgba(45,60,69,.26);
   border-bottom: 1px solid rgba(45,60,69,.26);
   color: rgba(45,60,69,.86);
-  background: linear-gradient( to left ,
-    rgba(165,222,255,1), rgba(165,222,255,.90));
+  background: rgba(165,222,255,1);
 }
 
 .basket-top {
@@ -187,7 +206,6 @@ ol.basket-items {
 }
 
 .basket .amount,
-.basket .coupon,
 .basket .remove,
 .basket .total-text,
 .basket .total-price {
@@ -196,15 +214,17 @@ ol.basket-items {
 }
 
 .basket .coupon,
-.basket .total-coupon {
+.basket .site-coupon {
+  height: 28px;
+  margin-top: 8px;
   text-align: center;
-  width: 50%;
+  width: 60%;
 }
 
 .basket .amount,
 .basket .update,
 .basket .coupon,
-.basket .total-coupon {
+.basket .site-coupon {
   float: left;
   border-style: none;
   background: rgba(165,222,255,1);
@@ -250,9 +270,67 @@ ol.basket-items {
   float: left;
 }
 
-.basket .total-coupon {
-  margin-top: 0;
+.basket .site-coupon {
+  margin-bottom: 12px;
 }
+
+.basket .basket-checkout li:first-child span:first-child {
+  float: left;
+  width: 35%;
+  font-size: .95rem;
+  margin-right: 10%;
+  padding: 1%;
+  color: rgba(45, 60, 69, 0.8); 
+  border-right: 1px solid rgba(45,60,69,.26);
+  border-bottom: 1px solid rgba(45,60,69,.26);
+}
+
+.basket .basket-checkout li:first-child span:nth-child(n+2) {
+  float: left;
+  position: relative;
+  /*margin: 1%;*/
+  padding: 1% 2%;
+  font-size: .95rem;
+  background: rgba(165,222,255,1);
+  color: #7db1d1;
+  box-shadow: 0 0 1px rgba(45,60,69,.26)
+}
+
+.basket  .specialsale {
+  margin: 6px 12%;
+}
+
+.basket .sitesale {
+  margin: 6px 0;
+}
+
+.basket .itemawesome:after,
+.basket  .specialsale:after,
+.basket .sitesale:after {
+  position: absolute;
+  top: -5px;
+  right: -15px;
+  background: rgba(255,255,255,.45);
+  border-radius: 6px;
+  -webkit-transform: rotate(45deg);
+     -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+       -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.basket .itemawesome:after {
+  content: "10%";
+}
+
+.basket  .specialsale:after {
+  content: '15%';
+}
+
+.basket .sitesale:after {
+  content: "5%";
+}
+
 .basket .total-price {
   float: right;
   text-align: right;
@@ -277,8 +355,8 @@ ol.basket-items {
   background: transparent;
   color: rgba(10,70,97,1);
   border: 1px solid transparent;
-  -webkit-transition: color .15s, background .5s;
-  transition: color .15s, background .5s;
+  -webkit-transition: background .5s ease-in-out;
+  transition: background .5s ease-in-out;
 }
 
 /********HOVER STATES********/
@@ -289,7 +367,7 @@ ol.basket-items {
 
 .basket .amount:focus,
 .basket .coupon:focus,
-.basket .total-coupon:focus {
+.basket .site-coupon:focus {
   background: rgba(54,64,63,.34);
   color: rgba(165,222,255,1);
   border: 1px solid transparent;
@@ -319,7 +397,7 @@ ol.basket-items {
 /********Styles added through Javascript********/
 
 .display {
-  top: 80px;
+  top: 0;
 }
 .basket li .visible {
   display: block;
