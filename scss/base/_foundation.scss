@@ -1,0 +1,134 @@
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+html,body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+fieldset {
+    border: none;
+}
+// h1,
+// h2,
+// h3,
+// h4,
+p,
+blockquote,
+figure,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+    // background-repeat: no-repeat;
+}
+main,
+li {
+    display: block;
+}
+h1,
+h2,
+h3,
+h4 {
+    font-size: inherit;
+}
+strong {
+    font-weight: bold;
+}
+a,
+button {
+    color: inherit;
+}
+a,
+button,
+input[type="button"],
+input[type="submit"] {
+    transition: .3s;
+}
+a {
+    text-decoration: none;
+}
+button,
+input[type="button"],
+input[type="submit"] {
+    cursor: pointer;
+}
+button,
+input {
+    overflow: visible;
+    border: 0;
+    font: inherit;
+    -webkit-font-smoothing: inherit;
+    letter-spacing: inherit;
+    background: none;
+    outline: 0;
+}
+input {
+    border-style: none;
+    box-shadow: none;;
+    &:required {
+      box-shadow: none;
+    }
+    &:invalid {
+      box-shadow: none;
+    }
+    // &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    //     color: $color-defaultBtn-fontColor;
+    // }
+    // &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    //    color: $color-defaultBtn-fontColor;
+    //    opacity: 1;
+    // }
+    // &::-moz-placeholder { /* Mozilla Firefox 19+ */
+    //    color: $color-defaultBtn-fontColor;
+    //    opacity: 1;
+    // }
+    // &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    //    color: $color-defaultBtn-fontColor;
+    // }
+}
+::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+:focus {
+    outline: 0;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    border: 0;
+}
+
+/********Clear Moz defaults psuedo element styling********/
+*:focus, *:visited, *:active, *:hover  { outline:0 !important;}
+*::-moz-focus-inner {border:0;}
+
+/*******Clear Moz deafult select element styling********/
+@-moz-document url-prefix() {
+  select, select:-moz-focusring, select::-moz-focus-inner {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+    background-image: none;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+  select:-moz-focusring:hover {
+    text-shadow: 0 0 0 #000;
+    color: transparent;
+  }
+}

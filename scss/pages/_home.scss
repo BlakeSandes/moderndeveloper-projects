@@ -1,0 +1,58 @@
+.quote {
+  text-align: center;
+  width: 75%;
+  max-width: 400px;
+  min-width: 345px;
+  margin: 0 auto;
+  .title {
+    width: 100%;
+    border-radius: 0 54px 0 54px;
+    margin: 18px auto 0;
+    padding: 4px 36px 8px;
+    text-align: center;
+    background: rgba(54,82,82,.12);
+    box-shadow: 0 0 3px rgba(105,62,57,.7), inset 0 0 4px silver, inset 0 0 8px rgba(68,219,199,.7);
+    background: radial-gradient(circle, rgba(0,247,242,.05), rgba(0,247,242,.25));
+    h2 {
+      font-family: 'fira_sans_condensedthin', sans-serif;
+      font-weight: lighter;
+    }
+  }
+  blockquote {
+    width: 75%;
+    margin: 64px auto;
+    p {
+      position: relative;
+      line-height: 1.2em;
+      font-size: 1.5rem;
+      &:before,
+      &:after {
+        font-size: 3em;
+        line-height: 0;
+        vertical-align: bottom;
+        margin: 0;
+        // color: rgba(19,43,59,.9);
+      }
+      &:before {
+        content: "“";
+        margin-right: 6px;
+      }
+      &:after {
+        content: "”";
+        margin-left: 6px;
+      }
+    }
+    span {
+      color: rgba(37,41,54,.7);
+      &:before {
+        content: "⁓";
+        margin-right: 4px;
+        color: rgba(37,41,54,1);
+      }
+    }
+  }
+}
+
+
+
+

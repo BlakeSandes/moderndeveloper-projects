@@ -1,0 +1,41 @@
+  /***********FOUNDATION STYLES FOR ALL PAGES**************/
+
+body {
+  height: 100%;
+  min-height: 100%;
+  padding-top: 7.5rem;
+  background: url("../images/sunset-greyed.jpg");
+  .container {
+    position: relative;
+    max-width: 100%;
+    min-height: 100%;
+    margin: 18px auto 0;
+    padding-bottom: 64px;
+    h1 {
+      &:first-child {
+      margin-top: 20px;
+      text-align: center;
+      }
+    }
+  }
+}
+
+/********Placeholder defaults********/
+
+::-webkit-input-placeholder {
+  color: rgba(0,35,64,.45);
+}
+::-moz-placeholder {
+  color: rgba(0,35,64,.45);
+}
+:-ms-input-placeholder {
+  color: rgba(0,35,64,.45);
+}
+:-moz-placeholder {
+  color: rgba(0,35,64,.45);
+}
+
+::-moz-placeholder {
+  opacity: 1;
+}
+

@@ -1,0 +1,32 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+<metadata></metadata>
+<defs>
+<font id="latoregular" horiz-adv-x="0" >
+<font-face units-per-em="2048" ascent="1649" descent="-399" />
+<missing-glyph horiz-adv-x="395" />
+<glyph />
+<glyph unicode="&#xd;" />
+<glyph />
+<glyph />
+<glyph unicode=" "  horiz-adv-x="395" />
+<glyph unicode="&#x09;" horiz-adv-x="395" />
+<glyph unicode="&#xa0;" horiz-adv-x="395" />
+<glyph unicode="&#x26;" horiz-adv-x="1439" d="M84 391q0 72 24 136t66.5 118t101 97t127.5 74q-62 79 -91.5 153.5t-29.5 154.5q0 75 27 140.5t78 114t124.5 77t164.5 28.5q81 0 147.5 -26t115 -69t76.5 -100t33 -119l-114 -22q-5 -1 -9 -1q-13 0 -25 7t-17 26q-7 27 -23 55.5t-41 52t-60.5 38.5t-82.5 15 q-51 0 -92 -16t-70.5 -45.5t-45 -69t-15.5 -85.5q0 -36 8.5 -68.5t26 -66t45 -68.5t66.5 -74l422 -429q39 69 62 144t31 151q2 19 12.5 30.5t28.5 11.5h113q-2 -118 -38 -231.5t-104 -213.5l308 -311h-177q-30 0 -48 7t-41 30l-147 148q-96 -93 -221.5 -147t-276.5 -54 q-82 0 -160.5 27.5t-140.5 80t-100 128.5t-38 171zM269 406q0 -67 24.5 -117.5t64.5 -85.5t91.5 -53t104.5 -18q115 0 206 42t161 112l-434 437q-109 -58 -163.5 -139.5t-54.5 -177.5z" />
+<glyph unicode="&#x2000;" horiz-adv-x="742" />
+<glyph unicode="&#x2001;" horiz-adv-x="1484" />
+<glyph unicode="&#x2002;" horiz-adv-x="742" />
+<glyph unicode="&#x2003;" horiz-adv-x="1484" />
+<glyph unicode="&#x2004;" horiz-adv-x="494" />
+<glyph unicode="&#x2005;" horiz-adv-x="371" />
+<glyph unicode="&#x2006;" horiz-adv-x="247" />
+<glyph unicode="&#x2007;" horiz-adv-x="247" />
+<glyph unicode="&#x2008;" horiz-adv-x="185" />
+<glyph unicode="&#x2009;" horiz-adv-x="296" />
+<glyph unicode="&#x200a;" horiz-adv-x="82" />
+<glyph unicode="&#x202f;" horiz-adv-x="296" />
+<glyph unicode="&#x205f;" horiz-adv-x="371" />
+<glyph unicode="&#x25fc;" horiz-adv-x="1038" d="M0 0v1039h1039v-1039h-1039z" />
+</font>
+</defs></svg> 

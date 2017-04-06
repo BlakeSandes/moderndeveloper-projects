@@ -22,22 +22,22 @@ signupForm.addEventListener('submit', function(event) {
                                             
   if (validator.isEmpty(firstName.value) || firstName.value.length < 2) {
     firstName.classList.add('invalid');
-    firstName.previousElementSibling.classList.add('error-icon');
+    firstName.parentElement.classList.add('error-icon');
   }
 
   if (validator.isEmpty(lastName.value) || lastName.value.length < 2) {
     lastName.classList.add('invalid');
-    lastName.previousElementSibling.classList.add('error-icon');
+    lastName.parentElement.classList.add('error-icon');
   }
 
   if (validator.isEmpty(userName.value) || userName.value.length < 2) {
     userName.classList.add('invalid');
-    userName.previousElementSibling.classList.add('error-icon');
+    userName.parentElement.classList.add('error-icon');
   }
 
   if (!validator.isEmailAddress(email.value)) {
     email.classList.add('invalid');
-    email.previousElementSibling.classList.add('error-icon');
+    email.parentElement.classList.add('error-icon');
   }
 
   if ( !validator.isEmpty(year.value) && !validator.isEmpty(month.value) && !validator.isEmpty(day.value) ) {
@@ -45,25 +45,25 @@ signupForm.addEventListener('submit', function(event) {
   } 
   if ( validator.isEmpty(year.value) || year.value.length !== 4 || isNaN(year.value)) {
     year.classList.add('invalid');
-    year.previousElementSibling.classList.add('error-icon');
+    year.parentElement.classList.add('error-icon');
   } 
   if ( validator.isEmpty(month.value) || month.value.length !== 2 || isNaN(month.value)) {
     month.classList.add('invalid');
-    month.previousElementSibling.classList.add('error-icon');
+    month.parentElement.classList.add('error-icon');
   } 
   if ( validator.isEmpty(day.value) || day.value.length !== 2 || isNaN(day.value) ) {
     day.classList.add('invalid');
-    day.previousElementSibling.classList.add('error-icon');
+    day.parentElement.classList.add('error-icon');
   }
   
   if (validator.isEmpty(password.value) || password.value.length < 6) {
     password.classList.add('invalid');
-    password.previousElementSibling.classList.add('error-icon');
+    password.parentElement.classList.add('error-icon');
   }
 
   if (validator.isEmpty(confirmPassword.value) || confirmPassword.value.length < 6 || password.value !== confirmPassword.value ) {
     confirmPassword.classList.add('invalid');
-    confirmPassword.previousElementSibling.classList.add('error-icon');
+    confirmPassword.parentElement.classList.add('error-icon');
   }
 
   if (document.getElementsByClassName('invalid')) {
@@ -86,8 +86,8 @@ firstName.addEventListener('input', function(event) {
 
   if (!validator.isEmpty(this.value) && this.value.length > 2) {
     this.classList.remove('invalid');
-    this.previousElementSibling.classList.remove('error-icon');
-    this.previousElementSibling.classList.add('valid');
+    this.parentElement.classList.remove('error-icon');
+    this.parentElement.classList.add('valid');
   }
 }, false);
 
@@ -96,8 +96,8 @@ lastName.addEventListener('input', function(event) {
 
   if (!validator.isEmpty(this.value) && this.value.length > 2) {
    this.classList.remove('invalid');
-   this.previousElementSibling.classList.remove('error-icon');
-    this.previousElementSibling.classList.add('valid');
+   this.parentElement.classList.remove('error-icon');
+    this.parentElement.classList.add('valid');
   }
 }, false);
 
@@ -106,8 +106,8 @@ userName.addEventListener('input', function(event) {
 
   if (!validator.isEmpty(this.value) && this.value.length > 2) {
     this.classList.remove('invalid');
-    this.previousElementSibling.classList.remove('error-icon');
-    this.previousElementSibling.classList.add('valid');
+    this.parentElement.classList.remove('error-icon');
+    this.parentElement.classList.add('valid');
   }
 }, false);
 
@@ -116,8 +116,8 @@ email.addEventListener('input', function (event) {
 
   if (validator.isEmailAddress(this.value)) {
     this.classList.remove('invalid');
-    this.previousElementSibling.classList.remove('error-icon');
-    this.previousElementSibling.classList.add('valid');
+    this.parentElement.classList.remove('error-icon');
+    this.parentElement.classList.add('valid');
   }
 }, false);
 
@@ -126,8 +126,8 @@ month.addEventListener('input', function(event) {
 
   if (this.value.length === 2 && !isNaN(this.value)) {
     this.classList.remove('invalid');
-    this.previousElementSibling.classList.remove('error-icon');
-    this.previousElementSibling.classList.add('valid');
+    this.parentElement.classList.remove('error-icon');
+    this.parentElement.classList.add('valid');
   }
 }, false);
 
@@ -136,8 +136,8 @@ day.addEventListener('input', function(event) {
 
   if (this.value.length === 2 && !isNaN(this.value)) {
     this.classList.remove('invalid');
-    this.previousElementSibling.classList.remove('error-icon');
-    this.previousElementSibling.classList.add('valid');
+    this.parentElement.classList.remove('error-icon');
+    this.parentElement.classList.add('valid');
   }
 }, false);
 
@@ -146,8 +146,8 @@ year.addEventListener('input', function(event) {
 
   if ( year.value.length === 4 && !isNaN(year.value)) {
     this.classList.remove('invalid');
-    this.previousElementSibling.classList.remove('error-icon');
-    this.previousElementSibling.classList.add('valid');
+    this.parentElement.classList.remove('error-icon');
+    this.parentElement.classList.add('valid');
   }
 }, false);
 
@@ -156,8 +156,8 @@ password.addEventListener('input', function(event) {
 
   if (this.value.length > 6) {
     this.classList.remove('invalid');
-    this.previousElementSibling.classList.remove('error-icon');
-    this.previousElementSibling.classList.add('valid');  
+    this.parentElement.classList.remove('error-icon');
+    this.parentElement.classList.add('valid');  
   }
 }, false);
 
@@ -166,7 +166,7 @@ confirmPassword.addEventListener('input', function(event) {
 
   if (this.value === password.value) {
     this.classList.remove('invalid');
-    this.previousElementSibling.classList.remove('error-icon');
-    this.previousElementSibling.classList.add('valid');  
+    this.parentElement.classList.remove('error-icon');
+    this.parentElement.classList.add('valid');  
   }
 }, false);

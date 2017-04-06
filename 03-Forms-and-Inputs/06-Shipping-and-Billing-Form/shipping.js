@@ -1,6 +1,6 @@
 var shippingForm = document.getElementById('shipping-form'),
-shipping = document.querySelector('.shipping'),
-billing = document.querySelector('.billing'),
+shipping = document.querySelector('.shipping__container'),
+billing = document.querySelector('.billing__container'),
 notMatch = document.getElementById('not-match'),
 
 country = document.getElementById('country'),

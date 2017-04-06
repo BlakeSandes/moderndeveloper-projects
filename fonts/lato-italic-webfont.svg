@@ -1,0 +1,32 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+<metadata></metadata>
+<defs>
+<font id="latoitalic" horiz-adv-x="0" >
+<font-face units-per-em="2048" ascent="1649" descent="-399" />
+<missing-glyph horiz-adv-x="395" />
+<glyph />
+<glyph unicode="&#xd;" />
+<glyph />
+<glyph />
+<glyph unicode=" "  horiz-adv-x="395" />
+<glyph unicode="&#x09;" horiz-adv-x="395" />
+<glyph unicode="&#xa0;" horiz-adv-x="395" />
+<glyph unicode="&#x26;" horiz-adv-x="1328" d="M741 1482q72 0 130.5 -22.5t100.5 -62.5t65 -94.5t23 -117.5v-6t-1 -9l-104 -19q-5 -1 -8.5 -1.5t-7.5 -0.5q-30 0 -37 34q-6 30 -18.5 58.5t-33.5 51.5t-51.5 37.5t-72.5 14.5q-52 0 -94 -19.5t-72.5 -54t-46.5 -81t-16 -99.5q0 -58 24 -120t75 -126l330 -419 q42 68 69.5 140t41.5 145q4 18 13.5 29.5t28.5 11.5h122q-16 -118 -62.5 -231.5t-119.5 -212.5l244 -308h-152q-22 0 -37.5 2.5t-28 8.5t-23 16.5t-23.5 24.5l-98 125q-96 -89 -214 -141t-250 -52q-84 0 -153.5 25t-119.5 71.5t-78 113t-28 149.5q0 81 27.5 152.5t75 131.5 t111.5 107t138 80q-40 68 -59 133.5t-19 129.5q0 84 29 158.5t83 128.5t129.5 86t167.5 32zM241 366q0 -57 17.5 -102t49 -75.5t74.5 -46.5t93 -16q97 0 183 44t158 116l-341 435q-118 -63 -176 -154.5t-58 -200.5z" />
+<glyph unicode="&#x2000;" horiz-adv-x="741" />
+<glyph unicode="&#x2001;" horiz-adv-x="1482" />
+<glyph unicode="&#x2002;" horiz-adv-x="741" />
+<glyph unicode="&#x2003;" horiz-adv-x="1482" />
+<glyph unicode="&#x2004;" horiz-adv-x="494" />
+<glyph unicode="&#x2005;" horiz-adv-x="370" />
+<glyph unicode="&#x2006;" horiz-adv-x="247" />
+<glyph unicode="&#x2007;" horiz-adv-x="247" />
+<glyph unicode="&#x2008;" horiz-adv-x="185" />
+<glyph unicode="&#x2009;" horiz-adv-x="296" />
+<glyph unicode="&#x200a;" horiz-adv-x="82" />
+<glyph unicode="&#x202f;" horiz-adv-x="296" />
+<glyph unicode="&#x205f;" horiz-adv-x="370" />
+<glyph unicode="&#x25fc;" horiz-adv-x="1038" d="M0 1039h1039v-1039h-1039v1039z" />
+</font>
+</defs></svg> 

@@ -1,0 +1,17 @@
+[class*="Form__container"] {
+  width: 100%;
+  max-width: 540px;
+  margin: 0 auto 24px;
+  background: rgba(240,240,255,.45);
+  padding: 12px 0;
+}
+
+form {
+  margin: 36px auto;
+  width: 80%;
+  max-width: 480px;
+  min-width: 360px;
+  fieldset {
+    border: none;
+  }
+}

@@ -1,0 +1,263 @@
+
+.shippingForm__container  {
+  fieldset {
+    position: relative;
+    background: rgba(204,197,195,1);
+    width: 100%;
+    border-radius: 3px;
+    padding: 6px;
+    box-shadow: 0 0 1px rgba(84,81,99,.35);
+    h1 {
+      font-size: 1.5em;
+      text-align: left;
+      padding-bottom: 24px;
+      color: rgba(84,81,99,1);
+    }
+    li {
+      position: relative;
+      margin-bottom: 18px;
+      padding: 0;
+      display: inline-block;
+      float: left;
+      & > label {
+        margin-bottom: 6px;
+        color: rgba(84,81,99,1);
+      }
+    }
+    input[type=checkbox] {
+      &:hover {
+        & + span {
+          cursor: pointer;
+        }
+      }
+      &:checked {
+        & + span {
+          background: rgba(255,125,158, 1);
+          &::after {
+            visibility: visible;
+          }
+        }
+      }
+    }
+    input[type=text] {
+      padding-left: 6px;
+      border: none;
+      &:hover,
+      &:focus {
+        background: #CEE8CC;
+      }
+    }
+    input[type=text], 
+    .select-styles {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 32px;
+      background: rgba(242,247,255,.90);
+      box-shadow: 0 0 1px grey;
+      border-radius: 3px;
+      -webkit-transition: background .5s ease-in-out;
+      transition: background .5s ease-in-out;
+    }
+    .select-styles {
+      &::after {
+        font-family: 'Material Icons';
+        content: 'arrow_drop_down';
+        -webkit-font-feature-settings: 'liga';
+        position: absolute;
+        top: 4px;
+        right: 0;
+        font-size: 1.5rem;
+        margin-right: 3px;
+        color: rgba(255,125,158, 1);
+      }
+      select {
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-radius: 3px;
+        background: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        margin-right: 6px;
+        padding-left: 6px;
+        color: transparent;
+        text-shadow: 0  1px rgba(84,81,99,.7);
+        -webkit-transition: background .5s ease-in-out;
+        transition: background .5s ease-in-out;
+        &:hover,
+        &:focus {
+          cursor: pointer;
+          background: #CEE8CC;
+        }
+      }
+      // &:hover,
+      // &:focus {
+      //   cursor: pointer;
+      //   background: #CEE8CC;
+      // }
+    }
+    
+  }
+  .shipping__container,
+  .billing__container,
+  .match__container {
+    border-top: 1px solid rgba(84,81,99,.35);
+    border-bottom: 1px solid rgba(84,81,99,.35);
+    margin-top: 18px;
+    padding-bottom: 18px;
+  }
+  .match__container {
+    margin: 12px 0;
+    padding: 12px 0;
+    span {
+      position: absolute;
+      left: -12px;
+      width: 20px;
+      height: 20px;
+      border-radius: 2px;
+      text-align: center;
+      background: #fff; 
+      box-shadow: 0 0 1px rgba(84,81,99,1);
+      &::after {
+        font-family: 'Material Icons';
+        content: 'check';
+        -webkit-font-feature-settings: 'liga';
+        position: absolute;
+        top: 1px;
+        left: 1px;
+        font-size: 1rem;
+        color: rgba(84,81,99,.85);
+        text-shadow: 0 0 1px #fff;
+        visibility: hidden;
+      }
+    }
+    input[type=checkbox] {
+      opacity: 0;
+    } 
+    label {
+      position: relative;
+      margin-left: 24px;
+      color: rgba(84,81,99,1);
+    }
+  }
+  .billing__container {
+    display: none;
+    &.toggle-display {
+      display: block;
+    }
+  }
+  .country {
+    width: 100%;
+  }
+  .firstName {
+    width: 49%;
+    margin-right: 1%;
+  }
+  .lastName {
+    width: 49%;
+    margin-left: 1%;
+  }
+  .street {
+    width: 64%;
+    margin-right: 1%;
+  }
+  .apt {
+    width: 34%;
+    margin-left: 1%;
+  }
+  .zip {
+    width: 23%;
+    margin-right: 1%;
+  }
+  .city {
+    width: 35%;
+    margin: 0 1%;
+  }
+  .state {
+    width: 38%;
+    margin-left: 1%;
+  }
+  .shippingFormBtn {
+    display: block;
+    height: 36px;
+    width: 100%;
+    margin: 12px auto 0 ;
+    padding: 0;
+    border-radius: 3px;
+    border: none;
+    background: rgba(255,125,158, 1);
+    color: rgba(84,81,99,1);
+    font-size: 1.35em;
+    text-align: center;
+    text-shadow: 0 0 1px white;
+    border-top: 1px solid rgba(84,81,99,.35);
+    border-bottom: 1px solid rgba(84,81,99,.35);
+    box-shadow: 0 0 1px rgba(84,81,99,.35);
+    -webkit-transition: background .5s, color .25s;
+          transition: background .5s, color .25s;
+    &:focus,
+    &:hover {
+      background: rgba(168,221,255,1);
+      cursor: pointer;
+    }
+  }
+}
+  
+/******VALIDATION STYLES******/
+
+.shipping__container li.invalid:after,
+.billing__container li.invalid:after,
+.select-styles.invalid:after {
+  font-family: 'Material Icons';
+  content: 'error';
+  -webkit-font-feature-settings: 'liga';
+  position: absolute;
+  top: 1.5rem;
+  right: 0.2rem;
+  font-size: .85rem;
+  color: rgba(255,125,158, 1);
+}
+
+.select-styles.invalid:after {
+  top: .5rem;
+  right: 0;
+}
+
+/********ERROR DIV********/
+.error-div1,
+.error-div2 {
+  visibility: hidden;
+  position: absolute;
+  top: 48px;
+  right: 6px;
+  width: 240px;
+  height: 24px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  color: rgba(255,125,158, 1);
+  background: #CEE8CC;
+  -webkit-transition: visibility .15s ease-in-out;
+          transition: visibility .15s ease-in-out;
+}
+.error-div1 p,
+.error-div2 p {
+  margin: 0;
+  padding-top: 2px;
+}
+
+.error-div1 em,
+.error-div2 em {
+  color: rgba(130,57,103,1);
+  padding-right: 4px;
+}
+
+.visible {
+  visibility: visible;
+  /*top: -54px;
+  margin-top: 12px;*/
+
+}
+
+
