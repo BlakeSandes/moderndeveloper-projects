@@ -11,22 +11,22 @@ var forEach = function(array, callback, scope) {
 };
 
 // Element variables
-var basketWrapper = document.querySelector('.basket-wrapper'),
+var basketContainer = document.querySelector('.basket__outerContainer'),
 basket = document.querySelector('.basket'),
-basketBtn = document.querySelector('.shopping-basket'),
-basketDropDown = document.querySelector('.basket-dropdown'),
-quantityCount = document.querySelector('.quantity-count'),
+basketBtn = document.querySelector('.basket__icon'),
+basketDropDown = document.querySelector('.basket__dropdown'),
+totalQuantity = document.querySelector('.basket__totalQuantity'),
 productCaption = document.querySelectorAll('[data-caption]'),
-basketItems = document.querySelector('.basket-items'),
-removeBtn = document.getElementsByClassName('remove'),
+basketItems = document.querySelector('.basket__items'),
+removeBtn = document.getElementsByClassName('basket__remove'),
 addItem = document.getElementsByClassName('add-item'),
-itemAmount = document.getElementsByClassName('amount'),
-basketPrice = document.getElementsByClassName('basket-price'),
-totalPrice = document.querySelector('.total-price'),
+itemQuantity = document.getElementsByClassName('basket__itemQuantity'),
+basketPrice = document.getElementsByClassName('basket__price'),
+totalPrice = document.querySelector('.basket__total'),
 total = 0,
 allPricesInBasket = {},
 allCouponsInBasket = {},
-coupon = document.getElementsByClassName('coupon'),
+coupon = document.getElementsByClassName('basket__coupon'),
 siteCoupon = document.getElementById('site-coupon'),
 specialSale = "SPECIALSALE",
 productSale = "ITEMAWESOME",
@@ -54,24 +54,24 @@ function basketFragment(caption,price, specialClass) {
   captionSpan.className = "basket-product-caption",
   captionSpan.setAttribute('data-basketcaption', caption);
 
-  priceSpan.className = "basket-price",
+  priceSpan.className = "basket__price",
   priceSpan.setAttribute('data-basketprice', price);
    
   amountInput.setAttribute('type','tel');
   amountInput.setAttribute('value', '1');
   amountInput.setAttribute('name', 'amount');
-  amountInput.className = "amount clearfix";
+  amountInput.className = "basket__itemQuantity clearfix";
   amountInput.id = "amount";
 
   removeBtnElem.setAttribute('type', 'button');
   removeBtnElem.setAttribute('name', 'remove');
   removeBtnElem.setAttribute('value', 'REMOVE');
-  removeBtnElem.className = "remove";
+  removeBtnElem.className = "basket__remove";
    
   couponInput.setAttribute('type', 'text');
   couponInput.setAttribute('name', 'coupon');
   couponInput.setAttribute('placeholder', 'Product COUPON')
-  couponInput.className = "coupon clearfix";
+  couponInput.className = "basket__coupon clearfix";
 
   bottomBarDiv.className = "bottom-bar clearfix";
 
@@ -162,10 +162,10 @@ forEach(addItem, function(index, elem) {
     }
 
     // 1. Remain hidden until at least one item has been added
-    basketWrapper.classList.add('display');
+    basketContainer.classList.add('display');
     
     // Add quantiy to basket quantiy amount circle.
-    quantityCount.innerHTML = basketItems.childElementCount;
+    totalQuantity.innerHTML = basketItems.childElementCount;
     
     // Set the property of the price object to the item caption and value to the item price when they are first added to the basket.
     allPricesInBasket[itemCaption] = itemPrice;
@@ -179,7 +179,7 @@ forEach(addItem, function(index, elem) {
         elem.addEventListener('click', function(ev) {
           ev.preventDefault();
           this.parentElement.remove();
-          quantityCount.innerHTML = basketItems.childElementCount;
+          totalQuantity.innerHTML = basketItems.childElementCount;
           
           delete allPricesInBasket[this.previousElementSibling.previousElementSibling.previousElementSibling.getAttribute('data-basketcaption')];
           totalObject(allPricesInBasket);
@@ -187,13 +187,13 @@ forEach(addItem, function(index, elem) {
           delete allCouponsInBasket[this.previousElementSibling.previousElementSibling.previousElementSibling.getAttribute('data-basketcaption')];
 
           if (basketItems.childElementCount === 0) {
-            basketWrapper.classList.remove('display');
+            basketContainer.classList.remove('display');
           } 
         }, false);
       });
 
       // 5. Change the quantity of an item. A quantity of 0 will remove the item from the cart.
-      forEach(itemAmount, function(index, elem) {
+      forEach(itemQuantity, function(index, elem) {
 
         elem.addEventListener('input', function(ev) {
           ev.preventDefault();
@@ -204,7 +204,7 @@ forEach(addItem, function(index, elem) {
           // Remove the item from the basket if quantity entered is 0.
           if (this.value ==='0') {
             this.parentElement.remove();
-            quantityCount.innerHTML = basketItems.childElementCount;
+            totalQuantity.innerHTML = basketItems.childElementCount;
             // Remove item from total prices object.
             delete allPricesInBasket[this.previousElementSibling.previousElementSibling.getAttribute('data-basketcaption')];
             // Update total.
@@ -221,7 +221,7 @@ forEach(addItem, function(index, elem) {
           
           // Close the basket if there are no items in it.
           if (basketItems.childElementCount === 0) {
-            basketWrapper.classList.remove('display');
+            basketContainer.classList.remove('display');
           } 
         }, false);
       });

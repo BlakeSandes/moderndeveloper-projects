@@ -1,0 +1,28 @@
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+%basketInputStyles {
+  border-style: none;
+  background: rgba(165,222,255,1);
+  color: rgba(45,60,69,.86);
+  border-top: 1px solid rgba(45,60,69,.26);
+  border-right: 1px solid rgba(45,60,69,.26);
+  border-bottom: 1px solid rgba(45,60,69,.26);
+  -webkit-transition: color .25s, background .75s;
+  transition: color .25s, background .75s;
+}
+%basketInputState {
+  background: rgba(54,64,63,.34);
+  color: rgba(165,222,255,1);
+  border: 1px solid transparent;
+}
+%basketBtnState {
+  cursor: pointer;
+  background: #FF72B1;
+  color: #fff;
+}

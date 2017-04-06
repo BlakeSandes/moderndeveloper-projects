@@ -29,7 +29,7 @@
         color: rgba(130,57,103,1);
         text-shadow: 0 0 1px white;
         font-size: 3em;
-        top: -8px;
+        top: -18px;
         left: 45%;
       }
       li {
@@ -171,10 +171,9 @@
             transition: visibility .15s ease-in, top .5s ease-in-out;
     p {
       margin: 0;
-      padding-top: 8px;
+      padding-top: 4px;
       em {
         color: rgba(130,57,103,1);
-        padding-right: 4px;
       }
     }
   }
