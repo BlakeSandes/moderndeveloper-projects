@@ -255,7 +255,7 @@ blockquote {
       line-height: 1.45833333;
       /* 35px / 24px */ } }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, label {
   font-family: 'fira_sans_condensedmedium', sans-serif;
   font-weight: normal;
   color: #1D394C;
@@ -2071,6 +2071,66 @@ a.profileback:hover {
     text-align: center;
     background: #CCFF99;
     color: rgba(17, 47, 66, 0.7); }
+
+.c-tabs {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  width: 40%;
+  min-width: 400px;
+  border-radius: 3px 3px 0 0;
+  height: 42px;
+  background: linear-gradient(#D5E2FF, #C0CBE5); }
+  .c-tabs__item:first-of-type .c-tabs__label {
+    background: #3ECCA8; }
+  .c-tabs__item:first-of-type .c-tabs__content {
+    background: linear-gradient(to bottom, #3ECCA8, #7bdcc3); }
+  .c-tabs__item:nth-of-type(2) .c-tabs__label {
+    background: #6795a6; }
+  .c-tabs__item:nth-of-type(2) .c-tabs__content {
+    background: linear-gradient(to bottom, #6795a6, #97b6c2); }
+  .c-tabs__item:nth-of-type(3) .c-tabs__label {
+    background: #81ff98; }
+  .c-tabs__item:nth-of-type(3) .c-tabs__content {
+    background: linear-gradient(to bottom, #81ff98, #cdffd6); }
+  .c-tabs__item:nth-of-type(4) .c-tabs__label {
+    background: #f497ff; }
+  .c-tabs__item:nth-of-type(4) .c-tabs__content {
+    background: linear-gradient(to bottom, #f497ff, #f9caff); }
+  .c-tabs__item input[type=radio] {
+    display: none; }
+    .c-tabs__item input[type=radio]:checked ~ .c-tabs__label {
+      color: #5b78bb;
+      text-shadow: none;
+      height: 32px;
+      margin-top: 10px; }
+    .c-tabs__item input[type=radio]:checked ~ .c-tabs__content {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 1s; }
+  .c-tabs__item .c-tabs__label {
+    height: 100%;
+    display: flex;
+    margin-right: 8px;
+    padding: 0 8px;
+    transition: background .5s, color .25s opacity .3s; }
+    .c-tabs__item .c-tabs__label:hover {
+      cursor: pointer;
+      opacity: .85; }
+  .c-tabs__item .c-tabs__content {
+    position: absolute;
+    top: 42px;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    height: 80px;
+    padding: 16px 0 0 24px;
+    border-radius: 0 0 3px 3px; }
 
 .quote {
   text-align: center;

@@ -2,28 +2,72 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Components</title>
+  <title>Tabs</title>
   <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
-  <link rel="stylesheet" href="../../main.css">
+  <link rel="stylesheet" href="../../css/main.css">
 </head>
 <body>
   <div class="container">
-    <header>
-      <nav>
-        <div class="home">
-          <span class=""><a  href="../../index.html">Blake Wilson</a></span>
+    <header class="nav__header">
+      <nav class="nav__container">
+        <div class="nav__homeLogo">
+          <span class="nav__homeLogoLink"><a  href="../../index.html">Blake Wilson</a></span>
         </div>
-        <ul>
-          <li><a class="selected" href="../components.html">Components</a></li>
-          <li><a href="../../02-Profiles-ModernDeveloper-Sidebar/profile.html">Sidebar</a></li>
-          <li><a href="../../03-Forms-and-Inputs/forms.html">Forms</a></li>
-          <li><a href="../../04-Calculator/calculator.html">Calculator</a></li>
-          <li><a href="../../05-Product-Listing-Page/products.html">Products</a></li>
+        <ul class="nav">
+          <li  class="nav__item"><a href="../components.html" class="nav__link nav__link--selected">Components</a></li>
+          <li  class="nav__item"><a href="../../02-Profiles-ModernDeveloper-Sidebar/profile.html" class="nav__link">Sidebar</a></li>
+          <li  class="nav__item"><a href="../../03-Forms-and-Inputs/forms.html" class="nav__link">Forms</a></li>
+          <li  class="nav__item"><a href="../../04-Calculator/calculator.html" class="nav__link">Calculator</a></li>
+          <li  class="nav__item"><a href="../../05-Product-Listing-Page/products.html" class="nav__link">Products</a></li>
         </ul>
       </nav>
     </header>
-    <main class="tabs content">
-      
+    <aside class="sidebar clearfix">
+      <button></button>
+      <h3>UI Elements</h3>
+      <ul>
+        <li>
+          <a href="../01-Button-Web-Component/button.html">Buttons</a>
+          <img src="">
+        </li>
+        <li>
+          <a href="tabs.html">Tabs</a>
+          <img src="">
+        </li>
+      </ul>
+    </aside>
+    <main class="content">
+      <h1>Tabs</h1>
+      <div class="c-tabs">
+        <div class="c-tabs__item">
+          <input type="radio" name="products" id="homeDecor"  checked>
+          <label for="homeDecor" class="c-tabs__label">Home Decor</label>
+          <div class="c-tabs__content">
+            <p>Browse through our list of home Decor Items.</p>
+          </div>
+        </div>
+        <div class="c-tabs__item">
+          <input type="radio" name="products" id="furniture">
+          <label for="furniture" class="c-tabs__label">Furniture</label>
+          <div class="c-tabs__content">
+            <p>Flash Sale on Living Room and Bedroom Furniture.</p>
+          </div>
+        </div>
+        <div class="c-tabs__item">
+          <input type="radio" name="products" id="kitchen">
+          <label for="kitchen" class="c-tabs__label">Kitchen</label>
+          <div class="c-tabs__content">
+            <p>Bring out the best of the Masterchef in you!</p>
+          </div>
+        </div>
+        <div class="c-tabs__item">
+          <input type="radio" name="products" id="clearance">
+          <label for="clearance" class="c-tabs__label">Clearance</label>
+          <div class="c-tabs__content">
+            <p>Red hot deals at affordable prices. Check out our clearance section for more details.</p>
+          </div>
+        </div>
+      </div>
 
     </main>
     <footer><span></span></footer>
