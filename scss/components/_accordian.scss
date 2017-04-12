@@ -1,0 +1,122 @@
+
+// Color variables
+$color-accordian-backGround: #373737;
+$color-accordian-border: #2e2e2e;
+$color-accordian-heading: #CCC;
+$color-accordian-fontBody: #B6B6B6;
+$color-accordian-highLight: #3ECCA8;
+
+// Animation variables
+$timing: .5s;
+$easing: cubic-bezier(0.865, 0.140, 0.095, 0.870);
+
+// Placeholders
+%outerBackground {
+  background:linear-gradient(to bottom,lighten($color-accordian-backGround,25%) 0,lighten($color-accordian-backGround,15%) 50%,$color-accordian-backGround 100%);
+  background-repeat: no-repeat;
+  box-shadow: inset 0 1px 2px -2px lighten($color-accordian-backGround,35%);
+}
+%innerBackground {
+  background: linear-gradient(to bottom, lighten($color-accordian-backGround,3%), lighten($color-accordian-backGround,2%));
+  background-repeat: no-repeat;
+  box-shadow: inset 4px 0 0 0 $color-accordian-highLight, inset 0 5px 6px $color-accordian-border, inset 0 -14px 14px -14px $color-accordian-border;
+}
+%outerBorder {
+  border-top: 5px solid $color-accordian-border;
+  border-right: 5px solid $color-accordian-border;
+  border-left: 5px solid $color-accordian-border;
+}
+%innerBorder {
+  border-right: 5px solid $color-accordian-border;
+  border-left: 5px solid $color-accordian-border;
+}
+
+// Accordian
+.c-accordian {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 24px;
+  width: 60%;
+  min-width: 380px;
+   &__item {
+    &:first-of-type {
+      .c-accordian__label {
+        border-radius: 3px 3px 0 0;
+      }
+    }
+    &:last-of-type {
+      .c-accordian__content {
+        border-bottom: 5px solid $color-accordian-border;
+        border-radius: 0 0 3px 3px;
+      }
+    }
+  }
+  // Radio Button
+  input[name="panel"] {
+    display: none;
+    // States when radio button clicked
+    &:checked {
+      & + .c-accordian__label {
+        color: $color-accordian-highLight;
+        &:after {
+          transform: rotate(90deg);
+        }
+      }
+      & ~ .c-accordian__content {
+        height: 200px;
+        overflow: scroll;
+      }
+    }
+  }
+ 
+  &__label {
+    width: 100%;
+    display: block;
+    color: $color-accordian-heading;
+    @extend %outerBackground;
+    @extend %outerBorder;
+    padding: 18px;
+    position: relative;
+    text-shadow: none;
+    transition: color $timing, border-right-color .7s;
+    &:hover {
+      cursor: pointer;
+      color: darken($color-accordian-heading,25%);
+      border-right-color: $color-accordian-highLight;
+    }
+    &:after {
+      position: absolute;
+      content: "⫷";
+      top: 14px;
+      right: 6px;
+      font-size: 1.5em;
+      transform: rotate(-90deg);
+      transition: transform .5s;
+    }
+  }
+  &__content {
+    @extend %innerBackground;
+    @extend %innerBorder;
+    height: 0px;
+    overflow: hidden;
+    position: relative;
+    transition: height $timing $easing;
+    padding: 0 16px;
+  }
+  &__header {
+    font-size: 1.5em;
+    line-height: 1em;
+    color: darken($color-accordian-fontBody,5%);
+  }
+  &__header--secondary {
+    font-size: 1.3em;
+    line-height: 1em;
+    color: darken($color-accordian-fontBody,3%);
+  }
+  &__body {
+    color: $color-accordian-fontBody;
+  }
+}
+
+
+  

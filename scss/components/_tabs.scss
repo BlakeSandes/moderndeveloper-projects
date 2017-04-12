@@ -1,3 +1,5 @@
+// Color variables
+
 .c-tabs {
   // align-items: flex-start;
   display: flex;
@@ -49,10 +51,11 @@
       display: none;
       &:checked {
         ~ .c-tabs__label {
-          color: darken(#C0CBE5,28%);
+          color: darken(#C0CBE5,40%);
           text-shadow: none;
           height: 32px;
           margin-top: 10px;
+          border-radius: 2px 2px 0 0;
         }
         ~ .c-tabs__content {
           opacity: 1;
@@ -64,9 +67,10 @@
     .c-tabs__label {
       height: 100%;
       display: flex;
-      margin-right: 8px;
+      margin: 0 6px;
       padding: 0 8px;
       transition: background .5s, color .25s opacity .3s;
+      border-radius: 2px;
       &:hover {
         cursor: pointer;
         opacity: .85;
