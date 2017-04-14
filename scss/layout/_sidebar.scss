@@ -17,7 +17,8 @@
   border-radius: 4px;
   padding: 1px 8px 8px;
   box-shadow: 0 0 1px rgba(105,62,57,1);
-  background: linear-gradient(to bottom, rgba(92,96,99,.25), rgba(92,96,99,.35));
+  background: linear-gradient(to bottom, rgba(92,96,99,.85), rgba(92,96,99,.95));
+  z-index: 12;
 }
 
 .sidebar button {
@@ -71,7 +72,7 @@
   height: 100%;
   padding: 8px 0;
   border-radius: 2px;
-  background: rgba(110,112,171,.6);
+  background: lighten(rgba(110,112,171,1),8%);
   box-shadow: 0 0 1px rgba(61,48,78,1);
   font-family: 'Fjalla One', sans-serif;
 }
@@ -94,44 +95,44 @@
   display: block;
 }
 
-.sidebar li > ol {
+.sidebar li > span {
   display: none;
 }
 
-.sidebvar li > ol > li {
+.sidebvar li > span > li {
   width: 100%;
 }
-.sidebar li > ol img {
+.sidebar li > span img {
   position: absolute;
   width: 100%;
   top: 25%;
   left: 124%;
 }
 
-.sidebar li:first-child > ol img {
+.sidebar li:first-child > span img {
   top: 15%;
 }
-.sidebar li:nth-child(4) > ol img {
+.sidebar li:nth-child(4) > span img {
   top: 35%;
 }
-.sidebar li:nth-child(5) > ol img {
+.sidebar li:nth-child(5) > span img {
   top: 31%;
 }
-.sidebar li:nth-child(6) > ol img {
+.sidebar li:nth-child(6) > span img {
   top: 27%;
 }
-.sidebar li:nth-child(7) > ol img {
+.sidebar li:nth-child(7) > span img {
   top: 35%;
 }
-.sidebar li:nth-child(8) > ol img {
+.sidebar li:nth-child(8) > span img {
   top: 64%;
 }
 
-.sidebar li:hover > ol {
+.sidebar li:hover > span {
   display: block;
 }
 @media screen and (min-width: 560px) {
-  .sidebar li > ol img {
+  .sidebar li > span img {
     left: 150%;
     width: 125%;
   }

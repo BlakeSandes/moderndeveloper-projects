@@ -1,0 +1,171 @@
+// Animation placeholder 
+%flipAnimation {
+  // transition: transform .75s, box-shadow .35s, opacity .375s;
+  // transition-delay: 0s, 0s, .375s;
+  
+}
+
+.c-card__container {
+  position: relative;
+  margin: 0 auto;
+  width: 420px;
+  height: 250px;
+  input[type="checkbox"] {
+    display: none;
+  }
+  .c-card__label {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    color: #fff;
+    z-index: 2;
+    .material-icons {
+      font-size: 2em;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  // Card Styles
+  .c-card {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition:  all .6s;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    .c-card__front,
+    .c-card__back {
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      padding: 18px;
+      border-radius: 3px;
+      transition: transform .75s, box-shadow .75s;
+      &:hover {
+      }
+    }
+    .c-card__front {
+      background-color: #8337df;
+      background-image: url(../images/bg1.png);
+      background-repeat: no-repeat;
+      -webkit-transform: rotateX(0deg);
+         -moz-transform: rotateX(0deg);
+          -ms-transform: rotateX(0deg);
+           -o-transform: rotateX(0deg);
+              transform: rotateX(0deg);
+      z-index: 2;
+      // position: relative;
+      &:hover {
+        -webkit-transform: rotateX(25deg);
+           -moz-transform: rotateX(25deg);
+            -ms-transform: rotateX(25deg);
+             -o-transform: rotateX(25deg);
+                transform: rotateX(25deg);
+        box-shadow: 0 20px 30px 2px lighten(#000,50%); 
+      }
+    }
+    .c-card__back {
+      background-color: #d0d1c9;
+      background-image: url(../images/shadow_selfie.jpg);
+      background-size: contain;
+      max-width: 100%;
+      display: block;
+      -webkit-transform: rotateX(180deg);
+         -moz-transform: rotateX(180deg);
+          -ms-transform: rotateX(180deg);
+           -o-transform: rotateX(180deg);
+              transform: rotateX(180deg);
+      &:hover {
+        -webkit-transform: rotateX(205deg);
+            -moz-transform: rotateX(205deg);
+            -ms-transform: rotateX(205deg);
+             -o-transform: rotateX(205deg);
+                transform: rotateX(205deg);        
+        box-shadow: 0 -20px 30px 2px lighten(#fff,35%);
+      }
+    }
+    .c-card__heading {
+      font-size: 2em;
+      line-height: 0;
+      font-family: 'fira_sans_condensedthin', sans-serif;
+      color: #fff;
+      padding-top: 6px;
+      font-weight: lighter;
+    }
+    .c-card__subheading {
+      font-size: .85em;
+      line-height: 0;
+      font-family: 'fira_sans_condensedthin', sans-serif;
+      margin-top: 2px;
+      margin-bottom: 22px;  
+      color: darken(#fff, 8%);
+      font-weight: lighter;
+    }
+    .c-card__bodyCopy {
+      font-size: .75em;
+      line-height: 1.25em;
+      height: 4.25em;
+      color: darken(#fff,10%);
+      margin-right: 30px;
+      margin-bottom: 6px;
+      overflow-wrap: break-word;
+      &:last-of-type {
+        position: relative;
+        margin: 26px 0 0 40px;
+        width: 40%;
+        em {
+          color: darken(#fff, 35%);
+          font-style: inherit;
+        }
+        &:before {
+          position: absolute;
+          content: '';
+          background-image: url(../images/enc1.png);
+          background-size: 100%;
+          width: 28px;
+          height: 28px;
+          top: 1px;
+          left: -42px;
+        }
+      }
+    }
+    // .c-card__linkContainer {
+
+    // }
+    .c-card__link {
+      font-size: .8rem;
+      color: #ff97f6;
+      &:first-of-type {
+        margin-right: 24px;
+      }
+    }
+    .c-card__socialIcons {
+      position: absolute;
+      bottom: 26px;
+      right: 16px;
+      width: 40%;
+      height: 26px;
+      text-align: right;
+      img {
+        height: 100%;
+      }
+    }
+  }
+  // Checked Card States
+  input[type="checkbox"]:checked {
+    & ~ .c-card {
+      -webkit-transform: rotateX(180deg);
+         -moz-transform: rotateX(180deg);
+          -ms-transform: rotateX(180deg);
+           -o-transform: rotateX(180deg);
+              transform: rotateX(180deg);
+      .c-card__back {
+        z-index: 3;
+      }
+    }
+  }
+}
