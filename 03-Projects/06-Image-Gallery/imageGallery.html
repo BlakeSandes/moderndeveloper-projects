@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="../../css/main.css">
+</head>
+<body>
+  <div class="container clearfix">
+    <header class="nav__header">
+      <nav class="nav__container">
+        <div class="nav__homeLogo">
+          <a href="../../index.html" class="nav__link--selected nav__homeLogoLink">Blake Wilson</a>
+        </div>
+        <ul class="nav">
+          <li class="nav__item"><a href="../../01-Components/components.html" class="nav__link">Components</a></li>
+          <li class="nav__item"><a href="../../02-Forms/forms.html" class="nav__link">Forms</a></li>
+          <li class="nav__item"><a href="../projects.html" class="nav__link">Projects</a></li>
+          <li class="nav__item"><a href="https://blakesandes.github.io/bov-academy-portfolio/" class="nav__link">Portfolio</a></li>
+        </ul>
+      </nav>
+    </header>
+    <aside class="sidebar clearfix">
+      <button></button>
+      <h3>Projects</h3>
+      <ul>
+        <li>
+          <a href="../01-Calculator/calculator.html">Calculator</a>
+          <img src="">
+        </li>
+        <li>
+          <a href="../02-Color-Builder/color.html">Color Builder</a>
+          <img src="">
+        </li>
+        <li>
+          <a href="../03-Product-Listing-Page/products.html">Product Listings</a>
+          <img src="">
+        </li>
+        <li>
+          <a href="../04-Profiles-Sidebar/profile.html">Profile Sidebar</a>
+          <img src="">
+        </li>
+        <li>
+          <a href="../05-Business-Card/businessCard.html">Business Card</a>
+          <img src="">
+        </li>
+        <li>
+          <a href="imageGallery.html">Image Gallery</a>
+          <img src="">
+        </li>
+      </ul>
+    </aside>
+    <main class="content clearfix">
+      <h1>Image Gallery</h1>
+      <div class="container">
+        <div class="c-gallery">
+          <div class="c-gallery__thumbnail">
+            <input type="radio" id="image-1" name="old-cars" checked>
+            <label for="image-1">
+              <img src="../../images/car-port-320.jpeg" alt="Broken car in broken car port.">
+            </label>
+            <div class="c-gallery__displayItem">
+              <img src="../../images/car-port-471.jpg" alt="Old rusted car in broken carport."
+              srcset="../../images/car-port-612.jpeg 612w, ../../images/car-port-728.jpeg 728w, ../../images/car-port-840.jpeg 840w, ../../images/car-port-944.jpeg 944w, ../../images/car-port-990.jpeg 990w,">
+            </div>
+          </div>
+          <div class="c-gallery__thumbnail">
+            <input type="radio" id="image-2" name="old-cars">
+            <label for="image-2">
+              <img src="../../images/car-garage-320.jpeg" alt="Old car in old garage.">
+            </label>
+            <div class="c-gallery__displayItem">
+              <img src="../../images/car-garage-471.jpg" alt="Old car in garage."
+              srcset="../../images/car-garage-612.jpeg 612w, ../../images/car-garage-728.jpeg 728w, ../../images/car-garage-840.jpeg 840w, ../../images/car-garage-944.jpeg 944w, ../../images/car-garage-990.jpeg 990w,">
+            </div>
+          </div>
+          <div class="c-gallery__thumbnail">
+            <input type="radio" id="image-3" name="old-cars">
+            <label for="image-3">
+              <img src="../../images/car-field-320.jpeg" alt="Rusted truck in field.">
+            </label>
+            <div class="c-gallery__displayItem">
+              <img src="../../images/car-field-471.jpg" alt="Old truck in field."
+              srcset="../../images/car-field-612.jpeg 612w, ../../images/car-field-728.jpeg 728w, ../../images/car-field-840.jpeg 840w, ../../images/car-field-944.jpeg 944w, ../../images/car-field-990.jpeg 990w,">
+            </div>
+          </div>
+          <div class="c-gallery__thumbnail">
+            <input type="radio" id="image-4" name="old-cars">
+            <label for="image-4"><img src="../../images/car-cinderBlocks-320.jpeg" alt="Old car on cinder blocks."></label>
+            <div class="c-gallery__displayItem">
+              <img src="../../images/car-cinderBlocks-471.jpg" alt="Old car on cinder blocks."
+              srcset="../../images/car-cinderBlocks-612.jpeg 612w, ../../images/car-cinderBlocks-728.jpeg 728w, ../../images/car-cinderBlocks-840.jpeg 840w, ../../images/car-cinderBlocks-944.jpeg 944w, ../../images/car-cinderBlocks-990.jpeg 990w,">
+            </div>
+          </div>
+          <div class="c-gallery__thumbnail">
+            <input type="radio" id="image-5" name="old-cars">
+            <label for="image-5"><img src="../../images/cars-yellowDoors-320.jpeg" alt="Two old cars outside yellow garage doors."></label>
+            <div class="c-gallery__displayItem">
+              <img src="../../images/cars-yellowDoors-471.jpg" alt="Old Cars, yellow garage doors."
+              srcset="../../images/cars-yellowDoors-612.jpeg 612w, ../../images/cars-yellowDoors-728.jpeg 728w, ../../images/cars-yellowDoors-840.jpeg 840w, ../../images/cars-yellowDoors-944.jpeg 944w, ../../images/cars-yellowDoors-990.jpeg 990w,">
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer><span></span></footer>
+  </div>
+  <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
