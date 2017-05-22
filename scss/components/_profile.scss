@@ -28,10 +28,11 @@
 }
 .profiles__sidebar h1 {
   text-align: left;
-  margin: 12px 0 0 12px;
+  margin: 6px 12px;
   /*padding-left: 8px;*/
   width: 10%;
   line-height: 1.125em;
+  font-size: 1.8em;
 }
 .profiles__sidebar h1 a {
   color: rgb(173,97,139);
@@ -50,7 +51,8 @@
   text-align: center;
   color: rgb(173,97,139);
   text-shadow: 0 0 1px white;
-  margin-bottom: 0;
+  margin: 6px 0;
+  font-size: 1.6em;
 }
 
 .profiles__sidebar p {

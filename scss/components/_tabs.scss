@@ -4,20 +4,27 @@
   // align-items: flex-start;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   margin: 0 auto;
   padding: 0;
   position: relative;
   width: 40%;
-  min-width: 400px;
+  min-width: 360px;
   border-radius: 3px 3px 0 0;
-  height: 42px;
+  height: 50px;
+  font-size: 1em;
   background: linear-gradient(#D5E2FF,#C0CBE5);
+  @media screen and(min-width: 1035px) {
+    font-size: 1.2em;
+  }
   &__item {
     &:first-of-type {
       .c-tabs__label {
         background: #3ECCA8;
+        @media  screen and(max-width: 600px) {
+          
+        }
       }
       .c-tabs__content {
         background: linear-gradient(to bottom, #3ECCA8, lighten(#3ECCA8,15%));
@@ -53,21 +60,24 @@
         ~ .c-tabs__label {
           color: darken(#C0CBE5,40%);
           text-shadow: none;
-          height: 32px;
-          margin-top: 10px;
+          height: 39px;
+          margin-top: 18px;
           border-radius: 2px 2px 0 0;
+          @media screen and (min-width: 1035px) {
+            margin-top: 10px;
+            padding: 0 8px;
+          }
         }
         ~ .c-tabs__content {
           opacity: 1;
           visibility: visible;
-          transition: opacity 1s;
+          transition: opacity .5s;
         }
       }
     }
     .c-tabs__label {
       height: 100%;
       display: flex;
-      margin: 0 6px;
       padding: 0 8px;
       transition: background .5s, color .25s opacity .3s;
       border-radius: 2px;
@@ -78,12 +88,12 @@
     }
     .c-tabs__content {
       position: absolute;
-      top: 42px;
+      top: 49px;
       left: 0;
       visibility: hidden;
       opacity: 0;
       width: 100%;
-      height: 80px;
+      height: 90px;
       padding: 16px 0 0 24px;
       border-radius: 0 0 3px 3px;
     }
