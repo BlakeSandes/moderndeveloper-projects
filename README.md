@@ -1,4 +1,4 @@
-# ![Modern Developer Projects](https://blakesandes.github.io/moderndeveloper-projects)
+# [Modern Developer Projects](https://blakesandes.github.io/moderndeveloper-projects)
 All projects for the Modern Developer program will be contained within this folder.
 
 ## Project-01: Multi Page Web Site [- index.html - ](index.html)[Styles Folder](styles)
